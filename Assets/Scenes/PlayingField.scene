@@ -1,0 +1,174 @@
+Scene: Untitled Scene
+Entities:
+  - Entity: 6746269488979416040
+    Class: Entity
+    TagComponent:
+      Tag: Directional Light
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [80, 10, 0]
+      Quaternion: [0.64034158, 0.0667651668, -0.0560226254, 0.763129413]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    DirectionalLightComponent:
+      Radiance: [1, 1, 1]
+      Intensity: 1
+      CastShadows: true
+  - Entity: 15785796350906600395
+    Class: Entity
+    TagComponent:
+      Tag: Skylight
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    SkyLightComponent:
+      IsPreetham: true
+      Preetham Settings:
+        Turbidity: 2
+        Azimuth: 0
+        Inclination: 0
+  - Entity: 11692630008594915235
+    Class: Player
+    TagComponent:
+      Tag: PlayerCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 58.2489281, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1.73602045, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 17599430179175385212
+      Modified: false
+    MeshComponent:
+      Asset: 165149688583984825
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 56
+    CharacterMovementComponent:
+      StepOffset: 0.300000012
+      Height: 1
+      Radius: 1
+    AudioListenerComponent:
+      Primary: false
+      Direction: [0, 0, -1]
+      ConeInner: 0
+      ConeOuter: 0
+  - Entity: 3747890795675537252
+    Class: GameState
+    TagComponent:
+      Tag: GameStateCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 9006556593877605602
+      Modified: false
+  - Entity: 17656272993098152703
+    Class: NavBoundsEntity
+    TagComponent:
+      Tag: Navigation Bounds
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [75.3994217, 75.3994217, 75.3994217]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    NavigationMeshSpecificationComponent:
+      Extent: [75.3994217, 75.3994217, 75.3994217]
+      HasBuilt: 1
+  - Entity: 1111878149587810175
+    Class: EnemySpawnLocation
+    TagComponent:
+      Tag: OppSpawner
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-32.6790543, 61.1744423, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 15538342156540820634
+      Modified: false
+  - Entity: 3273554202530465299
+    Class: Entity
+    TagComponent:
+      Tag: satgame-terrain
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [2, 2, 2]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    MeshComponent:
+      Asset: 3680622617780064957
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0

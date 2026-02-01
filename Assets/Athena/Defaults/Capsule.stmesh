@@ -1,0 +1,7 @@
+StaticMesh:
+  Filepath: Assets/Athena/Defaults/Capsule.gltf
+  Attached Shape: 0
+  Physics Material ID: 0
+  MaterialRegistry:
+    Materials:
+      - 0: 0

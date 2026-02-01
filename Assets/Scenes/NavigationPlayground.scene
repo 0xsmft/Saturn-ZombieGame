@@ -1,0 +1,335 @@
+Scene: Untitled Scene
+Entities:
+  - Entity: 14454109855051942970
+    Class: Entity
+    TagComponent:
+      Tag: Directional Light
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [80, 10, 0]
+      Quaternion: [0.64034158, 0.0667651668, -0.0560226254, 0.763129413]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    DirectionalLightComponent:
+      Radiance: [1, 1, 1]
+      Intensity: 1
+      CastShadows: true
+  - Entity: 842521448880056326
+    Class: Entity
+    TagComponent:
+      Tag: Skylight
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    SkyLightComponent:
+      IsPreetham: true
+      Preetham Settings:
+        Turbidity: 3.20000005
+        Azimuth: 1
+        Inclination: 1
+  - Entity: 7450333974910935090
+    Class: Entity
+    TagComponent:
+      Tag: XNavTest
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [16.5811691, 0, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    MeshComponent:
+      Asset: 5374017015968207930
+      MaterialRegistry:
+        AnyOverrides: true
+        MaterialOverrides:
+          - 0: 4188168686474315140
+          - 1: 4188168686474315140
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 7580106035821113383
+    Class: NavBoundsEntity
+    TagComponent:
+      Tag: Navigation Bounds
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [45.1000023, 45.1000023, 45.1000023]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    NavigationMeshSpecificationComponent:
+      Extent: [45.1000023, 45.1000023, 45.1000023]
+      HasBuilt: 1
+  - Entity: 17676021600005638331
+    Class: Player
+    TagComponent:
+      Tag: PlayerCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-6.79077673, 0, 1.49011612e-08]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        - ID: 16324824596227533540
+    PrefabComponent:
+      AssetID: 17599430179175385212
+      Modified: false
+    MeshComponent:
+      Asset: 165149688583984825
+      MaterialRegistry:
+        AnyOverrides: true
+        MaterialOverrides:
+          - 0: 4188168686474315140
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 56
+    CharacterMovementComponent:
+      StepOffset: 0.300000012
+      Height: 1
+      Radius: 1
+    AudioListenerComponent:
+      Primary: true
+      Direction: [0, 0, -1]
+      ConeInner: 0
+      ConeOuter: 0
+  - Entity: 16324824596227533540
+    Class: Entity
+    TagComponent:
+      Tag: Weapon
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [1.5, -0.5, 0.800000012]
+      Rotation: [0, 90, 0]
+      Quaternion: [0, 0.707106769, 0, 0.707106769]
+      Scale: [0.0299999993, 0.0299999993, 0.0299999993]
+    RelationshipComponent:
+      Parent: 17676021600005638331
+      Children:
+        []
+    MeshComponent:
+      Asset: 3007642428770073042
+      MaterialRegistry:
+        AnyOverrides: true
+        MaterialOverrides:
+          - 0: 15540430296704676022
+          - 1: 11067449887911952097
+          - 2: 8579261805612793011
+          - 3: 0
+  - Entity: 10271674618352100357
+    Class: EnemySpawnLocation
+    TagComponent:
+      Tag: OppSpawner
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [41.2494392, 0, 22.9332943]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 15538342156540820634
+      Modified: false
+  - Entity: 4994607709822679639
+    Class: EnemySpawnLocation
+    TagComponent:
+      Tag: OppSpawner
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-3.71467757, 0, 28.2492409]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 15538342156540820634
+      Modified: false
+  - Entity: 5372395261367142078
+    Class: EnemySpawnLocation
+    TagComponent:
+      Tag: OppSpawner
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-9.00726128, 0, -18.5694656]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 15538342156540820634
+      Modified: false
+  - Entity: 12786150656682352937
+    Class: EnemySpawnLocation
+    TagComponent:
+      Tag: OppSpawner
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [35.6270752, 0, -25.1025047]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 15538342156540820634
+      Modified: false
+  - Entity: 18228121966679020113
+    Class: GameState
+    TagComponent:
+      Tag: GameStateCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 9006556593877605602
+      Modified: false
+  - Entity: 4571894472717952408
+    Class: AmmoCrateSpawner
+    TagComponent:
+      Tag: AmmoCrateSpawnerCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-6.14820385, -1.84072554, -4.78047276]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 15200017920014184748
+      Modified: false
+    MeshComponent:
+      Asset: 968415808348049396
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    BoxColliderComponent:
+      Extents: [1, 1, 1]
+      Offset: [0, 0, 0]
+      IsTrigger: false
+      AutoAdjustExtent: true
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 13104698915219529227
+    Class: AmmoCrateSpawner
+    TagComponent:
+      Tag: AmmoCrateSpawnerCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [3.73545456, -2.56155539, 22.8902512]
+      Rotation: [180, -77.2777176, 180]
+      Quaternion: [-6.14366513e-08, 0.781097174, -6.14366513e-08, -0.624409497]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 15200017920014184748
+      Modified: false
+    MeshComponent:
+      Asset: 968415808348049396
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    BoxColliderComponent:
+      Extents: [1, 1, 1]
+      Offset: [0, 0, 0]
+      IsTrigger: false
+      AutoAdjustExtent: true
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0

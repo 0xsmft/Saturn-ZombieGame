@@ -1,0 +1,6 @@
+﻿.vs
+**.sln
+Cache/PerUser
+Build
+bin
+bin-int

@@ -1,0 +1,54 @@
+Project:
+  Name: Kismet
+  StartupScene: 1988173729960812615
+  DefaultMaterialAsset: 5915327659435897251
+  DefaultPhyMaterialAsset: 2783419812627168482
+  DefaultFontAsset: 2996908169661081287
+  IsAutoSavesEnabled: false
+  AutoSaveInterval: 300
+  DeveloperVersion: X1
+  ActionBindings:
+    - ActionBinding: Forward
+      ActionName: W
+      ID: 790492750004346047
+      Key: 46
+      MouseButton: 46
+      Type: 0
+    - ActionBinding: Backward
+      ActionName: S
+      ID: 9624676962574547581
+      Key: 42
+      MouseButton: 42
+      Type: 0
+    - ActionBinding: Left
+      ActionName: A
+      ID: 15722841371770451701
+      Key: 24
+      MouseButton: 24
+      Type: 0
+    - ActionBinding: Right
+      ActionName: D
+      ID: 15653183135290626581
+      Key: 27
+      MouseButton: 27
+      Type: 0
+    - ActionBinding: Use
+      ActionName: Left
+      ID: 12756720425059776944
+      Key: 0
+      MouseButton: 0
+      Type: 1
+    - ActionBinding: Reload
+      ActionName: R
+      ID: 6610809677163957872
+      Key: 41
+      MouseButton: 41
+      Type: 0
+    - ActionBinding: Interact
+      ActionName: E
+      ID: 11183059649673371823
+      Key: 28
+      MouseButton: 28
+      Type: 0
+  SoundGroups:
+    []

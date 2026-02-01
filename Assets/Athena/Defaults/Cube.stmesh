@@ -1,0 +1,7 @@
+StaticMesh:
+  Filepath: Assets/Athena/Defaults/Cube.fbx
+  Attached Shape: 0
+  Physics Material ID: 0
+  MaterialRegistry:
+    Materials:
+      - 0: 0

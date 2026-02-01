@@ -1,0 +1,8 @@
+StaticMesh:
+  Filepath: Assets/Athena/SurvivalSupport/Ammo/Mesh/untitled.gltf
+  Attached Shape: 1
+  Physics Material ID: -2006106910
+  MaterialRegistry:
+    Materials:
+      - 0: 12765754648904108514
+      - 1: 12765754648904108514

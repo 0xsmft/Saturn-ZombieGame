@@ -1,0 +1,24 @@
+# WARNING, MODIFICATIONS TO THIS FILE WILL NOT UPDATE GLOBALLY IN EDITOR!
+Prefab: 15538342156540820634
+Root Entity: 18231458910608525089
+Entities:
+  - Entity: 18231458910608525089
+    Class: EnemySpawnLocation
+    TagComponent:
+      Tag: OppSpawner
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 15538342156540820634
+      Modified: false
