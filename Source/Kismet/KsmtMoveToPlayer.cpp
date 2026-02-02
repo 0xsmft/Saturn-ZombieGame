@@ -81,10 +81,7 @@ Saturn::NodeEditorTaskState KsmtMoveToPlayer::InitPath()
 	if( !m_pTarget )
 		return NodeEditorTaskState::Failed;
 
-
-
-//	const auto randomPoint = m_Agent->GetScene()->GetNavigationSystem().GetRandomPointInNavMesh( 256.0f );
-	m_pPath = g_ActiveScene->GetNavigationSystem().CreateStraightPath( m_Agent->GetLocalPosition(), /*randomPoint.value()*/ m_pTarget->GetLocalPosition() );
+	m_pPath = g_ActiveScene->GetNavigationSystem().CreateStraightPath( m_Agent->GetLocalPosition(), m_pTarget->GetLocalPosition() );
 	m_pPath->CreatePath();
 
 	return NodeEditorTaskState::Starting;

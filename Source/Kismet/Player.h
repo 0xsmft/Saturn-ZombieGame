@@ -9,6 +9,10 @@
 
 using namespace Saturn;
 
+namespace Saturn {
+	class Texture2D;
+}
+
 SCLASS( VisibleInEditor )
 class Player : public Character
 {
@@ -56,4 +60,8 @@ private:
 	bool m_AlreadyReloading = false;
 
 	std::string m_StatusMessageText{};
+
+	// Why does the player have to hold a texture?
+	// API 1.1
+	Ref<Texture2D> m_HudCrosshairTexture = nullptr;
 };

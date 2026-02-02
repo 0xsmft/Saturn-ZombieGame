@@ -33,12 +33,16 @@ void GameState::OnUpdate( Saturn::Timestep ts )
 		m_TimeUntilNextWave = 15.0f;
 	}
 
+	// Fix - API 3.0
+
 	// Alura UI pass.
 	g_AluraCanvas->PushFontSize( 32.0f );
 
 	// Timer text
 	{
+		// Fix - API 3.2
 		std::string text = std::format( "{0}s", std::ceil( m_TimeUntilNextWave ) );
+		// Fix - API 3.1
 		const auto textSize = g_AluraCanvas->CalcTextSize( text );
 
 		g_AluraCanvas->SetNextItemPosition( glm::vec2{ ( g_AluraCanvas->GetWidth() - textSize.x ) - g_AluraCanvas->GetStyle().ItemSpacing.x, g_AluraCanvas->GetStyle().ItemSpacing.y } );
@@ -47,7 +51,9 @@ void GameState::OnUpdate( Saturn::Timestep ts )
 
 	// Wave text
 	{
+		// Fix - API 3.2
 		std::string text = std::format( "Wave {0}", m_CurrentWave );
+		// Fix - API 3.1
 		const auto textSize = g_AluraCanvas->CalcTextSize( text );
 
 		auto pos = glm::vec2{ ( g_AluraCanvas->GetWidth() - textSize.x ) - g_AluraCanvas->GetStyle().ItemSpacing.x, g_AluraCanvas->GetCursorPosition().y };
@@ -79,7 +85,9 @@ void GameState::AdvanceToNextWave()
 {
 	++m_CurrentWave;
 
+#if !defined(SAT_DIST)
 	SAT_CORE_INFO( "Advanced to wave number: {0}", m_CurrentWave );
+#endif
 
 	auto enemySpawners = GetScene()->GetAllEntitiesWithClass<EnemySpawnLocation>();
 	for( auto& rEntity : enemySpawners )

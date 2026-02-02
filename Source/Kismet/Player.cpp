@@ -10,6 +10,9 @@
 
 #include "Saturn/Audio/AudioSystem.h"
 #include "Saturn/Asset/AssetManager.h"
+#include "Saturn/Asset/TextureSourceAsset.h"
+
+#include "Saturn/Project/Project.h"
 
 #include "Saturn/Alura/AluraCanvas.h"
 #include "Saturn/Vulkan/AluraRenderer.h"
@@ -26,6 +29,25 @@ void Player::BeginPlay()
 {
 	Super::BeginPlay();
 
+	// Fix - API 1.1
+#if defined( SAT_DIST )
+	Ref<TextureSourceAsset> sourceAsset = AssetManager::Get().GetAssetAs<TextureSourceAsset>( 2338072335932728136llu );
+#else
+	// Fix - API 1.1
+	// Fix - API 0.1
+	const auto fullPath = Project::GetActiveProject()->FilepathAbs( AssetManager::Get().FindAsset( 2338072335932728136llu )->Path );
+	Ref<TextureSourceAsset> sourceAsset = Ref<TextureSourceAsset>::Create( fullPath );
+#endif
+
+	m_HudCrosshairTexture = Ref<Texture2D>::Create(
+		ImageFormat::RGBA8,
+		sourceAsset->Width(),
+		sourceAsset->Height(),
+		sourceAsset->TextureData().Data,
+		false );
+	
+	//////////////////////////////////////////////////////////////////////////
+
 	if( GetRigidBody() )
 	{
 		GetRigidBody()->SetOnCollisionHit( SAT_BIND_EVENT_FN( OnMeshHit ) );
@@ -41,6 +63,7 @@ void Player::BeginPlay()
 		}
 	}
 
+	// Fix - API 2.0
 	m_Weapon->SetParent( GetCameraEntity()->GetUUID() );
 	GetCameraEntity()->AddChild( m_Weapon->GetUUID() );
 
@@ -69,12 +92,17 @@ void Player::OnUpdate( Timestep ts )
 //		auto camPos = camera->GetPosition();
 	}
 
+	// Fix - API 3.0
+
 	// Alura UI pass.
 	g_AluraCanvas->PushFontSize( 32.0f );
 
 	// Timer text
 	{
-		std::string text = std::format( "{0} / {1} ({2} Bullets)", m_Ammo, m_MaxAmmoInMag, m_MaxAmmoInMag * m_NumberOfMagazines );
+		// Fix - API 3.2
+		std::string text = std::format( "{0} / {1} ({2} Magazines)", m_Ammo, m_MaxAmmoInMag, m_NumberOfMagazines );
+
+		// Fix - API 3.1
 		const auto textSize = g_AluraCanvas->CalcTextSize( text );
 
 		g_AluraCanvas->SetNextItemPosition( glm::vec2{ g_AluraCanvas->GetStyle().ItemSpacing.x * 0.25f, ( g_AluraCanvas->GetHeight() - textSize.y ) - g_AluraCanvas->GetStyle().ItemSpacing.y - 2.0f } );
@@ -96,12 +124,17 @@ void Player::OnUpdate( Timestep ts )
 
 		g_AluraCanvas->PushFontSize( 28.0f );
 		{
+			// Fix - API 3.1
 			const auto textSize = g_AluraCanvas->CalcTextSize( m_StatusMessageText );
 			g_AluraCanvas->SetNextItemPosition( glm::vec2{ g_AluraCanvas->GetStyle().ItemSpacing.x, ( ( g_AluraCanvas->GetHeight() * 0.5f ) - textSize.y ) - g_AluraCanvas->GetStyle().ItemSpacing.y - 2.0f } );
 			g_AluraCanvas->AddText( m_StatusMessageText );
 		}
 		g_AluraCanvas->PopFontSize();
 	}
+
+	// Crosshair
+	g_AluraCanvas->SetNextItemPosition( glm::vec2{ g_AluraCanvas->GetWidth() * 0.5f,  g_AluraCanvas->GetHeight() * 0.5f } );
+	g_AluraCanvas->AddImage( { 24.0F, 24.0F }, m_HudCrosshairTexture );
 }
 
 void Player::Use()
@@ -112,6 +145,7 @@ void Player::Use()
 		m_StatusMessageText = "No Ammo.";
 		ShowMessageText();
 
+		// Fix - API 0.1
 		AudioSystem::Get().RequestNewSound( 8451897523760267992llu );
 		return;
 	}
@@ -137,6 +171,7 @@ void Player::Use()
 		}
 	}
 
+	// Fix - API 0.1
 	AudioSystem::Get().PlaySoundAtLocation( 3293489935082472872llu, Saturn::UUID(), GetLocalPosition() );
 }
 
@@ -161,6 +196,7 @@ void Player::Reload()
 	{
 		m_AlreadyReloading = true;
 
+		// Fix - API 0.1
 		Ref<Sound> reloadSound = AudioSystem::Get().RequestNewSound( 570831928178778653llu, Saturn::UUID(), false );
 		reloadSound->AddOnCompleteFunction(
 			[ this ]( const Saturn::UUID& soundID )
@@ -192,6 +228,7 @@ void Player::Interact()
 					m_NumberOfMagazines += ammoCrate->GetValue();
 					ammoCrate->Hide();
 
+					// Fix - API 0.1
 					AudioSystem::Get().RequestNewSound( 16177217556467335637llu );
 				}
 			}
