@@ -139,6 +139,9 @@ void Player::OnUpdate( Timestep ts )
 
 void Player::Use()
 {
+	if( Input::Get().GetCursorMode() != RubyCursorMode::Locked )
+		return;
+
 	if( m_Ammo == 0 ) 
 	{
 		// Play ammo empty sound
@@ -213,6 +216,9 @@ void Player::Reload()
 
 void Player::Interact() 
 {
+	if( Input::Get().GetCursorMode() != RubyCursorMode::Locked )
+		return;
+
 	RaycastHitResult result;
 	TransformComponent tc = GetScene()->GetWorldSpaceTransform( GetCameraEntity() );
 
