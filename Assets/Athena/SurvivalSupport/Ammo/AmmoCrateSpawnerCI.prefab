@@ -30,8 +30,8 @@ Entities:
           - 0: 0
           - 1: 0
     BoxColliderComponent:
-      Extents: [3.5999999, 1, 2.0999999]
-      Offset: [-0.800000012, 0.400000006, -0.899999976]
+      Extents: [1.60000002, 0.5, 1]
+      Offset: [-0.800000012, 0.5, -1]
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:

@@ -1,4 +1,4 @@
 Sound:
   SourcePath: Assets\Athena\Sounds\Weapon\SFX_GunFire.mp3
-  ImportPath: E:\sound-hub\SFX_GunFire.mp3
+  ImportPath: \\sound-hub\SFX_GunFire.mp3
   LastWriteTime: 2026-01-25

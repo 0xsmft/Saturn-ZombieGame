@@ -1,5 +1,5 @@
 StaticMesh:
-  Filepath: Assets/Athena/Terrian/satgame-terrain.glb
+  Filepath: Assets/Athena/Terrain/satgame-terrain.glb
   Attached Shape: 5
   Physics Material ID: 0
   MaterialRegistry:
