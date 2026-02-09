@@ -1,6 +1,7 @@
 #include "sppch.h"
 #include "EnemySpawnLocation.h"
 
+#include "Saturn/Core/Random.h"
 #include "Saturn/Asset/AssetManager.h"
 #include "Saturn/Asset/Prefab.h"
 
@@ -47,9 +48,8 @@ void EnemySpawnLocation::Spawn()
 	for( uint32_t i = 0; i < m_NumberToSpawn; ++i )
 	{
 		CreateEntityParameters entityParameters;
-		entityParameters.Position = m_SpawingLocations[ i ];
+		entityParameters.Position = m_SpawingLocations[ Random::RandomElementInRange( 0, m_SpawingLocations.size() - 1 ) ];
 
 		GetScene()->CreatePrefab( prefabAsset, entityParameters );
 	}
 }
-

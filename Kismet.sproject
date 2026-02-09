@@ -1,6 +1,6 @@
 Project:
   Name: Kismet
-  StartupScene: 1988173729960812615
+  StartupScene: 6354757706168330290
   DefaultMaterialAsset: 5915327659435897251
   DefaultPhyMaterialAsset: 2783419812627168482
   DefaultFontAsset: 2996908169661081287
@@ -49,6 +49,12 @@ Project:
       ID: 11183059649673371823
       Key: 28
       MouseButton: 28
+      Type: 0
+    - ActionBinding: DbgMenu
+      ActionName: F1
+      ID: 1864692448738190188
+      Key: 12
+      MouseButton: 6
       Type: 0
   SoundGroups:
     []

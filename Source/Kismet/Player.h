@@ -27,9 +27,13 @@ public:
 	virtual void SetupInputBindings() override;
 
 private:
+	void DrawHud( Timestep ts );
 	void Use();
 	void Reload();
 	void Interact();
+#if !defined(SAT_DIST)
+	void DbgMenuHandle();
+#endif
 
 	void TakeDamage( int32_t damage );
 
@@ -50,6 +54,9 @@ private:
 	uint32_t m_NumberOfMagazines = 1u;
 
 	SharedPtr<Entity> m_Weapon = nullptr;
+
+	// The current intractable entity that the player is looking at.
+	SharedPtr<Entity> m_IntractableEntityHit = nullptr;
 
 	glm::vec3 m_PrevForward{};
 	glm::vec3 m_PrevRight{};

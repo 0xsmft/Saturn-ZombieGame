@@ -21,13 +21,13 @@ public:
 	virtual void OnUpdate( Saturn::Timestep ts ) override;
 
 public:
-	void RequestRespawn() { m_CheckRandom = true; }
+	void ForceSpawn();
+	void RequestRespawn();
 	uint32_t GetValue() const { return m_Value; }
 
 private:
 	void TrySpawnAgain();
 
 private:
-	bool m_CheckRandom = false;
 	uint32_t m_Value = 0u;
 };

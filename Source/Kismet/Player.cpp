@@ -3,6 +3,10 @@
 #include "AmmoCrateSpawner.h"
 #include "Enemy.h"
 
+#if !defined(SAT_DIST)
+#include "GameState.h"
+#endif
+
 #include "Saturn/Core/Random.h"
 
 #include "Saturn/Physics/PhysicsScene.h"
@@ -79,6 +83,7 @@ void Player::OnUpdate( Timestep ts )
 {
 	Super::OnUpdate( ts );
 
+	// Update weapon movement
 	if( m_Weapon )
 	{
 		const auto& camera = GetCameraEntity()->GetComponent<CameraComponent>().Camera;
@@ -92,6 +97,35 @@ void Player::OnUpdate( Timestep ts )
 //		auto camPos = camera->GetPosition();
 	}
 
+	// Hit detection
+	RaycastHitResult result;
+	TransformComponent tc = GetScene()->GetWorldSpaceTransform( GetCameraEntity() );
+
+	if( GetScene()->Raycast( tc.Position + CalculateForward(), CalculateForward(), 10.0f, &result ) )
+	{
+		if( result.Hit )
+		{
+			if( result.Hit->GetClass() == AmmoCrateSpawner::StaticClass() )
+			{
+				m_IntractableEntityHit = result.Hit;
+
+				// Display "E" to interact
+				m_StatusMessageText = "E";
+				ShowMessageText();
+			}
+		}
+	}
+	else
+	{
+		HideMessageText();
+		m_IntractableEntityHit = nullptr;
+	}
+
+	DrawHud( ts );
+}
+
+void Player::DrawHud( Timestep ts )
+{
 	// Fix - API 3.0
 
 	// Alura UI pass.
@@ -132,7 +166,7 @@ void Player::OnUpdate( Timestep ts )
 		g_AluraCanvas->PopFontSize();
 	}
 
-	// Crosshair
+	// Crosshair image.
 	g_AluraCanvas->SetNextItemPosition( glm::vec2{ g_AluraCanvas->GetWidth() * 0.5f,  g_AluraCanvas->GetHeight() * 0.5f } );
 	g_AluraCanvas->AddImage( { 24.0F, 24.0F }, m_HudCrosshairTexture );
 }
@@ -144,11 +178,12 @@ void Player::Use()
 
 	if( m_Ammo == 0 ) 
 	{
-		// Play ammo empty sound
+		// Show status message.
 		m_StatusMessageText = "No Ammo.";
 		ShowMessageText();
 
 		// Fix - API 0.1
+		// Play ammo empty sound
 		AudioSystem::Get().RequestNewSound( 8451897523760267992llu );
 		return;
 	}
@@ -219,28 +254,30 @@ void Player::Interact()
 	if( Input::Get().GetCursorMode() != RubyCursorMode::Locked )
 		return;
 
-	RaycastHitResult result;
-	TransformComponent tc = GetScene()->GetWorldSpaceTransform( GetCameraEntity() );
-
-	if( GetScene()->Raycast( tc.Position + CalculateForward(), CalculateForward(), 10.0f, &result ) )
+	if( m_IntractableEntityHit )
 	{
-		if( result.Hit )
+		auto ammoCrate = m_IntractableEntityHit.As<AmmoCrateSpawner>();
+		if( ammoCrate )
 		{
-			if( result.Hit->GetClass() == AmmoCrateSpawner::StaticClass() )
-			{
-				auto ammoCrate = result.Hit.As<AmmoCrateSpawner>();
-				if( ammoCrate )
-				{
-					m_NumberOfMagazines += ammoCrate->GetValue();
-					ammoCrate->Hide();
+			m_NumberOfMagazines += ammoCrate->GetValue();
+			ammoCrate->Hide();
 
-					// Fix - API 0.1
-					AudioSystem::Get().RequestNewSound( 16177217556467335637llu );
-				}
-			}
+			// Fix - API 0.1
+			AudioSystem::Get().RequestNewSound( 16177217556467335637llu );
 		}
 	}
 }
+
+#if !defined(SAT_DIST)
+void Player::DbgMenuHandle()
+{
+	auto gameStates = GetScene()->GetAllEntitiesWithClass<GameState>();
+	for( auto& rGameState : gameStates )
+	{
+		rGameState->ShowOrHideDbgMenu();
+	}
+}
+#endif
 
 void Player::OnMeshHit( SharedPtr<Entity> Other )
 {
@@ -307,4 +344,8 @@ void Player::SetupInputBindings()
 	m_PlayerInputController->BindAction( "Use", ActionBindingTriggerState::Pressed, SAT_BIND_EVENT_FN( Player::Use ) );
 	m_PlayerInputController->BindAction( "Reload", ActionBindingTriggerState::Pressed, SAT_BIND_EVENT_FN( Player::Reload ) );
 	m_PlayerInputController->BindAction( "Interact", ActionBindingTriggerState::Pressed, SAT_BIND_EVENT_FN( Player::Interact ) );
+
+#if !defined(SAT_DIST)
+	m_PlayerInputController->BindAction( "DbgMenu", ActionBindingTriggerState::Pressed, SAT_BIND_EVENT_FN( Player::DbgMenuHandle ) );
+#endif
 }

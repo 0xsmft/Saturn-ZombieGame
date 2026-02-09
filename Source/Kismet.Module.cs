@@ -10,8 +10,16 @@ public class KismetModule : Module
         base.Init();
 
         Name = "Saturn";
-        OutputType = LinkerOutput.SharedLibrary;
-        
+
+        if( Shared.ProjectInfo.CurrentConfigKind == ConfigKind.Dist )
+        {
+            OutputType = LinkerOutput.Executable;
+        }
+        else
+        {
+            OutputType = LinkerOutput.SharedLibrary;
+        }
+
         // Include directories relative to root folder (solution directory)
         string saturnDir = Shared.ProjectInfo.SaturnDir;
         Includes.AddRange( new string[] {
