@@ -9,6 +9,10 @@
 
 using namespace Saturn;
 
+/**
+ * The enemy entity class.
+ * Able to take damage and deal damage to the player.
+ */
 SCLASS( VisibleInEditor )
 class Enemy : public AIAgentEntity
 {

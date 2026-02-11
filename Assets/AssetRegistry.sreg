@@ -1,4 +1,8 @@
 Assets:
+  - Asset: 1988173729960812615
+    Path: Assets/Scenes/PlayingField.scene
+    Type: Scene
+    Version: 8196
   - Asset: 15538342156540820634
     Path: Assets/Athena/Opps/OppSpawner.prefab
     Type: Prefab
@@ -6,10 +10,6 @@ Assets:
   - Asset: 3680622617780064957
     Path: Assets/Athena/Terrain/satgame-terrain.stmesh
     Type: StaticMesh
-    Version: 8196
-  - Asset: 1988173729960812615
-    Path: Assets/Scenes/PlayingField.scene
-    Type: Scene
     Version: 8196
   - Asset: 14888528075718103984
     Path: Assets/Athena/Defaults/Cube.stmesh
@@ -39,13 +39,13 @@ Assets:
     Path: Assets/Athena/GameStateCI.prefab
     Type: Prefab
     Version: 8196
-  - Asset: 15200017920014184748
-    Path: Assets/Athena/SurvivalSupport/Ammo/AmmoCrateSpawnerCI.prefab
-    Type: Prefab
-    Version: 8196
   - Asset: 16769788357849991775
     Path: Assets/Athena/Terrain/M_Grass.smaterial
     Type: Material
+    Version: 8196
+  - Asset: 15200017920014184748
+    Path: Assets/Athena/SurvivalSupport/Ammo/AmmoCrateSpawnerCI.prefab
+    Type: Prefab
     Version: 8196
   - Asset: 18340302101549531855
     Path: Assets/Athena/Opps/OppBT.sbt
@@ -79,13 +79,13 @@ Assets:
     Path: Assets/Athena/Weapons/Textures/Material__180_normal.jpeg
     Type: Texture
     Version: 8196
-  - Asset: 185171295186420253
-    Path: Assets/Athena/Weapons/Textures/Material__183_baseColor.png
-    Type: Texture
-    Version: 8196
   - Asset: 570831928178778653
     Path: Assets/Athena/Sounds/Weapon/SFX_Reload.snd
     Type: Audio
+    Version: 8196
+  - Asset: 185171295186420253
+    Path: Assets/Athena/Weapons/Textures/Material__183_baseColor.png
+    Type: Texture
     Version: 8196
   - Asset: 7577715937433098098
     Path: Assets/Athena/Weapons/Textures/Material__183_metallicRoughness.png
@@ -95,37 +95,37 @@ Assets:
     Path: Assets/Athena/Weapons/Textures/Material__183_normal.jpeg
     Type: Texture
     Version: 8196
-  - Asset: 5648108834415740525
-    Path: Assets/Athena/Weapons/Textures/Material__184_baseColor.png
+  - Asset: 2338072335932728136
+    Path: Assets/Athena/Hud/Textures/HUD_Crosshair.png
     Type: Texture
     Version: 8196
   - Asset: 5799686793832250549
     Path: Assets/Athena/SurvivalSupport/Ammo/Textures/AmmoCrateColor.png
     Type: Texture
     Version: 8196
-  - Asset: 2338072335932728136
-    Path: Assets/Athena/Hud/Textures/HUD_Crosshair.png
+  - Asset: 5648108834415740525
+    Path: Assets/Athena/Weapons/Textures/Material__184_baseColor.png
     Type: Texture
-    Version: 8196
-  - Asset: 8579261805612793011
-    Path: Assets/Athena/Weapons/Materials/M_WeaponGrip.smaterial
-    Type: Material
-    Version: 8196
-  - Asset: 11067449887911952097
-    Path: Assets/Athena/Weapons/Materials/M_WeaponMagazine.smaterial
-    Type: Material
     Version: 8196
   - Asset: 4000573893458569165
     Path: Assets/Athena/Weapons/Textures/Material__184_metallicRoughness.png
     Type: Texture
     Version: 8196
-  - Asset: 2837394924545453813
-    Path: Assets/Athena/Weapons/Textures/Material__184_normal.jpeg
-    Type: Texture
+  - Asset: 11067449887911952097
+    Path: Assets/Athena/Weapons/Materials/M_WeaponMagazine.smaterial
+    Type: Material
+    Version: 8196
+  - Asset: 8579261805612793011
+    Path: Assets/Athena/Weapons/Materials/M_WeaponGrip.smaterial
+    Type: Material
     Version: 8196
   - Asset: 4188168686474315140
     Path: Assets/Athena/Debug/M_Prototype.smaterial
     Type: Material
+    Version: 8196
+  - Asset: 2837394924545453813
+    Path: Assets/Athena/Weapons/Textures/Material__184_normal.jpeg
+    Type: Texture
     Version: 8196
   - Asset: 8451897523760267992
     Path: Assets/Athena/Sounds/Weapon/SFX_GunClick.snd
@@ -167,28 +167,44 @@ Assets:
     Path: Assets/Fonts/NotoSans-Regular.saf
     Type: Font
     Version: 8196
+  - Asset: 1680156242400638590
+    Path: Assets/Athena/DeathZoneCI.prefab
+    Type: Prefab
+    Version: 8196
 Asset Dependencies:
-  - AssetID: 15540430296704676022
-    Dependencies:
-      - Dependency: 10084180520922664859
-  - AssetID: 4188168686474315140
-    Dependencies:
-      - Dependency: 7562165743019380132
   - AssetID: 12765754648904108514
     Dependencies:
       - Dependency: 5799686793832250549
+  - AssetID: 4188168686474315140
+    Dependencies:
+      - Dependency: 7562165743019380132
+  - AssetID: 15540430296704676022
+    Dependencies:
+      - Dependency: 10084180520922664859
   - AssetID: 5374017015968207930
     Dependencies:
       - Dependency: 5915327659435897251
-  - AssetID: 10084180520922664859
-    Dependencies:
-      - Dependency: 10084180520922664859
   - AssetID: 968415808348049396
     Dependencies:
       - Dependency: 12765754648904108514
-  - AssetID: 11067449887911952097
+  - AssetID: 10084180520922664859
     Dependencies:
-      - Dependency: 185171295186420253
+      - Dependency: 10084180520922664859
   - AssetID: 8579261805612793011
     Dependencies:
       - Dependency: 5648108834415740525
+  - AssetID: 11067449887911952097
+    Dependencies:
+      - Dependency: 185171295186420253
+  - AssetID: 7562165743019380132
+    Dependencies:
+      - Dependency: 7562165743019380132
+  - AssetID: 185171295186420253
+    Dependencies:
+      - Dependency: 185171295186420253
+  - AssetID: 5648108834415740525
+    Dependencies:
+      - Dependency: 5648108834415740525
+  - AssetID: 5799686793832250549
+    Dependencies:
+      - Dependency: 5799686793832250549

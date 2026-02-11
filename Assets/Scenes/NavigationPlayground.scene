@@ -1,4 +1,8 @@
 Scene: Untitled Scene
+Visualisation:
+  ShowGrid: true
+  ShowGridRT: false
+  PhysCollider: 1
 Entities:
   - Entity: 14454109855051942970
     Class: Entity
@@ -41,7 +45,7 @@ Entities:
     SkyLightComponent:
       IsPreetham: true
       Preetham Settings:
-        Turbidity: 3.20000005
+        Turbidity: 2
         Azimuth: 1
         Inclination: 1
   - Entity: 7450333974910935090
@@ -158,7 +162,6 @@ Entities:
           - 0: 15540430296704676022
           - 1: 11067449887911952097
           - 2: 8579261805612793011
-          - 3: 0
   - Entity: 10271674618352100357
     Class: EnemySpawnLocation
     TagComponent:
@@ -259,7 +262,7 @@ Entities:
     PrefabComponent:
       AssetID: 9006556593877605602
       Modified: false
-  - Entity: 4571894472717952408
+  - Entity: 820632610669425133
     Class: AmmoCrateSpawner
     TagComponent:
       Tag: AmmoCrateSpawnerCI
@@ -268,7 +271,7 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [-6.14820385, -1.84072554, -4.78047276]
+      Position: [-2.87551928, -2.54149914, 27.8967285]
       Rotation: [0, 0, 0]
       Quaternion: [0, 0, 0, 1]
       Scale: [1, 1, 1]
@@ -287,16 +290,16 @@ Entities:
           - 0: 0
           - 1: 0
     BoxColliderComponent:
-      Extents: [1, 1, 1]
-      Offset: [0, 0, 0]
+      Extents: [2, 0.5, 1]
+      Offset: [-0.699999988, 0.5, -1]
       IsTrigger: false
-      AutoAdjustExtent: true
+      AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: true
+      IsKinematic: false
       CCD: false
       Mass: 2
-      LockFlags: 0
-  - Entity: 13104698915219529227
+      LockFlags: 63
+  - Entity: 16183996094890163362
     Class: AmmoCrateSpawner
     TagComponent:
       Tag: AmmoCrateSpawnerCI
@@ -305,9 +308,9 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [3.73545456, -2.56155539, 22.8902512]
-      Rotation: [180, -77.2777176, 180]
-      Quaternion: [-6.14366513e-08, 0.781097174, -6.14366513e-08, -0.624409497]
+      Position: [-2.87551928, -2.54149914, -5.34115982]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
       Scale: [1, 1, 1]
     RelationshipComponent:
       Parent: 0
@@ -324,9 +327,45 @@ Entities:
           - 0: 0
           - 1: 0
     BoxColliderComponent:
-      Extents: [1, 1, 1]
-      Offset: [0, 0, 0]
+      Extents: [2, 0.5, 1]
+      Offset: [-0.699999988, 0.5, -1]
       IsTrigger: false
+      AutoAdjustExtent: false
+    RigidbodyComponent:
+      IsKinematic: false
+      CCD: false
+      Mass: 2
+      LockFlags: 63
+  - Entity: 12446406135342906621
+    Class: DeathZone
+    TagComponent:
+      Tag: DeathZoneCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, -16.379797, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [64, 2, 64]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1680156242400638590
+      Modified: false
+    MeshComponent:
+      Asset: 14888528075718103984
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+    BoxColliderComponent:
+      Extents: [64, 2, 64]
+      Offset: [0, 0, 0]
+      IsTrigger: true
       AutoAdjustExtent: true
     RigidbodyComponent:
       IsKinematic: true

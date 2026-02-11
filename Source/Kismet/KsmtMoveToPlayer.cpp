@@ -15,9 +15,11 @@ KsmtMoveToPlayer::~KsmtMoveToPlayer()
 {
 	if( m_pPath )
 	{
-		g_ActiveScene->GetNavigationSystem().DestoryStraightPath( m_pPath );
+		m_pActiveScene->GetNavigationSystem().DestoryStraightPath( m_pPath );
 		m_pPath = nullptr;
 	}
+
+	m_pActiveScene = nullptr;
 }
 
 void KsmtMoveToPlayer::InitialiseTask( NodeEditorTaskHandler* pHandler, NodeEditorBase* pEditor, NodeEditorNodeBase* pNode )
@@ -34,6 +36,9 @@ void KsmtMoveToPlayer::InitialiseTask( NodeEditorTaskHandler* pHandler, NodeEdit
 	}
 
 	m_PathRetargetDelay = m_PathRetargetDelayInterval;
+
+	// HACK!
+	m_pActiveScene = g_ActiveScene;
 }
 
 Saturn::NodeEditorTaskState KsmtMoveToPlayer::Tick( Timestep ts )
@@ -81,7 +86,7 @@ Saturn::NodeEditorTaskState KsmtMoveToPlayer::InitPath()
 	if( !m_pTarget )
 		return NodeEditorTaskState::Failed;
 
-	m_pPath = g_ActiveScene->GetNavigationSystem().CreateStraightPath( m_Agent->GetLocalPosition(), m_pTarget->GetLocalPosition() );
+	m_pPath = m_pActiveScene->GetNavigationSystem().CreateStraightPath( m_Agent->GetLocalPosition(), m_pTarget->GetLocalPosition() );
 	m_pPath->CreatePath();
 
 	return NodeEditorTaskState::Starting;

@@ -44,17 +44,9 @@ void GameState::TickGameState( Timestep ts )
 		{
 			case EGameState::WaveInProgress:
 			{
-				// Decide if we should have an intermission.
-				bool intermission = false;
-				if( intermission )
-				{
-					m_GameState = EGameState::Intermission;
-				}
-				// No intermission, next wave...
-				else 
-				{
-					AdvanceToNextWave();
-				}
+				// Go to next wave.
+				// NOTE: We may chance state after this to EGameState::Intermission!
+				AdvanceToNextWave();
 			} break;
 			
 			case EGameState::Intermission:

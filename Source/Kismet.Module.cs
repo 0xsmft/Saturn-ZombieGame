@@ -11,6 +11,7 @@ public class KismetModule : Module
 
         Name = "Saturn";
 
+        // This is so shit, this should be handled by the Target.
         if( Shared.ProjectInfo.CurrentConfigKind == ConfigKind.Dist )
         {
             OutputType = LinkerOutput.Executable;

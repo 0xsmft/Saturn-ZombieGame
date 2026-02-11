@@ -11,8 +11,18 @@
 
 using namespace Saturn;
 
+// Kismet Player
 class Player;
 
+namespace Saturn {
+	class Scene;
+}
+
+/**
+ * Enemy AI
+ * 
+ * Move to player (MoveToEntity really...)
+ */
 SCLASS( VisibleInEditor )
 class KsmtMoveToPlayer : public BehaviourTreeBaseTask
 {
@@ -39,6 +49,7 @@ private:
 	AIAgentEntity* m_Agent = nullptr;
 
 	Player* m_pTarget = nullptr;
+	Scene* m_pActiveScene = nullptr;
 
 	StraightNavPath* m_pPath = nullptr;
 	glm::vec3 m_NextPosition{};

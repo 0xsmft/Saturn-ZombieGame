@@ -9,6 +9,13 @@
 
 using namespace Saturn;
 
+/**
+ * Ammo Crate Spawner
+ * 
+ * OnBeginPlay the spawner will try to spawn.
+ * 
+ * The GameState controls when it should try to respawn.
+ */
 SCLASS( VisibleInEditor )
 class AmmoCrateSpawner : public Entity
 {
@@ -21,8 +28,19 @@ public:
 	virtual void OnUpdate( Saturn::Timestep ts ) override;
 
 public:
+	/**
+	 * Spawn the ammo crate now! Fuck the RNG.
+	 */
 	void ForceSpawn();
+
+	/**
+	 * Let the RNG decide if we should spawn or not.
+	 */
 	void RequestRespawn();
+
+	/**
+	 * Get the value of the magazines in the crate.
+	 */
 	uint32_t GetValue() const { return m_Value; }
 
 private:

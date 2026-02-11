@@ -17,7 +17,6 @@ enum class EGameState
 	// Wave 0
 	Init,
 
-	// Wave 1+
 	WaveInProgress,
 	
 	// Preparation time
@@ -29,6 +28,7 @@ enum class EGameState
 
 /**
  * The game state entity controls the state of the game.
+ * 
  * In this game it acts as the wave manager deciding how many entities should spawn 
  * and when the next wave should occur, it also keeps track of ammo boxes.
  */

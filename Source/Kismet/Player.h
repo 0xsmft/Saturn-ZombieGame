@@ -13,6 +13,9 @@ namespace Saturn {
 	class Texture2D;
 }
 
+/**
+ * THE player.
+ */
 SCLASS( VisibleInEditor )
 class Player : public Character
 {

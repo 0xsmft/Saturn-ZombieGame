@@ -20,9 +20,12 @@ public:
 	virtual void BeginPlay() override;
 	virtual void OnUpdate( Saturn::Timestep ts ) override;
 
+public:
+	/**
+	 * Spawn more enemies.
+	 */
 	void Spawn();
 
-public:
 	void IncrementNumberToSpawn() { ++m_NumberToSpawn; }
 	uint32_t GetNumberToSpawn() { return m_NumberToSpawn; }
 	void SetNumberToSpawn( uint32_t n ) { m_NumberToSpawn = n; }

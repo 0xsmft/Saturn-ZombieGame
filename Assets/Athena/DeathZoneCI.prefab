@@ -1,0 +1,34 @@
+# WARNING, MODIFICATIONS TO THIS FILE WILL NOT UPDATE GLOBALLY IN EDITOR!
+Prefab: 1680156242400638590
+Root Entity: 12200839383725224445
+Entities:
+  - Entity: 12200839383725224445
+    Class: DeathZone
+    TagComponent:
+      Tag: DeathZoneCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1680156242400638590
+      Modified: false
+    BoxColliderComponent:
+      Extents: [1, 1, 1]
+      Offset: [0, 0, 0]
+      IsTrigger: true
+      AutoAdjustExtent: true
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0

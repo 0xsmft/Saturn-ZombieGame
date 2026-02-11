@@ -1,4 +1,8 @@
 Scene: Untitled Scene
+Visualisation:
+  ShowGrid: true
+  ShowGridRT: false
+  PhysCollider: 1
 Entities:
   - Entity: 6746269488979416040
     Class: Entity
