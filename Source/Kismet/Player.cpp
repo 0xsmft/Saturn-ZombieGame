@@ -35,11 +35,11 @@ void Player::BeginPlay()
 
 	// Fix - API 1.1
 #if defined( SAT_DIST )
-	Ref<TextureSourceAsset> sourceAsset = AssetManager::Get().GetAssetAs<TextureSourceAsset>( 2338072335932728136llu );
+	Ref<TextureSourceAsset> sourceAsset = AssetManager::Get()->GetAssetAs<TextureSourceAsset>( 2338072335932728136llu );
 #else
 	// Fix - API 1.1
 	// Fix - API 0.1
-	const auto fullPath = Project::GetActiveProject()->FilepathAbs( AssetManager::Get().FindAsset( 2338072335932728136llu )->Path );
+	const auto fullPath = Project::GetActiveProject()->FilepathAbs( AssetManager::Get()->FindAsset( 2338072335932728136llu )->Path );
 	Ref<TextureSourceAsset> sourceAsset = Ref<TextureSourceAsset>::Create( fullPath );
 #endif
 

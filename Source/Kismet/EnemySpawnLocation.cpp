@@ -42,8 +42,8 @@ void EnemySpawnLocation::OnUpdate( Saturn::Timestep ts )
 
 void EnemySpawnLocation::Spawn()
 {
-	Ref<Asset> asset = AssetManager::Get().FindAsset( 5113922268661067256llu );
-	Ref<Prefab> prefabAsset = AssetManager::Get().GetAssetAs<Prefab>( asset->ID );
+	Ref<Asset> asset = AssetManager::Get()->FindAsset( 5113922268661067256llu );
+	Ref<Prefab> prefabAsset = AssetManager::Get()->GetAssetAs<Prefab>( asset->ID );
 
 	for( uint32_t i = 0; i < m_NumberToSpawn; ++i )
 	{
