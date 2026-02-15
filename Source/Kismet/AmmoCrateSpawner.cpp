@@ -1,15 +1,14 @@
 #include "AmmoCrateSpawner.h"
 
 #include "Saturn/Core/Random.h"
-
-#include "Saturn/Asset/AssetManager.h"
-
 #include "Saturn/Physics/PhysicsRigidBody.h"
 
 AmmoCrateSpawner::AmmoCrateSpawner()
 {
 	AddComponent<StaticMeshComponent>();
 	AddComponent<BoxColliderComponent>();
+
+	m_Type = ConsumableType::Ammo;
 }
 
 AmmoCrateSpawner::~AmmoCrateSpawner()
@@ -21,16 +20,11 @@ void AmmoCrateSpawner::BeginPlay()
 	TrySpawnAgain();
 }
 
-void AmmoCrateSpawner::OnUpdate( Saturn::Timestep ts )
-{
-}
-
 void AmmoCrateSpawner::ForceSpawn()
 {
-	Show();
-	GetComponent<RigidbodyComponent>().Rigidbody->SetShapeTrigger( false );
+	Super::ForceSpawn();
 
-	// Number of mags.
+	// Set Number of mags.
 	m_Value = Random::RandomElementInRange( 1, 4 );
 }
 
@@ -41,14 +35,7 @@ void AmmoCrateSpawner::RequestRespawn()
 
 void AmmoCrateSpawner::TrySpawnAgain()
 {
-	if( Random::RandomBool() )
-	{
-		ForceSpawn();
-	}
-	else
-	{
-		Hide();
-		GetComponent<RigidbodyComponent>().Rigidbody->SetShapeTrigger( true );
-		m_Value = 0u;
-	}
+	Super::TrySpawnAgain();
+
+	GetComponent<RigidbodyComponent>().Rigidbody->SetShapeTrigger( !IsVisible() );
 }

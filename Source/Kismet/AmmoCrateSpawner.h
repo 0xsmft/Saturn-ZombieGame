@@ -3,7 +3,7 @@
 #include "Saturn/Core/Timestep.h"
 #include "Saturn/GameFramework/Core/GameScript.h"
 
-#include "Saturn/Scene/Entity.h"
+#include "Consumable.h"
 
 #include "AmmoCrateSpawner.Gen.h"
 
@@ -15,9 +15,13 @@ using namespace Saturn;
  * OnBeginPlay the spawner will try to spawn.
  * 
  * The GameState controls when it should try to respawn.
+ * 
+ * NOTE: Although this is called AmmoCrateSpawner, 
+ * in the ClassInstance it will have it's mesh, box collider and it's rigidbody,
+ * meaning that this class IS the AmmoCrate itself, yes I know it's dumb... but I don't want to overcomplicate the system again.
  */
 SCLASS( VisibleInEditor )
-class AmmoCrateSpawner : public Entity
+class AmmoCrateSpawner : public Consumable
 {
 	GENERATED_BODY()
 public:
@@ -25,27 +29,27 @@ public:
 	~AmmoCrateSpawner();
 
 	virtual void BeginPlay() override;
-	virtual void OnUpdate( Saturn::Timestep ts ) override;
 
 public:
+	//////////////////////////////////////////////////////////////////////////
+	// Consumable API
+
 	/**
 	 * Spawn the ammo crate now! Fuck the RNG.
 	 */
-	void ForceSpawn();
+	virtual void ForceSpawn() override;
 
 	/**
 	 * Let the RNG decide if we should spawn or not.
 	 */
-	void RequestRespawn();
+	virtual void RequestRespawn() override;
 
+public:
 	/**
-	 * Get the value of the magazines in the crate.
+	 * An AmmoCreate is considered "interactable" if it's visible in the Scene.
 	 */
-	uint32_t GetValue() const { return m_Value; }
+	[[nodiscard]] bool IsInteractable() const { return IsVisible(); }
 
-private:
-	void TrySpawnAgain();
-
-private:
-	uint32_t m_Value = 0u;
+protected:
+	virtual void TrySpawnAgain() override;
 };
