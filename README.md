@@ -20,7 +20,11 @@ Grab Ammo sound is free to download via <a href="https://pixabay.com/sound-effec
 
 Gun Click & Gun Fire are taken from a youtube <a href="https://youtu.be/mLxiH0-5ORQ">video</a> testing the Ruger AR 556 Semi Auto. Author: Pete Z
 
-Gun Reload sound is free to download from <a href="https://pixabay.com/sound-effects/film-special-effects-shot-and-reload-6158/">pixabay</a>, Author: deathnsorrow
+Gun Reload sound is free to download via <a href="https://pixabay.com/sound-effects/film-special-effects-shot-and-reload-6158/">pixabay</a>, Author: deathnsorrow
+
+Zombie Bite sound is free to download via <a href="https://pixabay.com/sound-effects/film-special-effects-zombie-bite-96528/">pixabay</a>, Author: freesound_community
+
+Zombie Pack, which was used to create the ambient sounds for the Zombies is free to download via <a href="https://pixabay.com/sound-effects/horror-zombie-packclean-record-70768/">pixabay</a>, Author: freesound_community
 
 ### UI Images
 

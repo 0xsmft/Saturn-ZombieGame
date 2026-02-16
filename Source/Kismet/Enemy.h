@@ -9,6 +9,10 @@
 
 using namespace Saturn;
 
+namespace Saturn {
+	class Sound;
+}
+
 /**
  * The enemy entity class.
  * Able to take damage and deal damage to the player.
@@ -29,4 +33,6 @@ public:
 
 private:
 	int32_t m_Health = 100;
+
+	Ref<Sound> m_AmbientSound = nullptr;
 };

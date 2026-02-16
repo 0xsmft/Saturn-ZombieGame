@@ -63,6 +63,10 @@ Assets:
     Path: Assets/Athena/Defaults/PhysM_Default.sphymaterial
     Type: PhysicsMaterial
     Version: 8196
+  - Asset: 2482004967821507364
+    Path: Assets/Athena/Sounds/Zombie/SFX_ZbGrunt1.snd
+    Type: Audio
+    Version: 8196
   - Asset: 3007642428770073042
     Path: Assets/Athena/Weapons/Weapon.stmesh
     Type: StaticMesh
@@ -94,6 +98,10 @@ Assets:
   - Asset: 18157942553330815693
     Path: Assets/Athena/Weapons/Textures/Material__183_normal.jpeg
     Type: Texture
+    Version: 8196
+  - Asset: 11474219673214559782
+    Path: Assets/Athena/Sounds/Zombie/SFX_ZbGrunt3.snd
+    Type: Audio
     Version: 8196
   - Asset: 2338072335932728136
     Path: Assets/Athena/Hud/Textures/HUD_Crosshair.png
@@ -143,9 +151,17 @@ Assets:
     Path: Assets/Athena/Sounds/Weapon/SFX_GunFire.snd
     Type: Audio
     Version: 8196
+  - Asset: 2990208416715314967
+    Path: Assets/Athena/Sounds/Zombie/SFX_ZbGrunt2.snd
+    Type: Audio
+    Version: 8196
   - Asset: 968415808348049396
     Path: Assets/Athena/SurvivalSupport/Ammo/Mesh/AmmoCrateMesh.stmesh
     Type: StaticMesh
+    Version: 8196
+  - Asset: 1282004882715337350
+    Path: Assets/Athena/Sounds/Zombie/SFX_ZbBite.snd
+    Type: Audio
     Version: 8196
   - Asset: 13854200658949803486
     Path: Assets/Athena/SurvivalSupport/Ammo/Textures/AmmoCrateRoughMetal.png
@@ -170,6 +186,10 @@ Assets:
   - Asset: 1680156242400638590
     Path: Assets/Athena/DeathZoneCI.prefab
     Type: Prefab
+    Version: 8196
+  - Asset: 625831878733667820
+    Path: Assets/Athena/Sounds/Zombie/SG_ZbGrunt.gsnd
+    Type: GraphSound
     Version: 8196
 Asset Dependencies:
   - AssetID: 12765754648904108514
