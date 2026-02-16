@@ -19,6 +19,10 @@ Assets:
     Path: Assets/Athena/Defaults/M_Default.smaterial
     Type: Material
     Version: 8196
+  - Asset: 11649624488961672427
+    Path: Assets/Athena/Debug/M_DeathZone.smaterial
+    Type: Material
+    Version: 8196
   - Asset: 5374017015968207930
     Path: Assets/Athena/Debug/Meshes/XNavTest.stmesh
     Type: StaticMesh
@@ -191,6 +195,10 @@ Assets:
     Path: Assets/Athena/Sounds/Zombie/SG_ZbGrunt.gsnd
     Type: GraphSound
     Version: 8196
+  - Asset: 11436008685605565923
+    Path: Assets/Athena/Debug/Textures/DZ.png
+    Type: Texture
+    Version: 8196
 Asset Dependencies:
   - AssetID: 12765754648904108514
     Dependencies:
@@ -204,6 +212,9 @@ Asset Dependencies:
   - AssetID: 5374017015968207930
     Dependencies:
       - Dependency: 5915327659435897251
+  - AssetID: 11649624488961672427
+    Dependencies:
+      - Dependency: 11436008685605565923
   - AssetID: 968415808348049396
     Dependencies:
       - Dependency: 12765754648904108514
