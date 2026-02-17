@@ -83,7 +83,18 @@ void Player::OnUpdate( Timestep ts )
 {
 	Super::OnUpdate( ts );
 
-	// Update weapon movement
+	// Damage checking.
+	if( m_AlreadyTakingDamage && ( m_DamageCooldownTime -= ts.Seconds() ) <= 0.0f )
+	{
+#if defined(SAT_DEBUG)
+		SAT_CORE_INFO( "The Player is able to take damage again..." );
+#endif
+
+		m_DamageCooldownTime = 0.0f;
+		m_AlreadyTakingDamage = false;
+	}
+
+	// Update weapon movement.
 	if( m_Weapon )
 	{
 		const auto& camera = GetCameraEntity()->GetComponent<CameraComponent>().Camera;
@@ -183,7 +194,7 @@ void Player::Use()
 		ShowMessageText();
 
 		// Fix - API 0.1
-		// Play ammo empty sound
+		// Play ammo empty sound.
 		AudioSystem::Get().RequestNewSound( 8451897523760267992llu );
 		return;
 	}
@@ -203,6 +214,14 @@ void Player::Use()
 				auto enemy = result.Hit.As<Enemy>();
 				if( enemy )
 				{
+					// Yes we could be fancy and do some crazy cool maths to figure out
+					// what our damage should be based on the distance
+					// but we are shooting a rife and lets be real most of the entities have to be in close range
+					// anyways.
+					// 
+					// MaxDistance == 20.0 == 20m
+					// (a very short ranged rife...)
+					// Anyways, more RNG!
 					enemy->TakeDamage( ( int )Random::RandomElementInRange( 25, 88 ) );
 				}
 			}
@@ -283,28 +302,43 @@ void Player::OnMeshHit( SharedPtr<Entity> Other )
 {
 	if( Other->GetClass() == Enemy::StaticClass() )
 	{
-		TakeDamage( 50 );
+		TakeDamage( 15 );
+	}
+}
+
+void Player::HandleMenu()
+{
+#if !defined(SAT_DIST)
+	if( Input::Get().KeyPressed( RubyKey_LeftCtrl ) || Input::Get().KeyPressed( RubyKey_RightCtrl ) )
+#endif
+	{
+		GetScene()->PauseGame();
+		Input::Get().SetCursorMode( RubyCursorMode::Normal, true );
 	}
 }
 
 void Player::TakeDamage( int32_t damage )
 {
-	m_Health = glm::max( 0, m_Health - damage );
-
-	if( m_Health == 0 )
+	// This is not the best way to handle damage at all, but some entities will swarm the player
+	// causing player to die in seconds,
+	// so to mitigate this there is a small delay on taking damage.
+	// 
+	// TODO: Accrue damage.
+	if( !m_AlreadyTakingDamage )
 	{
-//		GetScene()->DestroyEntity( this );
+#if defined(SAT_DEBUG)
+		SAT_CORE_INFO( "Player taking damage {0}", damage );
+#endif
 
-		SAT_CORE_INFO( "Health: {0}", m_Health );
+		// Reset cool down.
+		m_DamageCooldownTime = 0.5f;
+		m_Health = glm::max( 0, m_Health - damage );
+		m_AlreadyTakingDamage = true;
 	}
 }
 
 void Player::OnMeshExit( SharedPtr<Entity> Other )
 {
-	if( Other->GetClass() == Enemy::StaticClass() )
-	{
-		TakeDamage( 50 );
-	}
 }
 
 void Player::ShowMessageText( float timeInSeconds /*= 2.5f */ )
