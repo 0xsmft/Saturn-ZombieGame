@@ -9,6 +9,10 @@
 
 using namespace Saturn;
 
+namespace Saturn {
+	class Sound;
+}
+
 /**
  * The actual game state...
  */
@@ -73,4 +77,6 @@ private:
 	bool m_ShowGameStateDebug = false;
 #endif
 	EGameState m_GameState = EGameState::Init;
+
+	Ref<Sound> m_TickSound;
 };

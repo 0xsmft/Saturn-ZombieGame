@@ -9,6 +9,8 @@
 #include "Saturn/Alura/AluraCanvas.h"
 #include "Saturn/Vulkan/AluraRenderer.h"
 
+#include "Saturn/GameFramework/GameFramework.h"
+
 GameState::GameState()
 {
 }
@@ -22,6 +24,8 @@ void GameState::BeginPlay()
 	Super::BeginPlay();
 
 	SetupGameState();
+
+	m_TickSound = AsPlaySound2D( 8050284560379928628llu );
 }
 
 void GameState::OnUpdate( Saturn::Timestep ts )
@@ -63,7 +67,13 @@ void GameState::TickGameState( Timestep ts )
 				break;
 		}
 	}
-
+	else if( m_TimeUntilNextGameState <= 3 )
+	{
+		if( !m_TickSound->IsPlaying() )
+		{
+			m_TickSound->Play();
+		}
+	}
 }
 
 void GameState::DrawGameStateUI()
