@@ -1,0 +1,8 @@
+StaticMesh:
+  Filepath: Assets/Athena/SurvivalSupport/Health/Mesh/HealthKit.glb
+  Attached Shape: 1
+  Physics Material ID: -2006106910
+  MaterialRegistry:
+    Materials:
+      - 0: 15980083650993367418
+      - 1: 15980083650993367418

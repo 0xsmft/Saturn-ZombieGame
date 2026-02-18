@@ -14,7 +14,7 @@ Entities:
       Position: [0, 0, 0]
       Rotation: [0, 0, 0]
       Quaternion: [0, 0, 0, 1]
-      Scale: [100, 100, 100]
+      Scale: [1, 1, 1]
     RelationshipComponent:
       Parent: 0
       Children:
@@ -23,13 +23,14 @@ Entities:
       AssetID: 17066470373613386315
       Modified: false
     MeshComponent:
-      Asset: 14888528075718103984
+      Asset: 18323555681594210271
       MaterialRegistry:
         AnyOverrides: false
         MaterialOverrides:
           - 0: 0
+          - 1: 0
     BoxColliderComponent:
-      Extents: [0.5, 0.5, 0.5]
+      Extents: [0.25, 0.150000006, 0.100000001]
       Offset: [0, 0, 0]
       IsTrigger: false
       AutoAdjustExtent: false
