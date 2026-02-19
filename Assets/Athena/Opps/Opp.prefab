@@ -25,9 +25,9 @@ Entities:
     MeshComponent:
       Asset: 165149688583984825
       MaterialRegistry:
-        AnyOverrides: false
+        AnyOverrides: true
         MaterialOverrides:
-          - 0: 0
+          - 0: 6750571966792973822
     RigidbodyComponent:
       IsKinematic: true
       CCD: false
