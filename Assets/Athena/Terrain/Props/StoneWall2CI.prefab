@@ -1,0 +1,42 @@
+# WARNING, MODIFICATIONS TO THIS FILE WILL NOT UPDATE GLOBALLY IN EDITOR!
+Prefab: 9695963966603639515
+Root Entity: 11258350935522112288
+Entities:
+  - Entity: 11258350935522112288
+    Class: Entity
+    TagComponent:
+      Tag: StoneWall2CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [1.9043684e-05, -6.19888306e-06, 6.36577606e-05]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 6844437785401053357
+      Modified: false
+    MeshComponent:
+      Asset: 1778302795075590585
+      MaterialRegistry:
+        AnyOverrides: true
+        MaterialOverrides:
+          - 0: 2332503372906174876
+          - 1: 0
+          - 2: 0
+    BoxColliderComponent:
+      Extents: [1.10000002, 2.79999995, 6]
+      Offset: [0, 2.0999999, -0.300000012]
+      IsTrigger: false
+      AutoAdjustExtent: false
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0

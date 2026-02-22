@@ -1,0 +1,41 @@
+# WARNING, MODIFICATIONS TO THIS FILE WILL NOT UPDATE GLOBALLY IN EDITOR!
+Prefab: 17703423472266939652
+Root Entity: 13277494996752231158
+Entities:
+  - Entity: 13277494996752231158
+    Class: Entity
+    TagComponent:
+      Tag: FenceCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 17703423472266939652
+      Modified: false
+    MeshComponent:
+      Asset: 9560119971860032365
+      MaterialRegistry:
+        AnyOverrides: true
+        MaterialOverrides:
+          - 0: 12921953789803613332
+          - 1: 12921953789803613332
+    BoxColliderComponent:
+      Extents: [0.5, 0.800000012, 3.0999999]
+      Offset: [0, 0, 0]
+      IsTrigger: false
+      AutoAdjustExtent: false
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0

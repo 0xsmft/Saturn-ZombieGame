@@ -1,0 +1,10 @@
+Material:
+  AlbedoColor: [0.321568638, 0.321568638, 0.321568638]
+  AlbedoTexture: 0
+  UseNormal: 0
+  NormalTexture: 0
+  Metalness: 1
+  MetalnessTexture: 0
+  Roughness: 1
+  RoughnessTexture: 0
+  Emissive: 0

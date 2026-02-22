@@ -14,6 +14,10 @@ The mesh `XNavTest` was taken from the <a href="https://github.com/recastnavigat
 
 The HealthKit mesh is free to download via <a href="https://sketchfab.com/3d-models/medkit-e5bbfa708fce411fb6ffbd18d50c971f">Sketchfab</a>, Author: Brandon Baldwin
 
+Low Poly Wooden Fence is free to download via <a href="https://sketchfab.com/3d-models/low-poly-wooden-fence-d69753a062cf4b47b9434a63631ed947">Sketchfab</a>, Author: thelegokid4455
+
+Low Poly Stone Walls is free to download via <a href="https://sketchfab.com/3d-models/low-poly-stone-walls-3e71a31454664216b1284056639106f6">Sketchfab</a>, Author: AkuVai
+
 ### Sounds
 
 Grab Ammo sound is free to download via <a href="https://pixabay.com/sound-effects/film-special-effects-box-of-ammo-64427/">pixabay</a>, Author: UnplugTheFridge

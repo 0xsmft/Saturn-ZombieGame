@@ -1,0 +1,8 @@
+StaticMesh:
+  Filepath: Assets/Athena/Terrain/Props/Mesh/Fence.glb
+  Attached Shape: 1
+  Physics Material ID: 0
+  MaterialRegistry:
+    Materials:
+      - 0: 12921953789803613332
+      - 1: 12921953789803613332

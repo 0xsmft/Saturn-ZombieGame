@@ -1,0 +1,10 @@
+StaticMesh:
+  Filepath: Assets/Athena/Terrain/Props/Mesh/StoneWall2.glb
+  Attached Shape: 0
+  Physics Material ID: 0
+  MaterialRegistry:
+    Materials:
+      - 0: 2332503372906174876
+      - 1: 5915327659435897251
+      - 2: 9388542142531453729
+      - 3: 3728408018453544927
