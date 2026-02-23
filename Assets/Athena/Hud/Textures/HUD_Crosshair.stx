@@ -1,0 +1,7 @@
+Texture:
+  Width: 512
+  Height: 512
+  Channels: 4
+  Hdr: false
+  Flags: 1
+  Source Path: Assets/Athena/Hud/Textures/HUD_Crosshair.png

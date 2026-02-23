@@ -1,0 +1,7 @@
+Texture:
+  Width: 2048
+  Height: 2048
+  Channels: 4
+  Hdr: false
+  Flags: 1
+  Source Path: Assets/Athena/SurvivalSupport/Health/Textures/Medkit_metallicRoughness.png
