@@ -44,6 +44,13 @@ public:
 	virtual void RequestRespawn();
 
 	/**
+	 * When this consumable is used this function should be called.
+	 * It is not the responsibility of the Consumable to do this, but it is the 
+	 * responsibility of the caller.
+	 */
+	virtual void OnUse();
+
+	/**
 	 * Get the "value" of this consumable.
 	 * 
 	 * Value could mean the amount of magazines in it if this was an AmmoCrateSpawner
@@ -51,7 +58,15 @@ public:
 	 */
 	uint32_t GetValue() const { return m_Value; }
 
+	/**
+	 * Get the type.
+	 */
 	ConsumableType GetType() const { return m_Type; }
+
+	/**
+	 * A Consumable is considered "interactable" if it's visible in the Scene.
+	 */
+	[[nodiscard]] bool IsInteractable() const { return IsVisible(); }
 
 protected:
 	virtual void TrySpawnAgain();

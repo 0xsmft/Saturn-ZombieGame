@@ -33,6 +33,14 @@ void AmmoCrateSpawner::RequestRespawn()
 	TrySpawnAgain();
 }
 
+void AmmoCrateSpawner::OnUse()
+{
+	Super::OnUse();
+
+	// Mark this as a trigger.
+	GetComponent<RigidbodyComponent>().Rigidbody->SetShapeTrigger( true );
+}
+
 void AmmoCrateSpawner::TrySpawnAgain()
 {
 	Super::TrySpawnAgain();

@@ -20,6 +20,11 @@ void Consumable::RequestRespawn()
 	TrySpawnAgain();
 }
 
+void Consumable::OnUse()
+{
+	Hide();
+}
+
 void Consumable::TrySpawnAgain()
 {
 	if( Random::RandomBool() )

@@ -1,6 +1,7 @@
 #include "Player.h"
 
-#include "AmmoCrateSpawner.h"
+#include "Consumable.h"
+
 #include "Enemy.h"
 
 #if !defined(SAT_DIST)
@@ -8,6 +9,8 @@
 #endif
 
 #include "Saturn/Core/Random.h"
+
+#include "Saturn/GameFramework/SClass.h"
 
 #include "Saturn/Physics/PhysicsScene.h"
 #include "Saturn/Physics/PhysicsRigidBody.h"
@@ -33,22 +36,9 @@ void Player::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// Fix - API 1.1
-#if defined( SAT_DIST )
-	Ref<TextureSourceAsset> sourceAsset = AssetManager::Get()->GetAssetAs<TextureSourceAsset>( 2338072335932728136llu );
-#else
-	// Fix - API 1.1
 	// Fix - API 0.1
-	const auto fullPath = Project::GetActiveProject()->FilepathAbs( AssetManager::Get()->FindAsset( 2338072335932728136llu )->Path );
-	Ref<TextureSourceAsset> sourceAsset = Ref<TextureSourceAsset>::Create( fullPath );
-#endif
-
-	m_HudCrosshairTexture = Ref<Texture2D>::Create(
-		ImageFormat::RGBA8,
-		sourceAsset->Width(),
-		sourceAsset->Height(),
-		sourceAsset->TextureData().Data,
-		false );
+	Ref<TextureSourceAsset> sourceAsset = AssetManager::Get()->GetAssetAs<TextureSourceAsset>( 2338072335932728136llu );
+	m_HudCrosshairTexture = sourceAsset->GetTexture();
 	
 	//////////////////////////////////////////////////////////////////////////
 
@@ -97,18 +87,20 @@ void Player::OnUpdate( Timestep ts )
 	// Update weapon movement.
 	if( m_Weapon )
 	{
-		const auto& camera = GetCameraEntity()->GetComponent<CameraComponent>().Camera;
+		// This is all we are getting for now.
+		// I have NO clue how to make this work.
+		// we probably have to calculate our angle offset
+		// from our turning... angle bullshit.
 		
+		const auto& camera = GetCameraEntity()->GetComponent<CameraComponent>().Camera;		
 		auto rotation = m_Weapon->GetLocalRotation();
 		rotation.x = camera->GetPitch();
-//		rotation.y = -camera->GetYaw();
 
 		m_Weapon->SetRotation( rotation );
-
-//		auto camPos = camera->GetPosition();
 	}
 
-	// Hit detection
+	// Consumable hit detection.
+	// Ray cast every frame!
 	RaycastHitResult result;
 	TransformComponent tc = GetScene()->GetWorldSpaceTransform( GetCameraEntity() );
 
@@ -116,13 +108,22 @@ void Player::OnUpdate( Timestep ts )
 	{
 		if( result.Hit )
 		{
-			if( result.Hit->GetClass() == AmmoCrateSpawner::StaticClass() )
+			if( result.Hit->GetClass()->IsChildOf( Consumable::StaticClass() ) )
 			{
-				m_IntractableEntityHit = result.Hit;
+				auto c = result.Hit.As<Consumable>();
+				if( c->IsInteractable() )
+				{
+					m_IntractableEntityHit = result.Hit;
 
-				// Display "E" to interact
-				m_StatusMessageText = "E";
-				ShowMessageText();
+					// Display "E" to interact
+					m_StatusMessageText = "E";
+					ShowMessageText();
+				}
+			}
+			else
+			{
+				HideMessageText();
+				m_IntractableEntityHit = nullptr;
 			}
 		}
 	}
@@ -132,6 +133,7 @@ void Player::OnUpdate( Timestep ts )
 		m_IntractableEntityHit = nullptr;
 	}
 
+	// ALURA Hud
 	DrawHud( ts );
 }
 
@@ -142,7 +144,16 @@ void Player::DrawHud( Timestep ts )
 	// Alura UI pass.
 	g_AluraCanvas->PushFontSize( 32.0f );
 
-	// Timer text
+	// Player
+	{
+		g_AluraCanvas->AddText( "Health" );
+		g_AluraCanvas->SameLine();
+		g_AluraCanvas->AddProgressBar( ( float ) ( m_Health / 100 ), { 64.0f, 16.0f } );
+		g_AluraCanvas->SameLine();
+		g_AluraCanvas->AddText( std::format( "{0} / 100", m_Health ) );
+	}
+
+	// Weapon
 	{
 		// Fix - API 3.2
 		std::string text = std::format( "{0} / {1} ({2} Magazines)", m_Ammo, m_MaxAmmoInMag, m_NumberOfMagazines );
@@ -205,7 +216,7 @@ void Player::Use()
 	RaycastHitResult result;
 	TransformComponent tc = GetScene()->GetWorldSpaceTransform( GetCameraEntity() );
 
-	if( GetScene()->Raycast( tc.Position + CalculateForward(), CalculateForward(), 10.0f, &result ) )
+	if( GetScene()->Raycast( tc.Position + CalculateForward(), CalculateForward(), 20.0f, &result ) )
 	{
 		if( result.Hit )
 		{
@@ -229,6 +240,7 @@ void Player::Use()
 	}
 
 	// Fix - API 0.1
+	// Play fire sound.
 	AudioSystem::Get().PlaySoundAtLocation( 3293489935082472872llu, Saturn::UUID(), GetLocalPosition() );
 }
 
@@ -275,14 +287,40 @@ void Player::Interact()
 
 	if( m_IntractableEntityHit )
 	{
-		auto ammoCrate = m_IntractableEntityHit.As<AmmoCrateSpawner>();
-		if( ammoCrate )
-		{
-			m_NumberOfMagazines += ammoCrate->GetValue();
-			ammoCrate->Hide();
+		auto consumable = m_IntractableEntityHit.As<Consumable>();
 
-			// Fix - API 0.1
-			AudioSystem::Get().RequestNewSound( 16177217556467335637llu );
+		// No need to check if its interactable because we wouldn't of gotten here
+		// if it wasn't.
+		if( consumable /*&& consumable->IsInteractable()*/ )
+		{
+			switch( consumable->GetType() )
+			{
+				case ConsumableType::Unknown:
+				default:
+					break;
+
+				case ConsumableType::Ammo:
+				{
+					m_NumberOfMagazines += consumable->GetValue();
+					consumable->OnUse();
+
+					// Fix - API 0.1 - Play get ammo sound
+					AudioSystem::Get().RequestNewSound( 16177217556467335637llu );
+				} break;
+
+				case ConsumableType::HealthKit:
+				{
+					if( m_Health == 100u )
+					{
+						m_StatusMessageText = "Already full health";
+						ShowMessageText();
+						break;
+					}
+
+					m_Health = glm::min( 100u, m_Health + consumable->GetValue() );
+					consumable->OnUse();
+				} break;
+			}
 		}
 	}
 }
@@ -309,7 +347,7 @@ void Player::OnMeshHit( SharedPtr<Entity> Other )
 void Player::HandleMenu()
 {
 #if !defined(SAT_DIST)
-	if( Input::Get().KeyPressed( RubyKey_LeftCtrl ) || Input::Get().KeyPressed( RubyKey_RightCtrl ) )
+	if( Input::Get().KeyPressed( RubyKey_LeftShift ) || Input::Get().KeyPressed( RubyKey_RightShift ) )
 #endif
 	{
 		GetScene()->PauseGame();

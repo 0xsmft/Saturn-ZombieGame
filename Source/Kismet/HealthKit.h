@@ -27,12 +27,7 @@ public:
 	// Consumable API
 	virtual void ForceSpawn() override;
 	virtual void RequestRespawn() override;
-
-public:
-	/**
-	* A health kit considered "interactable" if it's visible in the Scene.
-	*/
-	[[nodiscard]] bool IsInteractable() const { return IsVisible(); }
+	virtual void OnUse() override;
 
 protected:
 	virtual void TrySpawnAgain() override;

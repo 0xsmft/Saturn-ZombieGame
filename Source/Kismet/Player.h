@@ -64,10 +64,13 @@ private:
 	glm::vec3 m_PrevForward{};
 	glm::vec3 m_PrevRight{};
 	float m_CurrentYaw = 0.0f;
+	// Time in seconds.
 	float m_MessageTimeRemaining = 0.0f;
+	float m_DamageCooldownTime = 0.50f;
 
 	bool m_ShowMessageText = false;
 	bool m_AlreadyReloading = false;
+	bool m_AlreadyTakingDamage = false;
 
 	std::string m_StatusMessageText{};
 

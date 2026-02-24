@@ -44,11 +44,10 @@ public:
 	 */
 	virtual void RequestRespawn() override;
 
-public:
 	/**
-	 * An AmmoCreate is considered "interactable" if it's visible in the Scene.
+	 * See documentation in Consumable
 	 */
-	[[nodiscard]] bool IsInteractable() const { return IsVisible(); }
+	virtual void OnUse() override;
 
 protected:
 	virtual void TrySpawnAgain() override;

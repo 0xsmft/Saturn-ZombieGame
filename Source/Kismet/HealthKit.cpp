@@ -35,6 +35,14 @@ void HealthKit::RequestRespawn()
 	Super::RequestRespawn();
 }
 
+void HealthKit::OnUse()
+{
+	Super::OnUse();
+
+	// Mark as trigger.
+	GetComponent<RigidbodyComponent>().Rigidbody->SetShapeTrigger( true );
+}
+
 void HealthKit::TrySpawnAgain()
 {
 	Super::TrySpawnAgain();

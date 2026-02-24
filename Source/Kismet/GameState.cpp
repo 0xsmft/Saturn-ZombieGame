@@ -2,6 +2,8 @@
 #include "GameState.h"
 
 #include "AmmoCrateSpawner.h"
+#include "HealthKit.h"
+
 #include "EnemySpawnLocation.h"
 
 #include "Saturn/Core/Random.h"
@@ -25,7 +27,7 @@ void GameState::BeginPlay()
 
 	SetupGameState();
 
-	m_TickSound = AsPlaySound2D( 8050284560379928628llu );
+	m_TickSound = AsRequestSound2D( 8050284560379928628llu );
 }
 
 void GameState::OnUpdate( Saturn::Timestep ts )
@@ -46,23 +48,23 @@ void GameState::TickGameState( Timestep ts )
 	{
 		switch( m_GameState )
 		{
-			case EGameState::WaveInProgress:
+			case GameStateStage::WaveInProgress:
 			{
 				// Go to next wave.
 				// NOTE: We may chance state after this to EGameState::Intermission!
 				AdvanceToNextWave();
 			} break;
 			
-			case EGameState::Intermission:
+			case GameStateStage::Intermission:
 			{
 				// If we are currently in intermission and the time is up, set state to waves and begin spawning again.
-				m_GameState = EGameState::WaveInProgress;
+				m_GameState = GameStateStage::WaveInProgress;
 
 				AdvanceToNextWave();
 			} break;
 
-			case EGameState::Init:
-			case EGameState::Dead:
+			case GameStateStage::Init:
+			case GameStateStage::Dead:
 			default:
 				break;
 		}
@@ -124,16 +126,16 @@ void GameState::DrawGameStateUI()
 
 		switch( m_GameState )
 		{
-			case EGameState::WaveInProgress:
+			case GameStateStage::WaveInProgress:
 				text = std::format( "Wave {0}", m_CurrentWave );
 				break;
 
-			case EGameState::Intermission:
+			case GameStateStage::Intermission:
 				text = "Intermission - prepare for next wave";
 				break;
 
-			case EGameState::Init:
-			case EGameState::Dead:
+			case GameStateStage::Init:
+			case GameStateStage::Dead:
 			default:
 				break;
 		}
@@ -160,7 +162,7 @@ void GameState::SetupFirstWave()
 
 void GameState::SetupGameState()
 {
-	m_GameState = EGameState::Intermission;
+	m_GameState = GameStateStage::Intermission;
 	SetupFirstWave();
 }
 
@@ -170,12 +172,12 @@ void GameState::AdvanceToNextWave()
 	// and of course we need our RNG because who doesn't love that.
 	if( m_NumberOfWavesSinceLastInt >= 5 && Random::RandomBool() )
 	{
-		m_GameState = EGameState::Intermission;
+		m_GameState = GameStateStage::Intermission;
 		m_NumberOfWavesSinceLastInt = 0;
 		m_TimeUntilNextGameState = Random::RandomFloatInRange( 15.0f, 45.0f );
 
 		// We need to make sure we replenish the ammo crates...
-		ReplenishAmmoCrates();
+		ReplenishConsumables();
 
 		return;
 	}
@@ -218,10 +220,10 @@ void GameState::AdvanceToNextWave()
 		rEntity->Spawn();
 	}
 
-	ReplenishAmmoCrates();
+	ReplenishConsumables();
 }
 
-void GameState::ReplenishAmmoCrates()
+void GameState::ReplenishConsumables()
 {
 	int numberOfVisibleSpawners = 0;
 
@@ -239,5 +241,12 @@ void GameState::ReplenishAmmoCrates()
 	{
 		// RNG again to decide what spawner should become visible.
 		ammoSpanwers[ Random::RandomElementInRange( 0, ammoSpanwers.size() - 1 ) ]->ForceSpawn();
+	}
+
+	// Spawn health kits
+	auto healthKits = GetScene()->GetAllEntitiesWithClass<HealthKit>();
+	for( auto& rEntity : healthKits )
+	{
+		rEntity->RequestRespawn();
 	}
 }
