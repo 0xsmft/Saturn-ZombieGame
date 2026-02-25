@@ -38,6 +38,8 @@ private:
 	void DbgMenuHandle();
 #endif
 
+	void HandleMenu();
+
 	void TakeDamage( int32_t damage );
 
 	void OnMeshHit( SharedPtr<Entity> Other );

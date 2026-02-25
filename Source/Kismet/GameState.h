@@ -16,7 +16,7 @@ namespace Saturn {
 /**
  * The actual game state...
  */
-enum class EGameState
+enum class GameStateStage
 {
 	// Wave 0
 	Init,
@@ -55,6 +55,7 @@ public:
 #endif
 
 private:
+	void DrawPausedUI();
 	void TickGameState( Timestep ts );
 	void DrawGameStateUI();
 
@@ -62,7 +63,7 @@ private:
 	void SetupGameState();
 
 	void AdvanceToNextWave();
-	void ReplenishAmmoCrates();
+	void ReplenishConsumables();
 
 private:
 	uint32_t m_CurrentWave = 0u;
@@ -76,7 +77,7 @@ private:
 #if !defined(SAT_DIST)
 	bool m_ShowGameStateDebug = false;
 #endif
-	EGameState m_GameState = EGameState::Init;
+	GameStateStage m_GameState = GameStateStage::Init;
 
 	Ref<Sound> m_TickSound;
 };
