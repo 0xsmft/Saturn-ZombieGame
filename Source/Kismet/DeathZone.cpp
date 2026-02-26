@@ -34,6 +34,8 @@ void DeathZone::OnMeshHit( SharedPtr<Entity> Other )
 			rCameraComp.MainCamera = true;
 		}
 
+		SAT_CORE_INFO( "DeathZone killed entity: {0}", Other->GetName() );
+
 		// Destory entity...
 		GetScene()->DestroyEntity( Other.Get() );
 	}
