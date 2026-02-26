@@ -1,0 +1,8 @@
+StaticMesh:
+  Filepath: Assets/Athena/Terrain/Props/Mesh/Haycock.glb
+  Attached Shape: 5
+  Physics Material ID: -2006106910
+  MaterialRegistry:
+    Materials:
+      - 0: 13679589663929221812
+      - 1: 13679589663929221812

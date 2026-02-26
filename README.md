@@ -18,6 +18,8 @@ Low Poly Wooden Fence is free to download via <a href="https://sketchfab.com/3d-
 
 Low Poly Stone Walls is free to download via <a href="https://sketchfab.com/3d-models/low-poly-stone-walls-3e71a31454664216b1284056639106f6">Sketchfab</a>, Author: AkuVai
 
+Haycock and hay collection models is free to download via <a href="https://sketchfab.com/3d-models/free-pack-stylized-hay-bale-036289580a6a467b9705cd9a311747c1">Sketchfab</a>, Author: DuNguyn Studio
+
 ### Sounds
 
 Grab Ammo sound is free to download via <a href="https://pixabay.com/sound-effects/film-special-effects-box-of-ammo-64427/">pixabay</a>, Author: UnplugTheFridge

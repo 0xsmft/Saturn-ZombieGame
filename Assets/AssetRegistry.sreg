@@ -15,14 +15,6 @@ Assets:
     Path: Assets/Athena/Defaults/M_Default.smaterial
     Type: Material
     Version: 8196
-  - Asset: 11649624488961672427
-    Path: Assets/Athena/Debug/M_DeathZone.smaterial
-    Type: Material
-    Version: 8196
-  - Asset: 5374017015968207930
-    Path: Assets/Athena/Debug/Meshes/XNavTest.stmesh
-    Type: StaticMesh
-    Version: 8196
   - Asset: 5113922268661067256
     Path: Assets/Athena/Opps/Opp.prefab
     Type: Prefab
@@ -31,9 +23,21 @@ Assets:
     Path: Assets/Athena/Player/PlayerCI.prefab
     Type: Prefab
     Version: 8196
+  - Asset: 11649624488961672427
+    Path: Assets/Athena/Debug/M_DeathZone.smaterial
+    Type: Material
+    Version: 8196
+  - Asset: 5374017015968207930
+    Path: Assets/Athena/Debug/Meshes/XNavTest.stmesh
+    Type: StaticMesh
+    Version: 8196
   - Asset: 165149688583984825
     Path: Assets/Athena/Defaults/Capsule.stmesh
     Type: StaticMesh
+    Version: 8196
+  - Asset: 313970351627681043
+    Path: Assets/Athena/Terrain/Props/Textures/TP_WoodDiffuse.stx
+    Type: Texture
     Version: 8196
   - Asset: 9006556593877605602
     Path: Assets/Athena/GameStateCI.prefab
@@ -51,13 +55,21 @@ Assets:
     Path: Assets/Athena/Opps/OppBT.sbt
     Type: BehaviourTree
     Version: 8196
+  - Asset: 12921953789803613332
+    Path: Assets/Athena/Terrain/Props/Materials/M_TP_FenceMat.smaterial
+    Type: Material
+    Version: 8196
   - Asset: 15892810825430780158
     Path: Assets/Athena/Defaults/Plane.stmesh
     Type: StaticMesh
     Version: 8196
   - Asset: 18260538446210426904
-    Path: Assets/Athena/SurvivalSupport/Health/Textures/Medkit_metallicRoughness.png
+    Path: Assets/Athena/SurvivalSupport/Health/Textures/Medkit_metallicRoughness.stx
     Type: Texture
+    Version: 8196
+  - Asset: 1117485801279175151
+    Path: Assets/Athena/Terrain/Props/StoneWall1CI.prefab
+    Type: Prefab
     Version: 8196
   - Asset: 6354757706168330290
     Path: Assets/Scenes/NavigationPlayground.scene
@@ -76,23 +88,27 @@ Assets:
     Type: StaticMesh
     Version: 8196
   - Asset: 10084180520922664859
-    Path: Assets/Athena/Weapons/Textures/Material__180_baseColor.png
+    Path: Assets/Athena/Weapons/Textures/Material__180_baseColor.stx
     Type: Texture
+    Version: 8196
+  - Asset: 3728408018453544927
+    Path: Assets/Athena/Terrain/Props/Materials/M_TP_StoneWall2.smaterial
+    Type: Material
     Version: 8196
   - Asset: 14012615419070777176
     Path: Assets/Athena/Terrain/satgame-terrain.stmesh
     Type: StaticMesh
     Version: 8196
   - Asset: 3329617814416050954
-    Path: Assets/Athena/Weapons/Textures/Material__180_metallicRoughness.png
+    Path: Assets/Athena/Weapons/Textures/Material__180_metallicRoughness.stx
     Type: Texture
     Version: 8196
   - Asset: 1091016080700117701
-    Path: Assets/Athena/Weapons/Textures/Material__180_normal.jpeg
+    Path: Assets/Athena/Weapons/Textures/Material__180_normal.stx
     Type: Texture
     Version: 8196
   - Asset: 185171295186420253
-    Path: Assets/Athena/Weapons/Textures/Material__183_baseColor.png
+    Path: Assets/Athena/Weapons/Textures/Material__183_baseColor.stx
     Type: Texture
     Version: 8196
   - Asset: 570831928178778653
@@ -100,7 +116,7 @@ Assets:
     Type: Audio
     Version: 8196
   - Asset: 7577715937433098098
-    Path: Assets/Athena/Weapons/Textures/Material__183_metallicRoughness.png
+    Path: Assets/Athena/Weapons/Textures/Material__183_metallicRoughness.stx
     Type: Texture
     Version: 8196
   - Asset: 11474219673214559782
@@ -108,19 +124,19 @@ Assets:
     Type: Audio
     Version: 8196
   - Asset: 18157942553330815693
-    Path: Assets/Athena/Weapons/Textures/Material__183_normal.jpeg
-    Type: Texture
-    Version: 8196
-  - Asset: 5648108834415740525
-    Path: Assets/Athena/Weapons/Textures/Material__184_baseColor.png
-    Type: Texture
-    Version: 8196
-  - Asset: 5799686793832250549
-    Path: Assets/Athena/SurvivalSupport/Ammo/Textures/AmmoCrateColor.png
+    Path: Assets/Athena/Weapons/Textures/Material__183_normal.stx
     Type: Texture
     Version: 8196
   - Asset: 2338072335932728136
-    Path: Assets/Athena/Hud/Textures/HUD_Crosshair.png
+    Path: Assets/Athena/Hud/Textures/HUD_Crosshair.stx
+    Type: Texture
+    Version: 8196
+  - Asset: 5648108834415740525
+    Path: Assets/Athena/Weapons/Textures/Material__184_baseColor.stx
+    Type: Texture
+    Version: 8196
+  - Asset: 5799686793832250549
+    Path: Assets/Athena/SurvivalSupport/Ammo/Textures/AmmoCrateColor.stx
     Type: Texture
     Version: 8196
   - Asset: 8579261805612793011
@@ -132,35 +148,39 @@ Assets:
     Type: Material
     Version: 8196
   - Asset: 4000573893458569165
-    Path: Assets/Athena/Weapons/Textures/Material__184_metallicRoughness.png
-    Type: Texture
-    Version: 8196
-  - Asset: 2837394924545453813
-    Path: Assets/Athena/Weapons/Textures/Material__184_normal.jpeg
+    Path: Assets/Athena/Weapons/Textures/Material__184_metallicRoughness.stx
     Type: Texture
     Version: 8196
   - Asset: 4188168686474315140
     Path: Assets/Athena/Debug/M_Prototype.smaterial
     Type: Material
     Version: 8196
+  - Asset: 2837394924545453813
+    Path: Assets/Athena/Weapons/Textures/Material__184_normal.stx
+    Type: Texture
+    Version: 8196
   - Asset: 8451897523760267992
     Path: Assets/Athena/Sounds/Weapon/SFX_GunClick.snd
     Type: Audio
-    Version: 8196
-  - Asset: 7562165743019380132
-    Path: Assets/Athena/Debug/Textures/Red_Prototype_Texture_1x1.png
-    Type: Texture
     Version: 8196
   - Asset: 8050284560379928628
     Path: Assets/Athena/Sounds/Game/SFX_Tick.snd
     Type: Audio
     Version: 8196
+  - Asset: 9560119971860032365
+    Path: Assets/Athena/Terrain/Props/Mesh/Fence.stmesh
+    Type: StaticMesh
+    Version: 8196
   - Asset: 14683401302317873074
-    Path: Assets/Athena/SurvivalSupport/Health/Textures/Medkit_normal.png
+    Path: Assets/Athena/SurvivalSupport/Health/Textures/Medkit_normal.stx
     Type: Texture
     Version: 8196
   - Asset: 15540430296704676022
     Path: Assets/Athena/Weapons/Materials/M_WeaponShell.smaterial
+    Type: Material
+    Version: 8196
+  - Asset: 7151680205037334162
+    Path: Assets/Athena/Terrain/Props/Materials/M_TP_Mrkr.smaterial
     Type: Material
     Version: 8196
   - Asset: 2990208416715314967
@@ -176,7 +196,7 @@ Assets:
     Type: StaticMesh
     Version: 8196
   - Asset: 13854200658949803486
-    Path: Assets/Athena/SurvivalSupport/Ammo/Textures/AmmoCrateRoughMetal.png
+    Path: Assets/Athena/SurvivalSupport/Ammo/Textures/AmmoCrateRoughMetal.stx
     Type: Texture
     Version: 8196
   - Asset: 1282004882715337350
@@ -184,7 +204,7 @@ Assets:
     Type: Audio
     Version: 8196
   - Asset: 16815746788255443994
-    Path: Assets/Athena/SurvivalSupport/Ammo/Textures/AmmoCrateNorm.png
+    Path: Assets/Athena/SurvivalSupport/Ammo/Textures/AmmoCrateNorm.stx
     Type: Texture
     Version: 8196
   - Asset: 12765754648904108514
@@ -212,7 +232,7 @@ Assets:
     Type: GraphSound
     Version: 8196
   - Asset: 11436008685605565923
-    Path: Assets/Athena/Debug/Textures/DZ.png
+    Path: Assets/Athena/Debug/Textures/DZ.stx
     Type: Texture
     Version: 8196
   - Asset: 6750571966792973822
@@ -223,21 +243,93 @@ Assets:
     Path: Assets/Athena/SurvivalSupport/Health/Mesh/HealthKit.stmesh
     Type: StaticMesh
     Version: 8196
+  - Asset: 12917778785842715189
+    Path: Assets/Athena/Terrain/M_Water.smaterial
+    Type: Material
+    Version: 8196
   - Asset: 15921131299694052321
-    Path: Assets/Athena/SurvivalSupport/Health/Textures/Medkit_baseColor.png
+    Path: Assets/Athena/SurvivalSupport/Health/Textures/Medkit_baseColor.stx
     Type: Texture
+    Version: 8196
+  - Asset: 17703423472266939652
+    Path: Assets/Athena/Terrain/Props/FenceCI.prefab
+    Type: Prefab
     Version: 8196
   - Asset: 15980083650993367418
     Path: Assets/Athena/SurvivalSupport/Health/Material/M_HealthKit.smaterial
     Type: Material
     Version: 8196
+  - Asset: 6021832108797269594
+    Path: Assets/Athena/Debug/M_TestMaterial.smaterial
+    Type: Material
+    Version: 8196
+  - Asset: 17414491929245898612
+    Path: Assets/Athena/Terrain/Props/Mesh/StoneWall0.stmesh
+    Type: StaticMesh
+    Version: 8196
+  - Asset: 4841321382547937791
+    Path: Assets/Athena/Terrain/Props/Mesh/StoneWall1.stmesh
+    Type: StaticMesh
+    Version: 8196
+  - Asset: 1778302795075590585
+    Path: Assets/Athena/Terrain/Props/Mesh/StoneWall2.stmesh
+    Type: StaticMesh
+    Version: 8196
+  - Asset: 2332503372906174876
+    Path: Assets/Athena/Terrain/Props/Materials/M_TP_StoneWall1.smaterial
+    Type: Material
+    Version: 8196
+  - Asset: 14936835707402618291
+    Path: Assets/Athena/Terrain/Props/Textures/Straw_SG_baseColor.stx
+    Type: Texture
+    Version: 8196
+  - Asset: 9388542142531453729
+    Path: Assets/Athena/Terrain/Props/Materials/M_TP_StoneWall3.smaterial
+    Type: Material
+    Version: 8196
+  - Asset: 6844437785401053357
+    Path: Assets/Athena/Terrain/Props/StoneWall0CI.prefab
+    Type: Prefab
+    Version: 8196
+  - Asset: 9695963966603639515
+    Path: Assets/Athena/Terrain/Props/StoneWall2CI.prefab
+    Type: Prefab
+    Version: 8196
+  - Asset: 13750900116265353459
+    Path: Assets/Athena/Terrain/Props/Textures/TP_Mrkr.stx
+    Type: Texture
+    Version: 8196
+  - Asset: 13869134980634981992
+    Path: Assets/Athena/Debug/Textures/Red_Prototype_Texture_1x1.stx
+    Type: Texture
+    Version: 8196
+  - Asset: 3202090774154909166
+    Path: Assets/Athena/Terrain/Props/Mesh/Haycock.stmesh
+    Type: StaticMesh
+    Version: 8196
+  - Asset: 18179420711308606924
+    Path: Assets/Athena/Terrain/Props/Textures/Straw_SG_metallicRoughness.stx
+    Type: Texture
+    Version: 8196
+  - Asset: 2348461968130562933
+    Path: Assets/Athena/Terrain/Props/Textures/Straw_SG_normal.stx
+    Type: Texture
+    Version: 8196
+  - Asset: 13679589663929221812
+    Path: Assets/Athena/Terrain/Props/Materials/M_TP_Hay.smaterial
+    Type: Material
+    Version: 8196
+  - Asset: 1554006173899409552
+    Path: Assets/Athena/Editor/Billboard_OppSpawner.stx
+    Type: Texture
+    Version: 8196
 Asset Dependencies:
   - AssetID: 15540430296704676022
     Dependencies:
       - Dependency: 10084180520922664859
-  - AssetID: 4188168686474315140
+  - AssetID: 9560119971860032365
     Dependencies:
-      - Dependency: 7562165743019380132
+      - Dependency: 12921953789803613332
   - AssetID: 12765754648904108514
     Dependencies:
       - Dependency: 5799686793832250549
@@ -247,9 +339,8 @@ Asset Dependencies:
   - AssetID: 5374017015968207930
     Dependencies:
       - Dependency: 5915327659435897251
-  - AssetID: 10084180520922664859
-    Dependencies:
-      - Dependency: 10084180520922664859
+      - Dependency: 618508417
+      - Dependency: 2783419812627168482
   - AssetID: 968415808348049396
     Dependencies:
       - Dependency: 12765754648904108514
@@ -259,26 +350,49 @@ Asset Dependencies:
   - AssetID: 11067449887911952097
     Dependencies:
       - Dependency: 185171295186420253
-  - AssetID: 7562165743019380132
-    Dependencies:
-      - Dependency: 7562165743019380132
-  - AssetID: 185171295186420253
-    Dependencies:
-      - Dependency: 185171295186420253
-  - AssetID: 5648108834415740525
-    Dependencies:
-      - Dependency: 5648108834415740525
-  - AssetID: 5799686793832250549
-    Dependencies:
-      - Dependency: 5799686793832250549
   - AssetID: 625831878733667820
     Dependencies:
       - Dependency: 2482004967821507364
       - Dependency: 2990208416715314967
       - Dependency: 11474219673214559782
-  - AssetID: 11436008685605565923
-    Dependencies:
-      - Dependency: 11436008685605565923
   - AssetID: 15980083650993367418
     Dependencies:
       - Dependency: 15921131299694052321
+  - AssetID: 18323555681594210271
+    Dependencies:
+      - Dependency: 15980083650993367418
+  - AssetID: 14012615419070777176
+    Dependencies:
+      - Dependency: 16769788357849991775
+  - AssetID: 12921953789803613332
+    Dependencies:
+      - Dependency: 313970351627681043
+  - AssetID: 4841321382547937791
+    Dependencies:
+      - Dependency: 2332503372906174876
+      - Dependency: 3728408018453544927
+      - Dependency: 9388542142531453729
+      - Dependency: 5915327659435897251
+  - AssetID: 1778302795075590585
+    Dependencies:
+      - Dependency: 2332503372906174876
+      - Dependency: 9388542142531453729
+      - Dependency: 3728408018453544927
+      - Dependency: 5915327659435897251
+  - AssetID: 17414491929245898612
+    Dependencies:
+      - Dependency: 2332503372906174876
+      - Dependency: 3728408018453544927
+      - Dependency: 9388542142531453729
+  - AssetID: 7151680205037334162
+    Dependencies:
+      - Dependency: 13750900116265353459
+  - AssetID: 3202090774154909166
+    Dependencies:
+      - Dependency: 13679589663929221812
+  - AssetID: 6021832108797269594
+    Dependencies:
+      - Dependency: 13869134980634981992
+  - AssetID: 13679589663929221812
+    Dependencies:
+      - Dependency: 14936835707402618291

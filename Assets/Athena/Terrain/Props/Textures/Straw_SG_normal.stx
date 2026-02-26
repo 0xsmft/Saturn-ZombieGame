@@ -1,0 +1,7 @@
+Texture:
+  Width: 1024
+  Height: 1024
+  Channels: 3
+  Hdr: false
+  Flags: 1
+  Source Path: Assets/Athena/Terrain/Props/Textures/Straw_SG_normal.png
