@@ -22,3 +22,5 @@ Entities:
     PrefabComponent:
       AssetID: 15538342156540820634
       Modified: false
+    BillboardComponent:
+      TextureID: 1554006173899409552
