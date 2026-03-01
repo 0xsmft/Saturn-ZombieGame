@@ -20,6 +20,10 @@ Low Poly Stone Walls is free to download via <a href="https://sketchfab.com/3d-m
 
 Haycock and hay collection models is free to download via <a href="https://sketchfab.com/3d-models/free-pack-stylized-hay-bale-036289580a6a467b9705cd9a311747c1">Sketchfab</a>, Author: DuNguyn Studio
 
+Tree A and B is free to download via <a href="https://sketchfab.com/3d-models/low-poly-trees-51cae4a194344e8bbfbd0a4cff205f76">Sketchfab</a>, Author: Aditya Graphical
+
+Tree C is free to download via <a href="https://sketchfab.com/3d-models/low-poly-tree-4598c065d5534c40b6050c16b69d1b77">Sketchfab</a>, Author: Šimon Ustal
+
 ### Sounds
 
 Grab Ammo sound is free to download via <a href="https://pixabay.com/sound-effects/film-special-effects-box-of-ammo-64427/">pixabay</a>, Author: UnplugTheFridge

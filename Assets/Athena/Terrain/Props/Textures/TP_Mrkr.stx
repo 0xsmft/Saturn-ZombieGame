@@ -3,5 +3,5 @@ Texture:
   Height: 1024
   Channels: 3
   Hdr: false
-  Flags: 1
+  Flags: 0
   Source Path: Assets/Athena/Terrain/Props/Textures/TP_Mrkr.jpg

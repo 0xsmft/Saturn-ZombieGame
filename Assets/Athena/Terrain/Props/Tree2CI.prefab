@@ -1,41 +1,36 @@
 # WARNING, MODIFICATIONS TO THIS FILE WILL NOT UPDATE GLOBALLY IN EDITOR!
-Prefab: 17066470373613386315
-Root Entity: 12034626791404841937
+Prefab: 10184943951540239387
+Root Entity: 9220259178105084958
 Entities:
-  - Entity: 12034626791404841937
-    Class: HealthKit
+  - Entity: 9220259178105084958
+    Class: Entity
     TagComponent:
-      Tag: HealthKitCI
+      Tag: Tree2CI
     ClassInformation:
       LastPropertyCount: 0
       Properties:
         []
     TransformComponent:
-      Position: [0, 0, -7.4505806e-09]
+      Position: [0, 0, 0]
       Rotation: [0, 0, 0]
       Quaternion: [0, 0, 0, 1]
-      Scale: [1, 1, 1]
+      Scale: [10, 10, 10]
     RelationshipComponent:
       Parent: 0
       Children:
         []
     PrefabComponent:
-      AssetID: 17066470373613386315
+      AssetID: 10184943951540239387
       Modified: false
     MeshComponent:
-      Asset: 18323555681594210271
+      Asset: 6496390079175027039
       MaterialRegistry:
         AnyOverrides: false
         MaterialOverrides:
           - 0: 0
           - 1: 0
-    BoxColliderComponent:
-      Extents: [0.25, 0.150000006, 0.100000001]
-      Offset: [0, 0, 0]
-      IsTrigger: false
-      AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: false
+      IsKinematic: true
       CCD: false
       Mass: 2
-      LockFlags: 63
+      LockFlags: 0

@@ -2,7 +2,7 @@ Scene: Untitled Scene
 Visualisation:
   ShowGrid: true
   ShowGridRT: false
-  PhysCollider: 1
+  PhysCollider: 2
 Entities:
   - Entity: 6746269488979416040
     Class: Entity
@@ -48,46 +48,6 @@ Entities:
         Turbidity: 2
         Azimuth: 0
         Inclination: 0
-  - Entity: 11692630008594915235
-    Class: Player
-    TagComponent:
-      Tag: PlayerCI
-    ClassInformation:
-      LastPropertyCount: 0
-      Properties:
-        []
-    TransformComponent:
-      Position: [0, 58.2489281, 0]
-      Rotation: [0, 0, 0]
-      Quaternion: [0, 0, 0, 1]
-      Scale: [1, 1.73602045, 1]
-    RelationshipComponent:
-      Parent: 0
-      Children:
-        []
-    PrefabComponent:
-      AssetID: 17599430179175385212
-      Modified: false
-    MeshComponent:
-      Asset: 165149688583984825
-      MaterialRegistry:
-        AnyOverrides: false
-        MaterialOverrides:
-          - 0: 0
-    RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
-      Mass: 2
-      LockFlags: 56
-    CharacterMovementComponent:
-      StepOffset: 0.300000012
-      Height: 1
-      Radius: 1
-    AudioListenerComponent:
-      Primary: false
-      Direction: [0, 0, -1]
-      ConeInner: 0
-      ConeOuter: 0
   - Entity: 3747890795675537252
     Class: GameState
     TagComponent:
@@ -117,18 +77,664 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [0, 0, 0]
+      Position: [0, 86.0171127, 0]
       Rotation: [0, 0, 0]
       Quaternion: [0, 0, 0, 1]
-      Scale: [75.3994217, 75.3994217, 75.3994217]
+      Scale: [175.999985, 175.999985, 175.999985]
     RelationshipComponent:
       Parent: 0
       Children:
         []
     NavigationMeshSpecificationComponent:
-      Extent: [75.3994217, 75.3994217, 75.3994217]
+      Extent: [175.999985, 175.999985, 175.999985]
       HasBuilt: 1
-  - Entity: 1111878149587810175
+  - Entity: 3273554202530465299
+    Class: Entity
+    TagComponent:
+      Tag: satgame-terrain
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, -6.50920773, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    MeshComponent:
+      Asset: 14012615419070777176
+      MaterialRegistry:
+        AnyOverrides: true
+        MaterialOverrides:
+          - 0: 16769788357849991775
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 63
+  - Entity: 2796448515498574463
+    Class: Entity
+    TagComponent:
+      Tag: Weapon
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-0.5, -0.100000001, 1.13]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [0.0199999996, 0.0199999996, 0.0199999996]
+    RelationshipComponent:
+      Parent: 3203991571491610375
+      Children:
+        []
+    MeshComponent:
+      Asset: 3007642428770073042
+      MaterialRegistry:
+        AnyOverrides: true
+        MaterialOverrides:
+          - 0: 15540430296704676022
+          - 1: 11067449887911952097
+          - 2: 8579261805612793011
+          - 3: 15540430296704676022
+  - Entity: 3203991571491610375
+    Class: Player
+    TagComponent:
+      Tag: PlayerCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-1.50601673, 4.53132725, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        - ID: 2796448515498574463
+    PrefabComponent:
+      AssetID: 17599430179175385212
+      Modified: false
+    MeshComponent:
+      Asset: 165149688583984825
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 56
+    CharacterMovementComponent:
+      StepOffset: 0.300000012
+      Height: 1
+      Radius: 1
+    AudioListenerComponent:
+      Primary: true
+      Direction: [0, 0, -1]
+      ConeInner: 0
+      ConeOuter: 0
+  - Entity: 4500827804730850070
+    Class: DeathZone
+    TagComponent:
+      Tag: DeathZoneCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, -135.890488, 1.1920929e-07]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1024, 1, 1024]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1680156242400638590
+      Modified: false
+    BoxColliderComponent:
+      Extents: [1024, 1, 1024]
+      Offset: [0, 0, 0]
+      IsTrigger: true
+      AutoAdjustExtent: true
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+    BillboardComponent:
+      TextureID: 11436008685605565923
+  - Entity: 3131552762923220285
+    Class: Entity
+    TagComponent:
+      Tag: Water
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-51.4241486, -3.31972313, 0]
+      Rotation: [0, 0, -4.92173815]
+      Quaternion: [0, 0, -0.0429370664, 0.999077797]
+      Scale: [7026.13037, 1, 18848.4551]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    MeshComponent:
+      Asset: 15892810825430780158
+      MaterialRegistry:
+        AnyOverrides: true
+        MaterialOverrides:
+          - 0: 12917778785842715189
+    BoxColliderComponent:
+      Extents: [35.2999992, 1, 87.4000015]
+      Offset: [0, 0, 0]
+      IsTrigger: false
+      AutoAdjustExtent: false
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 12257178244619118867
+    Class: Entity
+    TagComponent:
+      Tag: Marker
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-71.9814682, 1.41258287, 85.0318222]
+      Rotation: [94.0521393, 0, 0]
+      Quaternion: [0.731663883, 0, 0, 0.68166554]
+      Scale: [293.310883, 293.310883, 293.310883]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    MeshComponent:
+      Asset: 15892810825430780158
+      MaterialRegistry:
+        AnyOverrides: true
+        MaterialOverrides:
+          - 0: 7151680205037334162
+  - Entity: 6255523134226927834
+    Class: AmmoCrateSpawner
+    TagComponent:
+      Tag: AmmoCrateSpawnerCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [8.09779263, 0.305409014, 1.56312335]
+      Rotation: [0, 0, -12.9840317]
+      Quaternion: [0, 0, -0.113064758, 0.993587613]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 15200017920014184748
+      Modified: false
+    MeshComponent:
+      Asset: 968415808348049396
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    BoxColliderComponent:
+      Extents: [1.60000002, 0.5, 1]
+      Offset: [-0.800000012, 0.5, -1]
+      IsTrigger: false
+      AutoAdjustExtent: false
+    RigidbodyComponent:
+      IsKinematic: false
+      CCD: false
+      Mass: 2
+      LockFlags: 63
+  - Entity: 1525000204008776130
+    Class: AmmoCrateSpawner
+    TagComponent:
+      Tag: AmmoCrateSpawnerCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-4.05666113, -1.0920918, -51.5849419]
+      Rotation: [-5.40711784, 0, -8.6980629]
+      Quaternion: [-0.0470326804, 0.00357688405, -0.0757476464, 0.99601078]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 15200017920014184748
+      Modified: false
+    MeshComponent:
+      Asset: 968415808348049396
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    BoxColliderComponent:
+      Extents: [1.60000002, 0.5, 1]
+      Offset: [-0.800000012, 0.5, -1]
+      IsTrigger: false
+      AutoAdjustExtent: false
+    RigidbodyComponent:
+      IsKinematic: false
+      CCD: false
+      Mass: 2
+      LockFlags: 63
+  - Entity: 6260325738484472731
+    Class: AmmoCrateSpawner
+    TagComponent:
+      Tag: AmmoCrateSpawnerCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [103.515045, -1.46301246, 19.0874519]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 15200017920014184748
+      Modified: false
+    MeshComponent:
+      Asset: 968415808348049396
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    BoxColliderComponent:
+      Extents: [1.60000002, 0.5, 1]
+      Offset: [-0.800000012, 0.5, -1]
+      IsTrigger: false
+      AutoAdjustExtent: false
+    RigidbodyComponent:
+      IsKinematic: false
+      CCD: false
+      Mass: 2
+      LockFlags: 63
+  - Entity: 6673694562670455674
+    Class: AmmoCrateSpawner
+    TagComponent:
+      Tag: AmmoCrateSpawnerCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [117.212166, -6.44568491, -57.553978]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 15200017920014184748
+      Modified: false
+    MeshComponent:
+      Asset: 968415808348049396
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    BoxColliderComponent:
+      Extents: [1.60000002, 0.5, 1]
+      Offset: [-0.800000012, 0.5, -1]
+      IsTrigger: false
+      AutoAdjustExtent: false
+    RigidbodyComponent:
+      IsKinematic: false
+      CCD: false
+      Mass: 2
+      LockFlags: 63
+  - Entity: 9857304727080614299
+    Class: AmmoCrateSpawner
+    TagComponent:
+      Tag: AmmoCrateSpawnerCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-9.40675545, -2.44973946, 55.1745186]
+      Rotation: [28.4890594, 4.9846344, 2.85783529]
+      Quaternion: [0.244700506, 0.0482654832, 0.0134504465, 0.968303323]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 15200017920014184748
+      Modified: false
+    MeshComponent:
+      Asset: 968415808348049396
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    BoxColliderComponent:
+      Extents: [1.60000002, 0.5, 1]
+      Offset: [-0.800000012, 0.5, -1]
+      IsTrigger: false
+      AutoAdjustExtent: false
+    RigidbodyComponent:
+      IsKinematic: false
+      CCD: false
+      Mass: 2
+      LockFlags: 63
+  - Entity: 14990274647629815964
+    Class: Entity
+    TagComponent:
+      Tag: FenceCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [115.603477, -5.52721548, -54.9853249]
+      Rotation: [0, 90, 0]
+      Quaternion: [0, 0.707106769, 0, 0.707106769]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 17703423472266939652
+      Modified: false
+    MeshComponent:
+      Asset: 9560119971860032365
+      MaterialRegistry:
+        AnyOverrides: true
+        MaterialOverrides:
+          - 0: 12921953789803613332
+          - 1: 12921953789803613332
+    BoxColliderComponent:
+      Extents: [0.5, 0.800000012, 3.0999999]
+      Offset: [0, 0, 0]
+      IsTrigger: false
+      AutoAdjustExtent: false
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 12922327228489436659
+    Class: Entity
+    TagComponent:
+      Tag: FenceCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [113.017082, -5.5773735, -52.0813408]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 17703423472266939652
+      Modified: false
+    MeshComponent:
+      Asset: 9560119971860032365
+      MaterialRegistry:
+        AnyOverrides: true
+        MaterialOverrides:
+          - 0: 12921953789803613332
+          - 1: 12921953789803613332
+    BoxColliderComponent:
+      Extents: [0.5, 0.800000012, 3.0999999]
+      Offset: [0, 0, 0]
+      IsTrigger: false
+      AutoAdjustExtent: false
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 13469669811050733344
+    Class: Entity
+    TagComponent:
+      Tag: FenceCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [118.818047, -5.52721548, -52.141819]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 17703423472266939652
+      Modified: false
+    MeshComponent:
+      Asset: 9560119971860032365
+      MaterialRegistry:
+        AnyOverrides: true
+        MaterialOverrides:
+          - 0: 12921953789803613332
+          - 1: 12921953789803613332
+    BoxColliderComponent:
+      Extents: [0.5, 0.800000012, 3.0999999]
+      Offset: [0, 0, 0]
+      IsTrigger: false
+      AutoAdjustExtent: false
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 14946347809157904184
+    Class: Entity
+    TagComponent:
+      Tag: Haycock
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1.45999992, 1.45999992, 1.45999992]
+    RelationshipComponent:
+      Parent: 13732214010468103137
+      Children:
+        []
+    MeshComponent:
+      Asset: 3202090774154909166
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 63
+  - Entity: 3000921423199766182
+    Class: Entity
+    TagComponent:
+      Tag: Haycock
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-2.70000005, 0, -0.300000012]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1.45999992, 1.45999992, 1.45999992]
+    RelationshipComponent:
+      Parent: 13732214010468103137
+      Children:
+        []
+    MeshComponent:
+      Asset: 3202090774154909166
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 63
+  - Entity: 13732214010468103137
+    Class: Entity
+    TagComponent:
+      Tag: HaycockMaster
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [117.110001, -6.38999987, -51.0099983]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        - ID: 14946347809157904184
+        - ID: 3000921423199766182
+        - ID: 18022179316500604907
+        - ID: 6502663572782872020
+  - Entity: 8386540626953381003
+    Class: HealthKit
+    TagComponent:
+      Tag: HealthKitCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [117.069695, -6.26286221, -53.6788254]
+      Rotation: [-90, 0, 0]
+      Quaternion: [-0.707106769, 0, 0, 0.707106769]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 17066470373613386315
+      Modified: false
+    MeshComponent:
+      Asset: 18323555681594210271
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    BoxColliderComponent:
+      Extents: [0.25, 0.150000006, 0.100000001]
+      Offset: [0, 0, 0]
+      IsTrigger: false
+      AutoAdjustExtent: false
+    RigidbodyComponent:
+      IsKinematic: false
+      CCD: false
+      Mass: 2
+      LockFlags: 63
+  - Entity: 18022179316500604907
+    Class: Entity
+    TagComponent:
+      Tag: Haycock
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-2.79999995, 0, -2.5]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1.45999992, 1.45999992, 1.45999992]
+    RelationshipComponent:
+      Parent: 13732214010468103137
+      Children:
+        []
+    MeshComponent:
+      Asset: 3202090774154909166
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 63
+  - Entity: 6502663572782872020
+    Class: Entity
+    TagComponent:
+      Tag: HaycockNC
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, -2.5]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1.45999992, 1.45999992, 1.45999992]
+    RelationshipComponent:
+      Parent: 13732214010468103137
+      Children:
+        []
+    MeshComponent:
+      Asset: 3202090774154909166
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+  - Entity: 2254990091254895264
     Class: EnemySpawnLocation
     TagComponent:
       Tag: OppSpawner
@@ -137,7 +743,7 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [-32.6790543, 61.1744423, 0]
+      Position: [81.9518356, -4.2943368, 34.9552612]
       Rotation: [0, 0, 0]
       Quaternion: [0, 0, 0, 1]
       Scale: [1, 1, 1]
@@ -148,29 +754,581 @@ Entities:
     PrefabComponent:
       AssetID: 15538342156540820634
       Modified: false
-  - Entity: 3273554202530465299
-    Class: Entity
+    BillboardComponent:
+      TextureID: 1554006173899409552
+  - Entity: 11137132221699925313
+    Class: EnemySpawnLocation
     TagComponent:
-      Tag: satgame-terrain
+      Tag: OppSpawner
     ClassInformation:
       LastPropertyCount: 0
       Properties:
         []
     TransformComponent:
-      Position: [0, 0, 0]
+      Position: [116.05632, -6.28541231, -49.8500748]
       Rotation: [0, 0, 0]
       Quaternion: [0, 0, 0, 1]
-      Scale: [2, 2, 2]
+      Scale: [1, 1, 1]
     RelationshipComponent:
       Parent: 0
       Children:
         []
+    PrefabComponent:
+      AssetID: 15538342156540820634
+      Modified: false
+    BillboardComponent:
+      TextureID: 1554006173899409552
+  - Entity: 16941326754423204531
+    Class: EnemySpawnLocation
+    TagComponent:
+      Tag: OppSpawner
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [116.05632, -2.34630489, -5.04296684]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 15538342156540820634
+      Modified: false
+    BillboardComponent:
+      TextureID: 1554006173899409552
+  - Entity: 17259962787541087506
+    Class: EnemySpawnLocation
+    TagComponent:
+      Tag: OppSpawner
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-30.1529484, 1.44181359, -25.1256981]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 15538342156540820634
+      Modified: false
+    BillboardComponent:
+      TextureID: 1554006173899409552
+  - Entity: 8625821237631444631
+    Class: Entity
+    TagComponent:
+      Tag: Tree2CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [90.8619843, -3.78432989, 44.1694336]
+      Rotation: [5.92315674, 0.0115963006, 0.647869647]
+      Quaternion: [0.0516648814, 0.000393165625, 0.00564091932, 0.998648405]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 10184943951540239387
+      Modified: false
     MeshComponent:
-      Asset: 3680622617780064957
+      Asset: 6496390079175027039
       MaterialRegistry:
         AnyOverrides: false
         MaterialOverrides:
           - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 16821462325214919482
+    Class: Entity
+    TagComponent:
+      Tag: Tree2CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [160.925476, -6.45066929, -70.8051453]
+      Rotation: [-4.08108711, 0, 0]
+      Quaternion: [-0.0356066748, 0, 0, 0.999365866]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 10184943951540239387
+      Modified: false
+    MeshComponent:
+      Asset: 6496390079175027039
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 7052839518655694218
+    Class: Entity
+    TagComponent:
+      Tag: Tree2CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [141.662323, 12.6030502, 63.7299652]
+      Rotation: [-18.4047222, 0, 0]
+      Quaternion: [-0.159921855, 0, 0, 0.987129688]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 10184943951540239387
+      Modified: false
+    MeshComponent:
+      Asset: 6496390079175027039
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 14530780188863029327
+    Class: Entity
+    TagComponent:
+      Tag: Tree2CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [31.0721798, 1.62257862, 63.7299652]
+      Rotation: [-6.85928392, 0, 0]
+      Quaternion: [-0.0598228052, 0, 0, 0.998209]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 10184943951540239387
+      Modified: false
+    MeshComponent:
+      Asset: 6496390079175027039
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 2027272732317732714
+    Class: Entity
+    TagComponent:
+      Tag: Tree2CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [31.0721798, 3.03953028, 42.0141716]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 10184943951540239387
+      Modified: false
+    MeshComponent:
+      Asset: 6496390079175027039
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 12860683956583134569
+    Class: Entity
+    TagComponent:
+      Tag: Tree2CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [52.2423325, -6.80423737, -57.0950394]
+      Rotation: [2.9049294, 0, 0]
+      Quaternion: [0.0253475755, 0, 0, 0.999678671]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 10184943951540239387
+      Modified: false
+    MeshComponent:
+      Asset: 6496390079175027039
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 15427374461524837940
+    Class: Entity
+    TagComponent:
+      Tag: Tree1CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [120.345474, -6.96055031, -52.5899124]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1196541555939798699
+      Modified: false
+    MeshComponent:
+      Asset: 17156012918794846394
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 720152163356918409
+    Class: Entity
+    TagComponent:
+      Tag: Tree2CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-23.4894085, 3.16614747, 22.8208618]
+      Rotation: [-4.2741003, 0, -0.0920104831]
+      Quaternion: [-0.0372899026, 2.99416715e-05, -0.000802384457, 0.999304175]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 10184943951540239387
+      Modified: false
+    MeshComponent:
+      Asset: 6496390079175027039
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 12767381860477742435
+    Class: Entity
+    TagComponent:
+      Tag: Tree2CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-43.650135, 1.41809916, 11.2338295]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 10184943951540239387
+      Modified: false
+    MeshComponent:
+      Asset: 6496390079175027039
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 11370182434807255699
+    Class: Entity
+    TagComponent:
+      Tag: Tree2CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-25.6160011, 1.21039212, -49.0389824]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 10184943951540239387
+      Modified: false
+    MeshComponent:
+      Asset: 6496390079175027039
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 13782114213641802507
+    Class: Entity
+    TagComponent:
+      Tag: Tree1CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [119.160957, -6.96055031, -57.0540352]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1196541555939798699
+      Modified: false
+    MeshComponent:
+      Asset: 17156012918794846394
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 16037532164085670095
+    Class: Entity
+    TagComponent:
+      Tag: Tree1CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [113.937302, -6.96055031, -57.0540352]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1196541555939798699
+      Modified: false
+    MeshComponent:
+      Asset: 17156012918794846394
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 1513626730639150316
+    Class: Entity
+    TagComponent:
+      Tag: Tree1CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-4.84010363, -1.02326417, -56.1451187]
+      Rotation: [8.62983513, 0, 0]
+      Quaternion: [0.0752383471, 0, 0, 0.997165561]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1196541555939798699
+      Modified: false
+    MeshComponent:
+      Asset: 17156012918794846394
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 16595561292751580908
+    Class: Entity
+    TagComponent:
+      Tag: Tree2CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-43.650135, 2.30605555, -20.4873123]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 10184943951540239387
+      Modified: false
+    MeshComponent:
+      Asset: 6496390079175027039
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 13450125446735044872
+    Class: Entity
+    TagComponent:
+      Tag: Tree2CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [140.493469, -3.49698853, -4.07718945]
+      Rotation: [-4.08108711, 0, 0]
+      Quaternion: [-0.0356066748, 0, 0, 0.999365866]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 10184943951540239387
+      Modified: false
+    MeshComponent:
+      Asset: 6496390079175027039
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0
+  - Entity: 11334130018430300765
+    Class: Entity
+    TagComponent:
+      Tag: Tree1CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [111.22776, -6.96055031, -51.9981804]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1196541555939798699
+      Modified: false
+    MeshComponent:
+      Asset: 17156012918794846394
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
     RigidbodyComponent:
       IsKinematic: true
       CCD: false

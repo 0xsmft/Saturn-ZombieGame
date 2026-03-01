@@ -54,7 +54,13 @@ Project:
       ActionName: F1
       ID: 1864692448738190188
       Key: 12
-      MouseButton: 6
+      MouseButton: 12
+      Type: 0
+    - ActionBinding: Menu
+      ActionName: Esc
+      ID: 5433929689061832871
+      Key: 73
+      MouseButton: 73
       Type: 0
   SoundGroups:
     []

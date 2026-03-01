@@ -2,7 +2,7 @@ Scene: Untitled Scene
 Visualisation:
   ShowGrid: true
   ShowGridRT: false
-  PhysCollider: 1
+  PhysCollider: 2
 Entities:
   - Entity: 14454109855051942970
     Class: Entity
@@ -106,7 +106,7 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [-6.79077673, 0, 1.49011612e-08]
+      Position: [-6.79077673, -1.49011612e-08, 0]
       Rotation: [0, 0, 0]
       Quaternion: [0, 0, 0, 1]
       Scale: [1, 1, 1]
@@ -348,7 +348,7 @@ Entities:
       Position: [0, -16.379797, 0]
       Rotation: [0, 0, 0]
       Quaternion: [0, 0, 0, 1]
-      Scale: [64, 2, 64]
+      Scale: [194.470154, 2, 314.944885]
     RelationshipComponent:
       Parent: 0
       Children:
@@ -359,11 +359,11 @@ Entities:
     MeshComponent:
       Asset: 14888528075718103984
       MaterialRegistry:
-        AnyOverrides: false
+        AnyOverrides: true
         MaterialOverrides:
-          - 0: 0
+          - 0: 11649624488961672427
     BoxColliderComponent:
-      Extents: [64, 2, 64]
+      Extents: [194.470154, 2, 314.944885]
       Offset: [0, 0, 0]
       IsTrigger: true
       AutoAdjustExtent: true
@@ -372,3 +372,151 @@ Entities:
       CCD: false
       Mass: 2
       LockFlags: 0
+  - Entity: 10685983828571219451
+    Class: HealthKit
+    TagComponent:
+      Tag: HealthKitCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [20.8624592, -1.97113073, 25.7798271]
+      Rotation: [0, -64.6680756, 0]
+      Quaternion: [0, -0.534854412, 0, 0.844944239]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 17066470373613386315
+      Modified: false
+    MeshComponent:
+      Asset: 18323555681594210271
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    BoxColliderComponent:
+      Extents: [0.25, 0.150000006, 0.100000001]
+      Offset: [0, 0, 0]
+      IsTrigger: false
+      AutoAdjustExtent: false
+    RigidbodyComponent:
+      IsKinematic: false
+      CCD: false
+      Mass: 2
+      LockFlags: 63
+  - Entity: 14628912401645054660
+    Class: HealthKit
+    TagComponent:
+      Tag: HealthKitCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [19.656971, -1.97113073, 25.1262646]
+      Rotation: [0, -64.6680756, 0]
+      Quaternion: [0, -0.534854412, 0, 0.844944239]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 17066470373613386315
+      Modified: false
+    MeshComponent:
+      Asset: 18323555681594210271
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    BoxColliderComponent:
+      Extents: [0.25, 0.150000006, 0.100000001]
+      Offset: [0, 0, 0]
+      IsTrigger: false
+      AutoAdjustExtent: false
+    RigidbodyComponent:
+      IsKinematic: false
+      CCD: false
+      Mass: 2
+      LockFlags: 63
+  - Entity: 2184477020922674454
+    Class: HealthKit
+    TagComponent:
+      Tag: HealthKitCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [20.4072933, -1.97113073, 24.8183136]
+      Rotation: [0, -64.6680756, 0]
+      Quaternion: [0, -0.534854412, 0, 0.844944239]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 17066470373613386315
+      Modified: false
+    MeshComponent:
+      Asset: 18323555681594210271
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    BoxColliderComponent:
+      Extents: [0.25, 0.150000006, 0.100000001]
+      Offset: [0, 0, 0]
+      IsTrigger: false
+      AutoAdjustExtent: false
+    RigidbodyComponent:
+      IsKinematic: false
+      CCD: false
+      Mass: 2
+      LockFlags: 63
+  - Entity: 737246813221223458
+    Class: HealthKit
+    TagComponent:
+      Tag: HealthKitCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [20.1304016, -1.97113073, 26.1263638]
+      Rotation: [0, -64.6680756, 0]
+      Quaternion: [0, -0.534854412, 0, 0.844944239]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 17066470373613386315
+      Modified: false
+    MeshComponent:
+      Asset: 18323555681594210271
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    BoxColliderComponent:
+      Extents: [0.25, 0.150000006, 0.100000001]
+      Offset: [0, 0, 0]
+      IsTrigger: false
+      AutoAdjustExtent: false
+    RigidbodyComponent:
+      IsKinematic: false
+      CCD: false
+      Mass: 2
+      LockFlags: 63

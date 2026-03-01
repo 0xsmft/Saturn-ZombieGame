@@ -1,0 +1,9 @@
+StaticMesh:
+  Filepath: Assets/Athena/Terrain/Props/Mesh/Tree0.glb
+  Attached Shape: 5
+  Physics Material ID: 0
+  MaterialRegistry:
+    Materials:
+      - 0: 8175834221736490207
+      - 1: 8175834221736490207
+      - 2: 5915327659435897251

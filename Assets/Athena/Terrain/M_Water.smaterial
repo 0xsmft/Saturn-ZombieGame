@@ -1,6 +1,6 @@
 Material:
-  AlbedoColor: [1, 1, 1]
-  AlbedoTexture: 14936835707402618291
+  AlbedoColor: [0, 0.455598593, 1]
+  AlbedoTexture: 0
   UseNormal: 0
   NormalTexture: 0
   Metalness: 1

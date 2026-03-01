@@ -115,6 +115,10 @@ Assets:
     Path: Assets/Athena/Sounds/Weapon/SFX_Reload.snd
     Type: Audio
     Version: 8196
+  - Asset: 17156012918794846394
+    Path: Assets/Athena/Terrain/Props/Mesh/Tree1.stmesh
+    Type: StaticMesh
+    Version: 8196
   - Asset: 7577715937433098098
     Path: Assets/Athena/Weapons/Textures/Material__183_metallicRoughness.stx
     Type: Texture
@@ -280,7 +284,7 @@ Assets:
     Type: Material
     Version: 8196
   - Asset: 14936835707402618291
-    Path: Assets/Athena/Terrain/Props/Textures/Straw_SG_baseColor.stx
+    Path: Assets/Athena/Terrain/Props/Textures/TP_Straw_SG_baseColor.stx
     Type: Texture
     Version: 8196
   - Asset: 9388542142531453729
@@ -308,11 +312,11 @@ Assets:
     Type: StaticMesh
     Version: 8196
   - Asset: 18179420711308606924
-    Path: Assets/Athena/Terrain/Props/Textures/Straw_SG_metallicRoughness.stx
+    Path: Assets/Athena/Terrain/Props/Textures/TP_Straw_SG_metallicRoughness.stx
     Type: Texture
     Version: 8196
   - Asset: 2348461968130562933
-    Path: Assets/Athena/Terrain/Props/Textures/Straw_SG_normal.stx
+    Path: Assets/Athena/Terrain/Props/Textures/TP_Straw_SG_normal.stx
     Type: Texture
     Version: 8196
   - Asset: 13679589663929221812
@@ -322,6 +326,46 @@ Assets:
   - Asset: 1554006173899409552
     Path: Assets/Athena/Editor/Billboard_OppSpawner.stx
     Type: Texture
+    Version: 8196
+  - Asset: 15104614662974724977
+    Path: Assets/Athena/Terrain/Props/Mesh/Tree0.stmesh
+    Type: StaticMesh
+    Version: 8196
+  - Asset: 8175834221736490207
+    Path: Assets/Athena/Terrain/Props/Materials/M_TP_Tree0.smaterial
+    Type: Material
+    Version: 8196
+  - Asset: 16640591717479748269
+    Path: Assets/Athena/Terrain/Props/Textures/TP_TreeTexture.stx
+    Type: Texture
+    Version: 8196
+  - Asset: 3309555597944458250
+    Path: Assets/Athena/Terrain/Props/Textures/TP_Tree_1_BaseColor.stx
+    Type: Texture
+    Version: 8196
+  - Asset: 11350410678480156004
+    Path: Assets/Athena/Terrain/Props/Materials/M_TP_Tree1.smaterial
+    Type: Material
+    Version: 8196
+  - Asset: 16164894740795494566
+    Path: Assets/Athena/Terrain/Props/Textures/8_tree_baseColor.stx
+    Type: Texture
+    Version: 8196
+  - Asset: 2903878141788772784
+    Path: Assets/Athena/Terrain/Props/Materials/M_TP_Tree2.smaterial
+    Type: Material
+    Version: 8196
+  - Asset: 6496390079175027039
+    Path: Assets/Athena/Terrain/Props/Mesh/Tree2.stmesh
+    Type: StaticMesh
+    Version: 8196
+  - Asset: 1196541555939798699
+    Path: Assets/Athena/Terrain/Props/Tree1CI.prefab
+    Type: Prefab
+    Version: 8196
+  - Asset: 10184943951540239387
+    Path: Assets/Athena/Terrain/Props/Tree2CI.prefab
+    Type: Prefab
     Version: 8196
 Asset Dependencies:
   - AssetID: 15540430296704676022
@@ -355,6 +399,9 @@ Asset Dependencies:
       - Dependency: 2482004967821507364
       - Dependency: 2990208416715314967
       - Dependency: 11474219673214559782
+  - AssetID: 2903878141788772784
+    Dependencies:
+      - Dependency: 16164894740795494566
   - AssetID: 15980083650993367418
     Dependencies:
       - Dependency: 15921131299694052321
@@ -364,14 +411,17 @@ Asset Dependencies:
   - AssetID: 14012615419070777176
     Dependencies:
       - Dependency: 16769788357849991775
-  - AssetID: 12921953789803613332
-    Dependencies:
-      - Dependency: 313970351627681043
   - AssetID: 4841321382547937791
     Dependencies:
       - Dependency: 2332503372906174876
       - Dependency: 3728408018453544927
       - Dependency: 9388542142531453729
+      - Dependency: 5915327659435897251
+  - AssetID: 15104614662974724977
+    Dependencies:
+      - Dependency: 2783419812627168482
+      - Dependency: 8175834221736490207
+      - Dependency: 11649624488961672427
       - Dependency: 5915327659435897251
   - AssetID: 1778302795075590585
     Dependencies:
@@ -393,6 +443,22 @@ Asset Dependencies:
   - AssetID: 6021832108797269594
     Dependencies:
       - Dependency: 13869134980634981992
+  - AssetID: 8175834221736490207
+    Dependencies:
+      - Dependency: 16640591717479748269
+  - AssetID: 17156012918794846394
+    Dependencies:
+      - Dependency: 11350410678480156004
+      - Dependency: 5915327659435897251
+  - AssetID: 12921953789803613332
+    Dependencies:
+      - Dependency: 313970351627681043
+  - AssetID: 6496390079175027039
+    Dependencies:
+      - Dependency: 2903878141788772784
   - AssetID: 13679589663929221812
     Dependencies:
       - Dependency: 14936835707402618291
+  - AssetID: 11350410678480156004
+    Dependencies:
+      - Dependency: 3309555597944458250
