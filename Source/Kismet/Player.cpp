@@ -216,7 +216,7 @@ void Player::Use()
 	RaycastHitResult result;
 	TransformComponent tc = GetScene()->GetWorldSpaceTransform( GetCameraEntity() );
 
-	if( GetScene()->Raycast( tc.Position + CalculateForward(), CalculateForward(), 20.0f, &result ) )
+	if( GetScene()->Raycast( tc.Position + CalculateForward(), CalculateForward(), 100.0f, &result ) )
 	{
 		if( result.Hit )
 		{
@@ -230,8 +230,7 @@ void Player::Use()
 					// but we are shooting a rife and lets be real most of the entities have to be in close range
 					// anyways.
 					// 
-					// MaxDistance == 20.0 == 20m
-					// (a very short ranged rife...)
+					// MaxDistance == 100.0 == 100m
 					// Anyways, more RNG!
 					enemy->TakeDamage( ( int )Random::RandomElementInRange( 25, 88 ) );
 				}

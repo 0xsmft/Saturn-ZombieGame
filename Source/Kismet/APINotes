@@ -18,3 +18,7 @@ API 3.1 - Alura, calculating text size twice
 
 API 3.2 - Alura, adding text
  -> Avoid using std::format, should add AluraCanvas::AddText(fmt,...)
+
+API 4.0
+ -> Unloading sounds, we shouldn't have to call AudioSystem::UnloadSound()
+
