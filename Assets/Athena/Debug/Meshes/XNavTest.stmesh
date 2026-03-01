@@ -1,7 +1,7 @@
 StaticMesh:
   Filepath: Assets/Athena/Debug/Meshes/XNavTest.gltf
   Attached Shape: 5
-  Physics Material ID: -2006106910
+  Physics Material ID: 618508417
   MaterialRegistry:
     Materials:
       - 0: 5915327659435897251
