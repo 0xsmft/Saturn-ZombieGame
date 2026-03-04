@@ -39,3 +39,5 @@ Entities:
       CCD: false
       Mass: 2
       LockFlags: 63
+    BillboardComponent:
+      TextureID: 13451726458623680817

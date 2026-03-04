@@ -1,0 +1,8 @@
+Texture:
+  Width: 128
+  Height: 128
+  Channels: 3
+  Hdr: false
+  Flags: 1
+  FilteringFlags: 0
+  Source Path: Assets/Athena/Editor/ammobill.png
