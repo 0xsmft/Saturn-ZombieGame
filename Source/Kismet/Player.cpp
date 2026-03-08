@@ -8,6 +8,8 @@
 #include "GameState.h"
 #endif
 
+#include "PlayerHUD.h"
+
 #include "Saturn/Core/Random.h"
 
 #include "Saturn/GameFramework/SClass.h"
@@ -16,13 +18,11 @@
 #include "Saturn/Physics/PhysicsRigidBody.h"
 
 #include "Saturn/Audio/AudioSystem.h"
-#include "Saturn/Asset/AssetManager.h"
-#include "Saturn/Asset/TextureSourceAsset.h"
 
 #include "Saturn/Project/Project.h"
 
 #include "Saturn/Alura/AluraCanvas.h"
-#include "Saturn/Vulkan/AluraRenderer.h"
+
 
 Player::Player()
 {
@@ -35,11 +35,13 @@ Player::~Player()
 void Player::BeginPlay() 
 {
 	Super::BeginPlay();
-
-	// Fix - API 0.1
-	Ref<TextureSourceAsset> sourceAsset = AssetManager::Get()->GetAssetAs<TextureSourceAsset>( 2338072335932728136llu );
-	m_HudCrosshairTexture = sourceAsset->GetTexture();
 	
+	//////////////////////////////////////////////////////////////////////////
+
+	m_PlayerHUD = Ref<PlayerHUD>::Create();
+	m_PlayerHUD->SetPlayer( SharedFromThis() );
+	g_AluraCanvas->AddDrawer( m_PlayerHUD );
+
 	//////////////////////////////////////////////////////////////////////////
 
 	if( GetRigidBody() )
@@ -71,6 +73,10 @@ void Player::BeginPlay()
 
 void Player::OnUpdate( Timestep ts )
 {
+	// API - 4.0
+	if( GetScene()->IsPaused() )
+		return;
+
 	Super::OnUpdate( ts );
 
 	// Damage checking.
@@ -116,81 +122,21 @@ void Player::OnUpdate( Timestep ts )
 					m_IntractableEntityHit = result.Hit;
 
 					// Display "E" to interact
-					m_StatusMessageText = "E";
-					ShowMessageText();
+					m_PlayerHUD->ShowMessageText( "E" );
 				}
 			}
 			else
 			{
-				HideMessageText();
+				m_PlayerHUD->HideMessageText();
 				m_IntractableEntityHit = nullptr;
 			}
 		}
 	}
 	else
 	{
-		HideMessageText();
+		m_PlayerHUD->HideMessageText();
 		m_IntractableEntityHit = nullptr;
 	}
-
-	// ALURA Hud
-	DrawHud( ts );
-}
-
-void Player::DrawHud( Timestep ts )
-{
-	// Fix - API 3.0
-
-	// Alura UI pass.
-	g_AluraCanvas->PushFontSize( 32.0f );
-
-	// Player
-	{
-		g_AluraCanvas->AddText( "Health" );
-		g_AluraCanvas->SameLine();
-		g_AluraCanvas->AddProgressBar( ( float ) ( m_Health / 100 ), { 64.0f, 16.0f } );
-		g_AluraCanvas->SameLine();
-		g_AluraCanvas->AddText( std::format( "{0} / 100", m_Health ) );
-	}
-
-	// Weapon
-	{
-		// Fix - API 3.2
-		std::string text = std::format( "{0} / {1} ({2} Magazines)", m_Ammo, m_MaxAmmoInMag, m_NumberOfMagazines );
-
-		// Fix - API 3.1
-		const auto textSize = g_AluraCanvas->CalcTextSize( text );
-
-		g_AluraCanvas->SetNextItemPosition( glm::vec2{ g_AluraCanvas->GetStyle().ItemSpacing.x * 0.25f, ( g_AluraCanvas->GetHeight() - textSize.y ) - g_AluraCanvas->GetStyle().ItemSpacing.y - 2.0f } );
-		g_AluraCanvas->AddText( text );
-	}
-
-	g_AluraCanvas->PopFontSize();
-
-	if( m_ShowMessageText )
-	{
-		m_MessageTimeRemaining -= ts.Seconds();
-
-		if( m_MessageTimeRemaining <= 0 )
-		{
-			m_MessageTimeRemaining = 0.0f;
-			m_ShowMessageText = false;
-			return;
-		}
-
-		g_AluraCanvas->PushFontSize( 28.0f );
-		{
-			// Fix - API 3.1
-			const auto textSize = g_AluraCanvas->CalcTextSize( m_StatusMessageText );
-			g_AluraCanvas->SetNextItemPosition( glm::vec2{ g_AluraCanvas->GetStyle().ItemSpacing.x, ( ( g_AluraCanvas->GetHeight() * 0.5f ) - textSize.y ) - g_AluraCanvas->GetStyle().ItemSpacing.y - 2.0f } );
-			g_AluraCanvas->AddText( m_StatusMessageText );
-		}
-		g_AluraCanvas->PopFontSize();
-	}
-
-	// Crosshair image.
-	g_AluraCanvas->SetNextItemPosition( glm::vec2{ g_AluraCanvas->GetWidth() * 0.5f,  g_AluraCanvas->GetHeight() * 0.5f } );
-	g_AluraCanvas->AddImage( { 24.0F, 24.0F }, m_HudCrosshairTexture );
 }
 
 void Player::Use()
@@ -201,8 +147,7 @@ void Player::Use()
 	if( m_Ammo == 0 ) 
 	{
 		// Show status message.
-		m_StatusMessageText = "No Ammo.";
-		ShowMessageText();
+		m_PlayerHUD->ShowMessageText( "No Ammo." );
 
 		// Fix - API 0.1
 		// Play ammo empty sound.
@@ -247,18 +192,15 @@ void Player::Reload()
 {
 	if( m_Ammo == m_MaxAmmoInMag )
 	{
-		m_StatusMessageText = "Already full ammo.";
-		ShowMessageText();
+		m_PlayerHUD->ShowMessageText( "Already full ammo." );
 	}
 	else if( m_AlreadyReloading )
 	{
-		m_StatusMessageText = "Already reloading.";
-		ShowMessageText();
+		m_PlayerHUD->ShowMessageText( "Already reloading." );
 	}
 	else if( m_NumberOfMagazines == 0 )
 	{
-		m_StatusMessageText = "No Magazines to reload from.";
-		ShowMessageText();
+		m_PlayerHUD->ShowMessageText( "No magazines to reload from." );
 	}
 	else
 	{
@@ -311,8 +253,7 @@ void Player::Interact()
 				{
 					if( m_Health == 100u )
 					{
-						m_StatusMessageText = "Already full health";
-						ShowMessageText();
+						m_PlayerHUD->ShowMessageText( "Already full health." );
 						break;
 					}
 
@@ -327,11 +268,13 @@ void Player::Interact()
 #if !defined(SAT_DIST)
 void Player::DbgMenuHandle()
 {
+/*
 	auto gameStates = GetScene()->GetAllEntitiesWithClass<GameState>();
 	for( auto& rGameState : gameStates )
 	{
 		rGameState->ShowOrHideDbgMenu();
 	}
+*/
 }
 #endif
 
@@ -340,17 +283,6 @@ void Player::OnMeshHit( SharedPtr<Entity> Other )
 	if( Other->GetClass() == Enemy::StaticClass() )
 	{
 		TakeDamage( 15 );
-	}
-}
-
-void Player::HandleMenu()
-{
-#if !defined(SAT_DIST)
-	if( Input::Get().KeyPressed( RubyKey_LeftShift ) || Input::Get().KeyPressed( RubyKey_RightShift ) )
-#endif
-	{
-		GetScene()->PauseGame();
-		Input::Get().SetCursorMode( RubyCursorMode::Normal, true );
 	}
 }
 
@@ -376,18 +308,6 @@ void Player::TakeDamage( int32_t damage )
 
 void Player::OnMeshExit( SharedPtr<Entity> Other )
 {
-}
-
-void Player::ShowMessageText( float timeInSeconds /*= 2.5f */ )
-{
-	m_MessageTimeRemaining = timeInSeconds;
-	m_ShowMessageText = true;
-}
-
-void Player::HideMessageText()
-{
-	m_MessageTimeRemaining = 0.0f;
-	m_ShowMessageText = false;
 }
 
 /*

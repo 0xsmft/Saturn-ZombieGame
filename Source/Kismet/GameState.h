@@ -13,6 +13,8 @@ namespace Saturn {
 	class Sound;
 }
 
+class GameStateHUD;
+
 /**
  * The actual game state...
  */
@@ -34,7 +36,7 @@ enum class GameStateStage
  * The game state entity controls the state of the game.
  * 
  * In this game it acts as the wave manager deciding how many entities should spawn 
- * and when the next wave should occur, it also keeps track of ammo boxes.
+ * and when the next wave should occur, it also keeps track of ammo boxes and heath kits.
  */
 SCLASS( VisibleInEditor )
 class GameState : public Entity
@@ -49,15 +51,15 @@ public:
 	void OnUpdate( Saturn::Timestep ts ) override;
 	void OnPhysicsUpdate( Saturn::Timestep ts ) override;
 
-#if !defined(SAT_DIST)
 public:
-	inline void ShowOrHideDbgMenu() { m_ShowGameStateDebug ^= 1; }
-#endif
+	uint32_t GetCurrentWave() const { return m_CurrentWave; }
+	uint32_t GetWaveDifficulty() const { return m_WaveDifficulty; }
+	uint32_t GetNumberOfWavesSinceLastInt() const { return m_NumberOfWavesSinceLastInt; }
+	float TimeUntilNextGameStateChange() const { return m_TimeUntilNextGameState; }
+	GameStateStage GetCurrentStage() const { return m_GameState; }
 
 private:
-	void DrawPausedUI();
 	void TickGameState( Timestep ts );
-	void DrawGameStateUI();
 
 	void SetupFirstWave();
 	void SetupGameState();
@@ -74,10 +76,8 @@ private:
 
 	// The time until the next game state change, in seconds.
 	float m_TimeUntilNextGameState = 0.0f;
-#if !defined(SAT_DIST)
-	bool m_ShowGameStateDebug = false;
-#endif
 	GameStateStage m_GameState = GameStateStage::Init;
 
 	Ref<Sound> m_TickSound;
+	Ref<GameStateHUD> m_GameStateHUD;
 };

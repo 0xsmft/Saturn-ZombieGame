@@ -1,6 +1,7 @@
 #include "sppch.h"
 #include "Enemy.h"
 
+#include "Player.h"
 
 #include "Saturn/Core/Random.h"
 #include "Saturn/Audio/AudioSystem.h"
@@ -41,12 +42,20 @@ void Enemy::BeginPlay()
 
 void Enemy::OnUpdate( Saturn::Timestep ts )
 {
+	// API - 4.0
+	if( GetScene()->IsPaused() )
+		return;
+
 	Super::OnUpdate( ts );
 
 	// We destroy the sound, then tick for one frame, then the entity is destroyed, which makes sense
 	// due to our differed destruction queue.
 	if( m_AmbientSound )
 		m_AmbientSound->SetPosition( GetLocalPosition() );
+}
+
+void Enemy::OnMeshHit( SharedPtr<Entity> Other )
+{
 }
 
 void Enemy::TakeDamage( int32_t damage )

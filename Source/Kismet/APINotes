@@ -22,3 +22,5 @@ API 3.2 - Alura, adding text
 API 4.0
  -> Unloading sounds, we shouldn't have to call AudioSystem::UnloadSound()
 
+API 5.0
+ -> Paused API for UI

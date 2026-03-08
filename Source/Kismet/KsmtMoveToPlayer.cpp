@@ -15,7 +15,7 @@ KsmtMoveToPlayer::~KsmtMoveToPlayer()
 {
 	if( m_pPath )
 	{
-		m_pActiveScene->GetNavigationSystem().DestoryStraightPath( m_pPath );
+		m_pActiveScene->GetNavigationSystem().DestroyStraightPath( m_pPath );
 		m_pPath = nullptr;
 	}
 

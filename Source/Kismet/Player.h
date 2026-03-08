@@ -9,9 +9,7 @@
 
 using namespace Saturn;
 
-namespace Saturn {
-	class Texture2D;
-}
+class PlayerHUD;
 
 /**
  * THE player.
@@ -29,8 +27,13 @@ public:
 
 	virtual void SetupInputBindings() override;
 
+public:
+	int32_t GetHealth() const { return m_Health; }
+	uint32_t GetAmmo() const { return m_Ammo; }
+	uint32_t GetMaxAmmoInMag() const { return m_MaxAmmoInMag; }
+	uint32_t GetNumberOfMagazines() const { return m_NumberOfMagazines; }
+
 private:
-	void DrawHud( Timestep ts );
 	void Use();
 	void Reload();
 	void Interact();
@@ -38,15 +41,10 @@ private:
 	void DbgMenuHandle();
 #endif
 
-	void HandleMenu();
-
 	void TakeDamage( int32_t damage );
 
 	void OnMeshHit( SharedPtr<Entity> Other );
 	void OnMeshExit( SharedPtr<Entity> Other );
-
-	void ShowMessageText( float timeInSeconds = 2.5f );
-	void HideMessageText();
 
 private:
 	int32_t m_Health = 100;
@@ -63,20 +61,16 @@ private:
 	// The current intractable entity that the player is looking at.
 	SharedPtr<Entity> m_IntractableEntityHit = nullptr;
 
+	Ref<PlayerHUD> m_PlayerHUD;
+	
 	glm::vec3 m_PrevForward{};
 	glm::vec3 m_PrevRight{};
+
 	float m_CurrentYaw = 0.0f;
+	
 	// Time in seconds.
-	float m_MessageTimeRemaining = 0.0f;
 	float m_DamageCooldownTime = 0.50f;
 
-	bool m_ShowMessageText = false;
 	bool m_AlreadyReloading = false;
 	bool m_AlreadyTakingDamage = false;
-
-	std::string m_StatusMessageText{};
-
-	// Why does the player have to hold a texture?
-	// API 1.1
-	Ref<Texture2D> m_HudCrosshairTexture = nullptr;
 };

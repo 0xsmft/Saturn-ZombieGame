@@ -29,6 +29,8 @@ public:
 	virtual void OnUpdate( Saturn::Timestep ts ) override;
 
 public:
+	void OnMeshHit( SharedPtr<Entity> Other );
+	
 	void TakeDamage( int32_t damage );
 
 private:
