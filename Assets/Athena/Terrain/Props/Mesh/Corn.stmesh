@@ -1,0 +1,9 @@
+StaticMesh:
+  Filepath: Assets/Athena/Terrain/Props/Mesh/Corn.glb
+  Attached Shape: 5
+  Physics Material ID: -2006106910
+  MaterialRegistry:
+    Materials:
+      - 0: 2457214804823271695
+      - 1: 2457214804823271695
+      - 2: 2457214804823271695

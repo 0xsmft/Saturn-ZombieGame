@@ -1,0 +1,36 @@
+# WARNING, MODIFICATIONS TO THIS FILE WILL NOT UPDATE GLOBALLY IN EDITOR!
+Prefab: 12093135264508207330
+Root Entity: 7627018236835286278
+Entities:
+  - Entity: 7627018236835286278
+    Class: Entity
+    TagComponent:
+      Tag: BarnCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 12093135264508207330
+      Modified: false
+    MeshComponent:
+      Asset: 12425274493211354822
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0

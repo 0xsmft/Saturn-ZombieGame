@@ -1,0 +1,37 @@
+# WARNING, MODIFICATIONS TO THIS FILE WILL NOT UPDATE GLOBALLY IN EDITOR!
+Prefab: 1811936586911379277
+Root Entity: 10013159932337728426
+Entities:
+  - Entity: 10013159932337728426
+    Class: Entity
+    TagComponent:
+      Tag: CornCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1811936586911379277
+      Modified: false
+    MeshComponent:
+      Asset: 2837387038883008654
+      MaterialRegistry:
+        AnyOverrides: true
+        MaterialOverrides:
+          - 0: 2457214804823271695
+          - 1: 2457214804823271695
+          - 2: 2457214804823271695
+    RigidbodyComponent:
+      IsKinematic: true
+      CCD: false
+      Mass: 2
+      LockFlags: 0

@@ -1,0 +1,8 @@
+Texture:
+  Width: 512
+  Height: 512
+  Channels: 3
+  Hdr: false
+  Flags: 1
+  FilteringFlags: 0
+  Source Path: Assets/Athena/Terrain/Props/Textures/corn_plant__corn_texture_png_baseColor.png

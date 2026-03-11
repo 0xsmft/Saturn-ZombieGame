@@ -2,6 +2,8 @@
 
 This game is primarily a test of <a href="https://github.com/0xsmft/Saturn-Engine">Saturn Engine's</a> API and workflow.
 
+I wouldn't call this a game, it is more of a test to see what Saturn is capable of.
+
 ## Acknowledgements
 
 ### Models
@@ -23,6 +25,10 @@ Haycock and hay collection models is free to download via <a href="https://sketc
 Tree A and B is free to download via <a href="https://sketchfab.com/3d-models/low-poly-trees-51cae4a194344e8bbfbd0a4cff205f76">Sketchfab</a>, Author: Aditya Graphical
 
 Tree C is free to download via <a href="https://sketchfab.com/3d-models/low-poly-tree-4598c065d5534c40b6050c16b69d1b77">Sketchfab</a>, Author: Šimon Ustal
+
+Corn Model is free to download via <a href="https://sketchfab.com/3d-models/corn-corn-corn-10187bc37c9e42ef8770b28452ee7cd3">Sketchfab</a>, Author: Tiia Tuulia
+
+Barn Model is free to download via <a href="https://sketchfab.com/3d-models/american-old-barn-1d0b768a8e2449de990b3f69f94c5db6">Sketchfab</a>, Author: andrewriddle
 
 ### Sounds
 

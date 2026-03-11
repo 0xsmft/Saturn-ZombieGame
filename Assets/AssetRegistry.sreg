@@ -243,10 +243,6 @@ Assets:
     Path: Assets/Athena/Opps/M_Opp.smaterial
     Type: Material
     Version: 8196
-  - Asset: 18323555681594210271
-    Path: Assets/Athena/SurvivalSupport/Health/Mesh/HealthKit.stmesh
-    Type: StaticMesh
-    Version: 8196
   - Asset: 13451726458623680817
     Path: Assets/Athena/Editor/Billboard_HealthKit.stx
     Type: Texture
@@ -254,6 +250,10 @@ Assets:
   - Asset: 12917778785842715189
     Path: Assets/Athena/Terrain/M_Water.smaterial
     Type: Material
+    Version: 8196
+  - Asset: 18323555681594210271
+    Path: Assets/Athena/SurvivalSupport/Health/Mesh/HealthKit.stmesh
+    Type: StaticMesh
     Version: 8196
   - Asset: 15921131299694052321
     Path: Assets/Athena/SurvivalSupport/Health/Textures/Medkit_baseColor.stx
@@ -352,7 +352,7 @@ Assets:
     Type: Material
     Version: 8196
   - Asset: 16164894740795494566
-    Path: Assets/Athena/Terrain/Props/Textures/8_tree_baseColor.stx
+    Path: Assets/Athena/Terrain/Props/Textures/TP_Tree_OLD.stx
     Type: Texture
     Version: 8196
   - Asset: 2903878141788772784
@@ -375,6 +375,38 @@ Assets:
     Path: Assets/Athena/Editor/Billboard_AmmoCrate.stx
     Type: Texture
     Version: 8196
+  - Asset: 2837387038883008654
+    Path: Assets/Athena/Terrain/Props/Mesh/Corn.stmesh
+    Type: StaticMesh
+    Version: 8196
+  - Asset: 6923230922604573827
+    Path: Assets/Athena/Terrain/Props/Textures/TP_CornPlant.stx
+    Type: Texture
+    Version: 8196
+  - Asset: 2457214804823271695
+    Path: Assets/Athena/Terrain/Props/Materials/M_TP_Corn.smaterial
+    Type: Material
+    Version: 8196
+  - Asset: 1811936586911379277
+    Path: Assets/Athena/Terrain/Props/CornCI.prefab
+    Type: Prefab
+    Version: 8196
+  - Asset: 12425274493211354822
+    Path: Assets/Athena/Terrain/Props/Mesh/Barn.stmesh
+    Type: StaticMesh
+    Version: 8196
+  - Asset: 2862624955171168504
+    Path: Assets/Athena/Terrain/Props/Textures/TP_Barn_Albedo.stx
+    Type: Texture
+    Version: 8196
+  - Asset: 12151932020588205072
+    Path: Assets/Athena/Terrain/Props/Materials/M_TP_Barn.smaterial
+    Type: Material
+    Version: 8196
+  - Asset: 12093135264508207330
+    Path: Assets/Athena/Terrain/Props/BarnCI.prefab
+    Type: Prefab
+    Version: 8196
 Asset Dependencies:
   - AssetID: 12765754648904108514
     Dependencies:
@@ -388,7 +420,6 @@ Asset Dependencies:
   - AssetID: 5374017015968207930
     Dependencies:
       - Dependency: 5915327659435897251
-      - Dependency: 618508417
       - Dependency: 2783419812627168482
   - AssetID: 11649624488961672427
     Dependencies:
@@ -470,3 +501,18 @@ Asset Dependencies:
   - AssetID: 11350410678480156004
     Dependencies:
       - Dependency: 3309555597944458250
+  - AssetID: 2837387038883008654
+    Dependencies:
+      - Dependency: 2783419812627168482
+      - Dependency: 2457214804823271695
+  - AssetID: 12425274493211354822
+    Dependencies:
+      - Dependency: 2783419812627168482
+      - Dependency: 12151932020588205072
+      - Dependency: 5915327659435897251
+  - AssetID: 12151932020588205072
+    Dependencies:
+      - Dependency: 2862624955171168504
+  - AssetID: 2457214804823271695
+    Dependencies:
+      - Dependency: 6923230922604573827

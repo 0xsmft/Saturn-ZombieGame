@@ -1,0 +1,8 @@
+StaticMesh:
+  Filepath: Assets/Athena/Terrain/Props/Mesh/Barn.glb
+  Attached Shape: 5
+  Physics Material ID: -2006106910
+  MaterialRegistry:
+    Materials:
+      - 0: 12151932020588205072
+      - 1: 5915327659435897251

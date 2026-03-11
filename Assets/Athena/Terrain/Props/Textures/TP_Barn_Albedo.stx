@@ -1,0 +1,8 @@
+Texture:
+  Width: 2048
+  Height: 2048
+  Channels: 3
+  Hdr: false
+  Flags: 0
+  FilteringFlags: 0
+  Source Path: Assets/Athena/Terrain/Props/Textures/Object002_mtl_baseColor.jpeg
