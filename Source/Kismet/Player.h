@@ -37,9 +37,6 @@ private:
 	void Use();
 	void Reload();
 	void Interact();
-#if !defined(SAT_DIST)
-	void DbgMenuHandle();
-#endif
 
 	void TakeDamage( int32_t damage );
 

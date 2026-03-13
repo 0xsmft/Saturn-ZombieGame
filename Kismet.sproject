@@ -62,5 +62,11 @@ Project:
       Key: 73
       MouseButton: 73
       Type: 0
+    - ActionBinding: Sprint
+      ActionName: LeftShift
+      ID: 14250685328157624700
+      Key: 1
+      MouseButton: 1
+      Type: 0
   SoundGroups:
     []
