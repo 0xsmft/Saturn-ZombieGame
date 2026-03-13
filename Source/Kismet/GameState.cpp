@@ -130,7 +130,7 @@ void GameState::AdvanceToNextWave()
 
 	auto enemySpawners = GetScene()->GetAllEntitiesWithClass<EnemySpawnLocation>();
 	
-	uint32_t numberToSpawn = ( 5 + m_CurrentWave * 2 ) + ( glm::pow( ( float ) ( 0.6f * m_CurrentWave ), 1.4f ) );
+	uint32_t numberToSpawn = ( 5 + m_CurrentWave * 2 ) + ( glm::pow( ( float ) ( 0.6f * ( float ) m_CurrentWave ), 1.4f ) );
 	numberToSpawn /= enemySpawners.size();
 
 	for( auto& rEntity : enemySpawners )
