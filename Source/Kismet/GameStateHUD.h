@@ -37,8 +37,5 @@ public:
 
 private:
 	SharedPtr<GameState> m_GameState = nullptr;
-
-#if !defined(SAT_DIST)
 	bool m_ShowGameStateDebug = false;
-#endif
 };

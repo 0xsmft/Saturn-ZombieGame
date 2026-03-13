@@ -265,19 +265,6 @@ void Player::Interact()
 	}
 }
 
-#if !defined(SAT_DIST)
-void Player::DbgMenuHandle()
-{
-/*
-	auto gameStates = GetScene()->GetAllEntitiesWithClass<GameState>();
-	for( auto& rGameState : gameStates )
-	{
-		rGameState->ShowOrHideDbgMenu();
-	}
-*/
-}
-#endif
-
 void Player::OnMeshHit( SharedPtr<Entity> Other )
 {
 	if( Other->GetClass() == Enemy::StaticClass() )
@@ -336,7 +323,4 @@ void Player::SetupInputBindings()
 	m_PlayerInputController->BindAction( "Reload", ActionBindingTriggerState::Pressed, SAT_BIND_EVENT_FN( Player::Reload ) );
 	m_PlayerInputController->BindAction( "Interact", ActionBindingTriggerState::Pressed, SAT_BIND_EVENT_FN( Player::Interact ) );
 
-#if !defined(SAT_DIST)
-	m_PlayerInputController->BindAction( "DbgMenu", ActionBindingTriggerState::Pressed, SAT_BIND_EVENT_FN( Player::DbgMenuHandle ) );
-#endif
 }

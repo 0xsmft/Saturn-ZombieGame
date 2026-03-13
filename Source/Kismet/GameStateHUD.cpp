@@ -26,6 +26,7 @@ void GameStateHUD::OnInit()
 
 void GameStateHUD::OnDraw( Timestep ts )
 {
+	// Paused check.
 	if( g_ActiveScene->IsPaused() )
 	{
 		g_AluraCanvas->PushFontSize( 32.0f );
@@ -43,12 +44,13 @@ void GameStateHUD::OnDraw( Timestep ts )
 		return;
 	}
 
-#if !defined(SAT_DIST)
+	// Game state debug.
 	if( m_ShowGameStateDebug )
 	{
 		g_AluraCanvas->PushFontSize( 32.0f );
 		{
 			g_AluraCanvas->AddText( "=== Game State Debug ===" );
+			g_AluraCanvas->AddText( std::format( "FPS: {0}", Application::Get()->Framerate() ) );
 
 			g_AluraCanvas->Indent();
 			{
@@ -65,7 +67,6 @@ void GameStateHUD::OnDraw( Timestep ts )
 
 		return;
 	}
-#endif
 
 	// Alura UI pass.
 	g_AluraCanvas->PushFontSize( 32.0f );
@@ -142,6 +143,11 @@ void GameStateHUD::OnEvent( Event& rEvent )
 					g_ActiveScene->PauseGame();
 					Input::Get().SetCursorMode( RubyCursorMode::Normal, true );
 				}
+			}
+
+			if( rKeyEvent.GetKeycode() == RubyKey_F1 )
+			{
+				m_ShowGameStateDebug ^= 1;
 			}
 
 		} break;
