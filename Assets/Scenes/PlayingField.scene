@@ -478,10 +478,10 @@ Entities:
     MeshComponent:
       Asset: 9560119971860032365
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 12921953789803613332
-          - 1: 12921953789803613332
+          - 0: 0
+          - 1: 0
     BoxColliderComponent:
       Extents: [0.5, 0.800000012, 3.0999999]
       Offset: [0, 0, 0]
@@ -515,10 +515,10 @@ Entities:
     MeshComponent:
       Asset: 9560119971860032365
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 12921953789803613332
-          - 1: 12921953789803613332
+          - 0: 0
+          - 1: 0
     BoxColliderComponent:
       Extents: [0.5, 0.800000012, 3.0999999]
       Offset: [0, 0, 0]
@@ -552,10 +552,10 @@ Entities:
     MeshComponent:
       Asset: 9560119971860032365
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 12921953789803613332
-          - 1: 12921953789803613332
+          - 0: 0
+          - 1: 0
     BoxColliderComponent:
       Extents: [0.5, 0.800000012, 3.0999999]
       Offset: [0, 0, 0]
@@ -1357,11 +1357,11 @@ Entities:
     MeshComponent:
       Asset: 2837387038883008654
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 2457214804823271695
-          - 1: 2457214804823271695
-          - 2: 2457214804823271695
+          - 0: 0
+          - 1: 0
+          - 2: 0
     RigidbodyComponent:
       IsKinematic: true
       CCD: false
@@ -1390,11 +1390,11 @@ Entities:
     MeshComponent:
       Asset: 2837387038883008654
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 2457214804823271695
-          - 1: 2457214804823271695
-          - 2: 2457214804823271695
+          - 0: 0
+          - 1: 0
+          - 2: 0
     RigidbodyComponent:
       IsKinematic: true
       CCD: false
@@ -1423,11 +1423,11 @@ Entities:
     MeshComponent:
       Asset: 2837387038883008654
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 2457214804823271695
-          - 1: 2457214804823271695
-          - 2: 2457214804823271695
+          - 0: 0
+          - 1: 0
+          - 2: 0
     RigidbodyComponent:
       IsKinematic: true
       CCD: false
@@ -1456,11 +1456,11 @@ Entities:
     MeshComponent:
       Asset: 2837387038883008654
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 2457214804823271695
-          - 1: 2457214804823271695
-          - 2: 2457214804823271695
+          - 0: 0
+          - 1: 0
+          - 2: 0
     RigidbodyComponent:
       IsKinematic: true
       CCD: false
@@ -1489,11 +1489,11 @@ Entities:
     MeshComponent:
       Asset: 2837387038883008654
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 2457214804823271695
-          - 1: 2457214804823271695
-          - 2: 2457214804823271695
+          - 0: 0
+          - 1: 0
+          - 2: 0
     RigidbodyComponent:
       IsKinematic: true
       CCD: false
@@ -1522,10 +1522,10 @@ Entities:
     MeshComponent:
       Asset: 9560119971860032365
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 12921953789803613332
-          - 1: 12921953789803613332
+          - 0: 0
+          - 1: 0
     BoxColliderComponent:
       Extents: [0.5, 0.800000012, 3.0999999]
       Offset: [0, 0, 0]
@@ -1559,10 +1559,10 @@ Entities:
     MeshComponent:
       Asset: 9560119971860032365
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 12921953789803613332
-          - 1: 12921953789803613332
+          - 0: 0
+          - 1: 0
     BoxColliderComponent:
       Extents: [0.5, 0.800000012, 3.0999999]
       Offset: [0, 0, 0]
@@ -1596,10 +1596,10 @@ Entities:
     MeshComponent:
       Asset: 9560119971860032365
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 12921953789803613332
-          - 1: 12921953789803613332
+          - 0: 0
+          - 1: 0
     BoxColliderComponent:
       Extents: [0.5, 0.800000012, 3.0999999]
       Offset: [0, 0, 0]
@@ -1633,10 +1633,10 @@ Entities:
     MeshComponent:
       Asset: 9560119971860032365
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 12921953789803613332
-          - 1: 12921953789803613332
+          - 0: 0
+          - 1: 0
     BoxColliderComponent:
       Extents: [0.5, 0.800000012, 3.0999999]
       Offset: [0, 0, 0]
@@ -1670,10 +1670,10 @@ Entities:
     MeshComponent:
       Asset: 9560119971860032365
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 12921953789803613332
-          - 1: 12921953789803613332
+          - 0: 0
+          - 1: 0
     BoxColliderComponent:
       Extents: [0.5, 0.800000012, 3.0999999]
       Offset: [0, 0, 0]
@@ -1707,10 +1707,10 @@ Entities:
     MeshComponent:
       Asset: 9560119971860032365
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 12921953789803613332
-          - 1: 12921953789803613332
+          - 0: 0
+          - 1: 0
     BoxColliderComponent:
       Extents: [0.5, 0.800000012, 3.0999999]
       Offset: [0, 0, 0]
@@ -1744,11 +1744,11 @@ Entities:
     MeshComponent:
       Asset: 2837387038883008654
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 2457214804823271695
-          - 1: 2457214804823271695
-          - 2: 2457214804823271695
+          - 0: 0
+          - 1: 0
+          - 2: 0
     RigidbodyComponent:
       IsKinematic: true
       CCD: false
@@ -1777,11 +1777,11 @@ Entities:
     MeshComponent:
       Asset: 2837387038883008654
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 2457214804823271695
-          - 1: 2457214804823271695
-          - 2: 2457214804823271695
+          - 0: 0
+          - 1: 0
+          - 2: 0
     RigidbodyComponent:
       IsKinematic: true
       CCD: false
@@ -1810,11 +1810,11 @@ Entities:
     MeshComponent:
       Asset: 2837387038883008654
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 2457214804823271695
-          - 1: 2457214804823271695
-          - 2: 2457214804823271695
+          - 0: 0
+          - 1: 0
+          - 2: 0
     RigidbodyComponent:
       IsKinematic: true
       CCD: false
@@ -1843,11 +1843,11 @@ Entities:
     MeshComponent:
       Asset: 2837387038883008654
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 2457214804823271695
-          - 1: 2457214804823271695
-          - 2: 2457214804823271695
+          - 0: 0
+          - 1: 0
+          - 2: 0
     RigidbodyComponent:
       IsKinematic: true
       CCD: false
@@ -1876,11 +1876,11 @@ Entities:
     MeshComponent:
       Asset: 2837387038883008654
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 2457214804823271695
-          - 1: 2457214804823271695
-          - 2: 2457214804823271695
+          - 0: 0
+          - 1: 0
+          - 2: 0
     RigidbodyComponent:
       IsKinematic: true
       CCD: false
@@ -1909,11 +1909,11 @@ Entities:
     MeshComponent:
       Asset: 2837387038883008654
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 2457214804823271695
-          - 1: 2457214804823271695
-          - 2: 2457214804823271695
+          - 0: 0
+          - 1: 0
+          - 2: 0
     RigidbodyComponent:
       IsKinematic: true
       CCD: false
@@ -1942,11 +1942,11 @@ Entities:
     MeshComponent:
       Asset: 2837387038883008654
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 2457214804823271695
-          - 1: 2457214804823271695
-          - 2: 2457214804823271695
+          - 0: 0
+          - 1: 0
+          - 2: 0
     RigidbodyComponent:
       IsKinematic: true
       CCD: false
@@ -1975,11 +1975,11 @@ Entities:
     MeshComponent:
       Asset: 2837387038883008654
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 2457214804823271695
-          - 1: 2457214804823271695
-          - 2: 2457214804823271695
+          - 0: 0
+          - 1: 0
+          - 2: 0
     RigidbodyComponent:
       IsKinematic: true
       CCD: false
@@ -2116,11 +2116,11 @@ Entities:
     MeshComponent:
       Asset: 2837387038883008654
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 2457214804823271695
-          - 1: 2457214804823271695
-          - 2: 2457214804823271695
+          - 0: 0
+          - 1: 0
+          - 2: 0
     RigidbodyComponent:
       IsKinematic: true
       CCD: false
@@ -2149,11 +2149,11 @@ Entities:
     MeshComponent:
       Asset: 2837387038883008654
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 2457214804823271695
-          - 1: 2457214804823271695
-          - 2: 2457214804823271695
+          - 0: 0
+          - 1: 0
+          - 2: 0
     RigidbodyComponent:
       IsKinematic: true
       CCD: false
