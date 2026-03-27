@@ -30,7 +30,6 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0

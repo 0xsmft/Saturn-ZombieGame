@@ -21,8 +21,6 @@ public class KismetEditor : Target
 
         PreprocessorDefines.AddRange( new string[] {
             "_CRT_SECURE_NO_WARNINGS",
-            "PX_PHYSX_STATIC_LIB",
-            "PX_GENERATE_STATIC_LIBRARIES",
             "GLM_ENABLE_EXPERIMENTAL",
             "SATURN_SS_IMPORT",
             "TRACY_ENABLE",
@@ -30,9 +28,13 @@ public class KismetEditor : Target
             "TRACY_MANUAL_LIFETIME",
             "SAT_RBY_INCLUDE_VULKAN",
             "KHRONOS_STATIC",
+            "JPH_DEBUG_RENDERER",
+            "JPH_FLOATING_POINT_EXCEPTIONS_ENABLED",
+            "JPH_EXTERNAL_PROFILE",
+            "JPH_ENABLE_ASSERTS"
         } );
 
-          Links.AddRange( new string[] { 
+        Links.AddRange( new string[] {
             "ImGui.lib",
             "SPIRV-Cross.lib",
             "yaml-cpp.lib",
@@ -42,6 +44,7 @@ public class KismetEditor : Target
             "Freetype.lib",
             "MSDFGen.lib",
             "MSDF-Atlas-Gen.lib",
+            "JoltPhysics.lib",
             "Saturn-SharedStorage.lib",
             "ole32.lib",
             "kernel32.lib",
@@ -71,9 +74,7 @@ public class KismetEditor : Target
             "Saturn/vendor/tracy/src",
             "Saturn/vendor/Filewatch/src",
             "Saturn/vendor/miniaudio/src",
-            "Saturn/vendor/physx/include",
-            "Saturn/vendor/physx/include/pxshared",
-            "Saturn/vendor/physx/include/physx",
+            "Saturn/vendor/JoltPhysics/Jolt",
             "Saturn/vendor/zlib",
             "Saturn/vendor/Recast/RecastAndDetour/Include",
             "Saturn/vendor/stb",

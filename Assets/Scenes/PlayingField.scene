@@ -112,8 +112,7 @@ Entities:
         MaterialOverrides:
           - 0: 16769788357849991775
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 63
   - Entity: 2796448515498574463
@@ -168,15 +167,16 @@ Entities:
         AnyOverrides: false
         MaterialOverrides:
           - 0: 0
-    RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
-      Mass: 2
-      LockFlags: 56
-    CharacterMovementComponent:
-      StepOffset: 0.300000012
+    CapsuleColliderComponent:
       Height: 1
       Radius: 1
+      Offset: [0, 0, 0]
+      IsTrigger: false
+    CharacterMovementComponent:
+      StepOffset: 0.300000012
+      NoGravity: false
+      ControlMovementInAir: false
+      ControlRotationInAir: false
     AudioListenerComponent:
       Primary: true
       Direction: [0, 0, -1]
@@ -208,8 +208,7 @@ Entities:
       IsTrigger: true
       AutoAdjustExtent: true
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
     BillboardComponent:
@@ -243,8 +242,7 @@ Entities:
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 12257178244619118867
@@ -303,8 +301,7 @@ Entities:
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: false
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 63
   - Entity: 1525000204008776130
@@ -340,8 +337,7 @@ Entities:
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: false
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 63
   - Entity: 6260325738484472731
@@ -377,8 +373,7 @@ Entities:
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: false
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 63
   - Entity: 6673694562670455674
@@ -414,8 +409,7 @@ Entities:
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: false
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 63
   - Entity: 9857304727080614299
@@ -451,8 +445,7 @@ Entities:
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: false
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 63
   - Entity: 14990274647629815964
@@ -488,8 +481,7 @@ Entities:
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 12922327228489436659
@@ -525,8 +517,7 @@ Entities:
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 13469669811050733344
@@ -562,8 +553,7 @@ Entities:
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 14946347809157904184
@@ -591,8 +581,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 63
   - Entity: 3000921423199766182
@@ -620,8 +609,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 63
   - Entity: 13732214010468103137
@@ -677,8 +665,7 @@ Entities:
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: false
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 63
   - Entity: 18022179316500604907
@@ -706,8 +693,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 63
   - Entity: 6502663572782872020
@@ -850,8 +836,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 16821462325214919482
@@ -882,8 +867,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 7052839518655694218
@@ -914,8 +898,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 14530780188863029327
@@ -946,8 +929,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 2027272732317732714
@@ -978,8 +960,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 12860683956583134569
@@ -1010,8 +991,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 15427374461524837940
@@ -1042,8 +1022,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 720152163356918409
@@ -1074,8 +1053,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 12767381860477742435
@@ -1106,8 +1084,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 11370182434807255699
@@ -1138,8 +1115,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 13782114213641802507
@@ -1170,8 +1146,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 16037532164085670095
@@ -1202,8 +1177,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 1513626730639150316
@@ -1234,8 +1208,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 16595561292751580908
@@ -1266,8 +1239,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 13450125446735044872
@@ -1298,8 +1270,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 11334130018430300765
@@ -1330,8 +1301,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 9003706685141219126
@@ -1363,8 +1333,7 @@ Entities:
           - 1: 0
           - 2: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 17711074983730271175
@@ -1396,8 +1365,7 @@ Entities:
           - 1: 0
           - 2: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 16583184126710197805
@@ -1429,8 +1397,7 @@ Entities:
           - 1: 0
           - 2: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 15898855495028709227
@@ -1462,8 +1429,7 @@ Entities:
           - 1: 0
           - 2: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 7822340834388312680
@@ -1495,8 +1461,7 @@ Entities:
           - 1: 0
           - 2: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 5941368918913993092
@@ -1532,8 +1497,7 @@ Entities:
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 6732309180256907773
@@ -1569,8 +1533,7 @@ Entities:
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 14226822421093511518
@@ -1606,8 +1569,7 @@ Entities:
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 6340232146451819403
@@ -1643,8 +1605,7 @@ Entities:
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 12560512141165990904
@@ -1680,8 +1641,7 @@ Entities:
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 105624095938797897
@@ -1717,8 +1677,7 @@ Entities:
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 2711669256331927768
@@ -1750,8 +1709,7 @@ Entities:
           - 1: 0
           - 2: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 18384087037068431810
@@ -1783,8 +1741,7 @@ Entities:
           - 1: 0
           - 2: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 2649816393875213100
@@ -1816,8 +1773,7 @@ Entities:
           - 1: 0
           - 2: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 12958130484527804470
@@ -1849,8 +1805,7 @@ Entities:
           - 1: 0
           - 2: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 10182131861648227311
@@ -1882,8 +1837,7 @@ Entities:
           - 1: 0
           - 2: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 3963998291193942522
@@ -1915,8 +1869,7 @@ Entities:
           - 1: 0
           - 2: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 5863693628749141433
@@ -1948,8 +1901,7 @@ Entities:
           - 1: 0
           - 2: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 34668603726806117
@@ -1981,8 +1933,7 @@ Entities:
           - 1: 0
           - 2: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 16818327339340328797
@@ -2013,8 +1964,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 5902003055779750744
@@ -2050,8 +2000,7 @@ Entities:
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: false
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 63
     BillboardComponent:
@@ -2089,8 +2038,7 @@ Entities:
       IsTrigger: false
       AutoAdjustExtent: false
     RigidbodyComponent:
-      IsKinematic: false
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 63
   - Entity: 4174026786917664556
@@ -2122,8 +2070,7 @@ Entities:
           - 1: 0
           - 2: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 5163565736039892842
@@ -2155,8 +2102,7 @@ Entities:
           - 1: 0
           - 2: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 18172650907934981494
@@ -2187,8 +2133,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 8600850717151174221
@@ -2219,8 +2164,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 3629248608086883978
@@ -2251,8 +2195,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 10267415730310185666
@@ -2283,8 +2226,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 5691243531799072109
@@ -2315,8 +2257,7 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0
   - Entity: 11995433360846346600
@@ -2347,7 +2288,6 @@ Entities:
           - 0: 0
           - 1: 0
     RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
+      BodyType: 0
       Mass: 2
       LockFlags: 0

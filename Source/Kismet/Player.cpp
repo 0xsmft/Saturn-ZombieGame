@@ -44,12 +44,6 @@ void Player::BeginPlay()
 
 	//////////////////////////////////////////////////////////////////////////
 
-	if( GetRigidBody() )
-	{
-		GetRigidBody()->SetOnCollisionHit( SAT_BIND_EVENT_FN( OnMeshHit ) );
-		GetRigidBody()->SetOnCollisionExit( SAT_BIND_EVENT_FN( OnMeshExit ) );
-	}
-
 	for( const auto& rID : GetChildren() )
 	{
 		SharedPtr<Entity> child = GetScene()->FindEntityByID( rID );

@@ -28,14 +28,15 @@ Entities:
         AnyOverrides: true
         MaterialOverrides:
           - 0: 6750571966792973822
-    RigidbodyComponent:
-      IsKinematic: true
-      CCD: false
-      Mass: 2
-      LockFlags: 56
-    CharacterMovementComponent:
-      StepOffset: 0.300000012
+    CapsuleColliderComponent:
       Height: 1
       Radius: 1
+      Offset: [0, 0, 0]
+      IsTrigger: false
+    CharacterMovementComponent:
+      StepOffset: 0.300000012
+      NoGravity: false
+      ControlMovementInAir: false
+      ControlRotationInAir: false
     BehaviourTreeComponent:
       AssetID: 18340302101549531855
