@@ -104,7 +104,7 @@ void Player::OnUpdate( Timestep ts )
 	RaycastHitResult result;
 	TransformComponent tc = GetScene()->GetWorldSpaceTransform( GetCameraEntity() );
 
-	if( GetScene()->Raycast( tc.Position + CalculateForward(), CalculateForward(), 10.0f, &result ) )
+	if( GetScene()->RaycastIgnore( SharedFromThis(), tc.Position + CalculateForward(), CalculateForward(), 10.0f, &result ) )
 	{
 		if( result.Hit )
 		{
@@ -133,6 +133,14 @@ void Player::OnUpdate( Timestep ts )
 	}
 }
 
+void Player::OnEntityHit( Entity* pOther, bool isTrigger )
+{
+	if( pOther->GetClass() == Enemy::StaticClass() )
+	{
+		TakeDamage( 15 );
+	}
+}
+
 void Player::Use()
 {
 	if( Input::Get().GetCursorMode() != RubyCursorMode::Locked )
@@ -154,8 +162,9 @@ void Player::Use()
 	// Hitscan weapons.
 	RaycastHitResult result;
 	TransformComponent tc = GetScene()->GetWorldSpaceTransform( GetCameraEntity() );
+	const glm::vec3 startingPosition = tc.Position;
 
-	if( GetScene()->Raycast( tc.Position + CalculateForward(), CalculateForward(), 100.0f, &result ) )
+	if( GetScene()->RaycastIgnore( SharedFromThis(), startingPosition + CalculateForward(), CalculateForward(), 100.0f, &result ) )
 	{
 		if( result.Hit )
 		{
@@ -259,14 +268,6 @@ void Player::Interact()
 	}
 }
 
-void Player::OnMeshHit( SharedPtr<Entity> Other )
-{
-	if( Other->GetClass() == Enemy::StaticClass() )
-	{
-		TakeDamage( 15 );
-	}
-}
-
 void Player::TakeDamage( int32_t damage )
 {
 	// This is not the best way to handle damage at all, but some entities will swarm the player
@@ -285,10 +286,6 @@ void Player::TakeDamage( int32_t damage )
 		m_Health = glm::max( 0, m_Health - damage );
 		m_AlreadyTakingDamage = true;
 	}
-}
-
-void Player::OnMeshExit( SharedPtr<Entity> Other )
-{
 }
 
 /*

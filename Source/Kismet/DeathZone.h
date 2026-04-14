@@ -22,7 +22,6 @@ public:
 	~DeathZone();
 
 	virtual void BeginPlay() override;
+	virtual void OnEntityHit( Entity* pOther, bool isTrigger );
 
-private:
-	void OnMeshHit( SharedPtr<Entity> Other );
 };

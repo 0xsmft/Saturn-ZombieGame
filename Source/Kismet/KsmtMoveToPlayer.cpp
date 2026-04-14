@@ -2,6 +2,7 @@
 
 #include "Player.h"
 
+#include "Saturn/Physics/PhysicsShapes.h"
 #include "Saturn/Physics/PhysicsCharacterController.h"
 
 #include "Saturn/AI/BehaviourTree/AssetViewer/BehaviourTreeNodeEditor.h"

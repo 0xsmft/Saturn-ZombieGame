@@ -24,6 +24,7 @@ public:
 
 	virtual void BeginPlay() override;
 	virtual void OnUpdate( Saturn::Timestep ts ) override;
+	virtual void OnEntityHit( Entity* pOther, bool isTrigger );
 
 	virtual void SetupInputBindings() override;
 
@@ -39,9 +40,6 @@ private:
 	void Interact();
 
 	void TakeDamage( int32_t damage );
-
-	void OnMeshHit( SharedPtr<Entity> Other );
-	void OnMeshExit( SharedPtr<Entity> Other );
 
 private:
 	int32_t m_Health = 100;

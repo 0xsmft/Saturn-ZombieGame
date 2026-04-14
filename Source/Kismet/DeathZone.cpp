@@ -16,27 +16,23 @@ DeathZone::~DeathZone()
 
 void DeathZone::BeginPlay()
 {
-	if( auto* pRigidbody = GetComponent<RigidbodyComponent>().Rigidbody; pRigidbody )
-	{
-		pRigidbody->SetOnCollisionHit( SAT_BIND_EVENT_FN( OnMeshHit ) );
-	}
 }
 
-void DeathZone::OnMeshHit( SharedPtr<Entity> Other )
+void DeathZone::OnEntityHit( Entity* pOther, bool isTrigger )
 {
-	if( Other )
+	if( pOther )
 	{
 		// If we just killed the player then we need to spawn the camera again, so that the whole runtime doesn't end.
-		if( Other->StaticClass() == Player::StaticClass() )
+		if( pOther->StaticClass() == Player::StaticClass() )
 		{
 			auto camEntity = GetScene()->CreateEntity( "DzCamera" );
 			auto& rCameraComp = camEntity->AddComponent<CameraComponent>();
 			rCameraComp.MainCamera = true;
 		}
 
-		SAT_CORE_INFO( "DeathZone killed entity: {0}", Other->GetName() );
+		SAT_CORE_INFO( "DeathZone killed entity: {0}", pOther->GetName() );
 
 		// Destory entity...
-		GetScene()->DestroyEntity( Other.Get() );
+		GetScene()->DestroyEntity( pOther );
 	}
 }
