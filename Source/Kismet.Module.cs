@@ -51,6 +51,7 @@ public class KismetModule : Module
             Path.Combine( saturnDir, "Saturn/vendor/spdlog/include" ),
             Path.Combine( saturnDir, "Saturn/vendor/acl/include" ),
             Path.Combine( saturnDir, "Saturn/vendor/acl/rtm/include" ),
+            Path.Combine( saturnDir, "Saturn/vendor/nativefiledialogext/src/include/nativefiledialog" ),
         } );
 
         string binPath = Path.Combine( saturnDir, "bin" );
@@ -69,6 +70,7 @@ public class KismetModule : Module
             VendorBinaries.GetBinPath( VendorProject.FREETYPE ),
             VendorBinaries.GetBinPath( VendorProject.MSDF ),
             VendorBinaries.GetBinPath( VendorProject.MSDFGEN ),
+            VendorBinaries.GetBinPath( VendorProject.NFD ),
         } );
 
         binPath = Path.Combine( binPath, "Saturn-SharedStorage" );

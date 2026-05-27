@@ -5,8 +5,7 @@
 #include "Saturn/Physics/PhysicsShapes.h"
 #include "Saturn/Physics/PhysicsCharacterController.h"
 
-#include "Saturn/AI/BehaviourTree/AssetViewer/BehaviourTreeNodeEditor.h"
-#include "Saturn/AI/BehaviourTree/AssetViewer/Nodes/BehaviourTreeNodeBase.h"
+#include "Saturn/AI/BehaviourTree/BehaviourTreeTaskHandler.h"
 
 KsmtMoveToPlayer::KsmtMoveToPlayer()
 {
@@ -23,12 +22,20 @@ KsmtMoveToPlayer::~KsmtMoveToPlayer()
 	m_pActiveScene = nullptr;
 }
 
-void KsmtMoveToPlayer::InitialiseTask( NodeEditorTaskHandler* pHandler, NodeEditorBase* pEditor, NodeEditorNodeBase* pNode )
+#if !defined(SAT_DIST)
+void KsmtMoveToPlayer::PreInitialiseTask( NodeEditor* pEditor, NodeEditorNodeBase* pNode )
 {
-	BehaviourTreeNodeEditor* BT = dynamic_cast< BehaviourTreeNodeEditor* >( pEditor );
+	Super::PreInitialiseTask( pEditor, pNode );
+}
+#endif
+
+void KsmtMoveToPlayer::InitialiseTaskWithOther( NodeEditorTaskHandler* pHandler, NodeEditorTaskBase* pOther )
+{
+	Super::InitialiseTaskWithOther( pHandler, pOther );
+
+	BehaviourTreeTaskHandler* BT = dynamic_cast< BehaviourTreeTaskHandler* >( pHandler );
 
 	m_Agent = BT->GetTargetAgent();
-	m_NodeID = pNode->ID;
 
 	auto players = m_Agent->GetScene()->GetAllEntitiesWithClass<Player>();
 	for( auto& rPlayer : players )

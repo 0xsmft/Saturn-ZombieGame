@@ -45,6 +45,7 @@ public class KismetEditor : Target
             "MSDFGen.lib",
             "MSDF-Atlas-Gen.lib",
             "JoltPhysics.lib",
+            "NativeFileDialogExtended.lib",
             "Saturn-SharedStorage.lib",
             "ole32.lib",
             "kernel32.lib",
