@@ -51,8 +51,6 @@ private:
 	uint32_t m_MaxAmmoInMag = 30u;
 	uint32_t m_NumberOfMagazines = 1u;
 
-	SharedPtr<Entity> m_Weapon = nullptr;
-
 	// The current intractable entity that the player is looking at.
 	SharedPtr<Entity> m_IntractableEntityHit = nullptr;
 
@@ -68,4 +66,6 @@ private:
 
 	bool m_AlreadyReloading = false;
 	bool m_AlreadyTakingDamage = false;
+	bool m_IsReloading = false;
+	bool m_IsFiring = false;
 };

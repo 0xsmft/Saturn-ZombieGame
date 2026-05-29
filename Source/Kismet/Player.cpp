@@ -23,6 +23,8 @@
 
 #include "Saturn/Alura/AluraCanvas.h"
 
+#include "Saturn/Animation/AnimationController.h"
+
 
 Player::Player()
 {
@@ -44,25 +46,14 @@ void Player::BeginPlay()
 
 	//////////////////////////////////////////////////////////////////////////
 
-	for( const auto& rID : GetChildren() )
-	{
-		SharedPtr<Entity> child = GetScene()->FindEntityByID( rID );
-		if( child && child->GetName() == "Weapon" )
-		{
-			m_Weapon = child;
-		}
-	}
-
-	// Fix - API 2.0
-	m_Weapon->SetParent( GetCameraEntity()->GetUUID() );
-	GetCameraEntity()->AddChild( m_Weapon->GetUUID() );
-
-	GetChildren().erase( std::remove( GetChildren().begin(), GetChildren().end(), m_Weapon->GetUUID() ), GetChildren().end() );
-
 	m_Ammo = m_MaxAmmoInMag;
 
 	m_PrevForward = CalculateForward();
 	m_PrevRight = CalculateRight();
+
+	GetComponent<SkeletalMeshComponent>().LocalAnimator->GetAnimGraph()->SetVariable( "Speed", &m_MovementSpeed );
+	GetComponent<SkeletalMeshComponent>().LocalAnimator->GetAnimGraph()->SetVariable( "IsReloading", &m_AlreadyReloading );
+	GetComponent<SkeletalMeshComponent>().LocalAnimator->GetAnimGraph()->SetVariable( "IsFiring", &m_IsFiring );
 }
 
 void Player::OnUpdate( Timestep ts )
@@ -82,21 +73,6 @@ void Player::OnUpdate( Timestep ts )
 
 		m_DamageCooldownTime = 0.0f;
 		m_AlreadyTakingDamage = false;
-	}
-
-	// Update weapon movement.
-	if( m_Weapon )
-	{
-		// This is all we are getting for now.
-		// I have NO clue how to make this work.
-		// we probably have to calculate our angle offset
-		// from our turning... angle bullshit.
-		
-		const auto& camera = GetCameraEntity()->GetComponent<CameraComponent>().Camera;		
-		auto rotation = m_Weapon->GetLocalRotation();
-		rotation.x = camera->GetPitch();
-
-		m_Weapon->SetRotation( rotation );
 	}
 
 	// Consumable hit detection.
