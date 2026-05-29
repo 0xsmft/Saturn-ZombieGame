@@ -8,8 +8,6 @@ I wouldn't call this a game, it is more of a test to see what Saturn is capable 
 
 ### Models
 
-The main weapon is free to download via <a href="https://sketchfab.com/3d-models/gun-a66b52ede9af472a9a9e0946154d603c">Sketchfab</a>, Author: Dries Deryckere
-
 The ammo crate model is free to download via <a href="https://sketchfab.com/3d-models/ammo-crate-pbr-4c1ae64a96934083b0250752cac78595">Sketchfab</a>, Author: avhatar
 
 The mesh `XNavTest` was taken from the <a href="https://github.com/recastnavigation/recastnavigation">recastnavigation</a> repository and was modified to be exported in the GLTF format. Author: Unknown
@@ -29,6 +27,10 @@ Tree C is free to download via <a href="https://sketchfab.com/3d-models/low-poly
 Corn Model is free to download via <a href="https://sketchfab.com/3d-models/corn-corn-corn-10187bc37c9e42ef8770b28452ee7cd3">Sketchfab</a>, Author: Tiia Tuulia
 
 Barn Model is free to download via <a href="https://sketchfab.com/3d-models/american-old-barn-1d0b768a8e2449de990b3f69f94c5db6">Sketchfab</a>, Author: andrewriddle
+
+VSK-94/BCK-94 Rife model is free to download via <a href="https://sketchfab.com/3d-models/vsk-94-94-sniper-rifle-gameready-lowpoly-2a38f8e36cae4952b6f04ec27b6c60da">Sketchfab</a>, Author: valterjherson1
+
+The animations for this model was created by <a href="https://sketchfab.com/ccransh">ccransh</a> and is free to download on <a href="https://sketchfab.com/3d-models/fps-animations-vsk-191e34e043d546718d9e899d19d2f974">Sketchfab</a>
 
 ### Sounds
 

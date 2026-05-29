@@ -1,0 +1,10 @@
+Material:
+  AlbedoColor: [1, 1, 1]
+  AlbedoTexture: 8232254349930466688
+  UseNormal: true
+  NormalTexture: 8728875531952690420
+  Metalness: 1
+  MetalnessTexture: 3415516015602051732
+  Roughness: 1
+  RoughnessTexture: 10577990618218426836
+  Emissive: 0

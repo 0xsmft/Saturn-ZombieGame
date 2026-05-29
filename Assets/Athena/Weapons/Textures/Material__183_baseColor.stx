@@ -1,7 +1,0 @@
-Texture:
-  Width: 1024
-  Height: 1024
-  Channels: 4
-  Hdr: false
-  Flags: 1
-  Source Path: Assets/Athena/Weapons/Textures/Material__183_baseColor.png

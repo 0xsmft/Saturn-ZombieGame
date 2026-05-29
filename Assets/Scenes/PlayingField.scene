@@ -115,73 +115,6 @@ Entities:
       BodyType: 0
       Mass: 2
       LockFlags: 63
-  - Entity: 2796448515498574463
-    Class: Entity
-    TagComponent:
-      Tag: Weapon
-    ClassInformation:
-      LastPropertyCount: 0
-      Properties:
-        []
-    TransformComponent:
-      Position: [-0.5, -0.100000001, 1.13]
-      Rotation: [0, 0, 0]
-      Quaternion: [0, 0, 0, 1]
-      Scale: [0.0199999996, 0.0199999996, 0.0199999996]
-    RelationshipComponent:
-      Parent: 3203991571491610375
-      Children:
-        []
-    MeshComponent:
-      Asset: 3007642428770073042
-      MaterialRegistry:
-        AnyOverrides: true
-        MaterialOverrides:
-          - 0: 15540430296704676022
-          - 1: 11067449887911952097
-          - 2: 8579261805612793011
-          - 3: 15540430296704676022
-  - Entity: 3203991571491610375
-    Class: Player
-    TagComponent:
-      Tag: PlayerCI
-    ClassInformation:
-      LastPropertyCount: 0
-      Properties:
-        []
-    TransformComponent:
-      Position: [-1.50601673, 4.53132725, 0]
-      Rotation: [0, 0, 0]
-      Quaternion: [0, 0, 0, 1]
-      Scale: [1, 1, 1]
-    RelationshipComponent:
-      Parent: 0
-      Children:
-        - ID: 2796448515498574463
-    PrefabComponent:
-      AssetID: 17599430179175385212
-      Modified: false
-    MeshComponent:
-      Asset: 165149688583984825
-      MaterialRegistry:
-        AnyOverrides: false
-        MaterialOverrides:
-          - 0: 0
-    CapsuleColliderComponent:
-      Height: 1
-      Radius: 1
-      Offset: [0, 0, 0]
-      IsTrigger: false
-    CharacterMovementComponent:
-      StepOffset: 0.300000012
-      NoGravity: false
-      ControlMovementInAir: false
-      ControlRotationInAir: false
-    AudioListenerComponent:
-      Primary: true
-      Direction: [0, 0, -1]
-      ConeInner: 0
-      ConeOuter: 0
   - Entity: 4500827804730850070
     Class: DeathZone
     TagComponent:
@@ -225,7 +158,7 @@ Entities:
       Position: [-51.4241486, -3.31972313, 0]
       Rotation: [0, 0, -4.92173815]
       Quaternion: [0, 0, -0.0429370664, 0.999077797]
-      Scale: [7026.13037, 1, 18848.4551]
+      Scale: [54.0294266, 0.999999762, 216.571823]
     RelationshipComponent:
       Parent: 0
       Children:
@@ -237,10 +170,10 @@ Entities:
         MaterialOverrides:
           - 0: 12917778785842715189
     BoxColliderComponent:
-      Extents: [35.2999992, 1, 87.4000015]
+      Extents: [54.0294266, 0.999999762, 216.571823]
       Offset: [0, 0, 0]
       IsTrigger: false
-      AutoAdjustExtent: false
+      AutoAdjustExtent: true
     RigidbodyComponent:
       BodyType: 0
       Mass: 2
@@ -257,7 +190,7 @@ Entities:
       Position: [-71.9814682, 1.41258287, 85.0318222]
       Rotation: [94.0521393, 0, 0]
       Quaternion: [0.731663883, 0, 0, 0.68166554]
-      Scale: [293.310883, 293.310883, 293.310883]
+      Scale: [1, 1, 1]
     RelationshipComponent:
       Parent: 0
       Children:
@@ -2291,3 +2224,69 @@ Entities:
       BodyType: 0
       Mass: 2
       LockFlags: 0
+  - Entity: 16666114889626276181
+    Class: Player
+    TagComponent:
+      Tag: PlayerCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [-2.86416245, 4.4903841, 0.298428595]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        - ID: 10347135955168382215
+    PrefabComponent:
+      AssetID: 17599430179175385212
+      Modified: false
+    SkeletalMeshComponent:
+      Asset: 13290213702652730351
+      AnimationAssetType: 1
+      AnimationAsset: 6725253899592384818
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+          - 2: 0
+          - 3: 0
+          - 4: 0
+    CapsuleColliderComponent:
+      Height: 1
+      Radius: 1
+      Offset: [0, 0, 0]
+      IsTrigger: false
+    CharacterMovementComponent:
+      StepOffset: 0.300000012
+      NoGravity: false
+      ControlMovementInAir: false
+      ControlRotationInAir: false
+    AudioListenerComponent:
+      Primary: true
+      Direction: [0, 0, -1]
+      ConeInner: 0
+      ConeOuter: 0
+  - Entity: 10347135955168382215
+    Class: Entity
+    TagComponent:
+      Tag: Camera
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0.25, 0.0299999993]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 16666114889626276181
+      Children:
+        []
+    CameraComponent:
+      MainCamera: true

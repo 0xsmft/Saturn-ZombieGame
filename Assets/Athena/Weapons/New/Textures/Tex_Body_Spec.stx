@@ -1,0 +1,8 @@
+Texture:
+  Width: 8192
+  Height: 8192
+  Channels: 3
+  Hdr: false
+  Flags: 0
+  FilteringFlags: 0
+  Source Path: Assets/Athena/Weapons/New/Textures/Body_Spec.jpg

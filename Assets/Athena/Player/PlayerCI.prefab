@@ -22,12 +22,18 @@ Entities:
     PrefabComponent:
       AssetID: 17599430179175385212
       Modified: false
-    MeshComponent:
-      Asset: 165149688583984825
+    SkeletalMeshComponent:
+      Asset: 13290213702652730351
+      AnimationAssetType: 1
+      AnimationAsset: 6725253899592384818
       MaterialRegistry:
         AnyOverrides: false
         MaterialOverrides:
           - 0: 0
+          - 1: 0
+          - 2: 0
+          - 3: 0
+          - 4: 0
     CapsuleColliderComponent:
       Height: 1
       Radius: 1
@@ -39,7 +45,7 @@ Entities:
       ControlMovementInAir: false
       ControlRotationInAir: false
     AudioListenerComponent:
-      Primary: false
+      Primary: true
       Direction: [0, 0, -1]
       ConeInner: 0
       ConeOuter: 0

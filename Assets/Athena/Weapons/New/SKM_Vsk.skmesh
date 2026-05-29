@@ -1,0 +1,13 @@
+SkeletalMesh:
+  Filepath: Assets/Athena/Weapons/New/Vsk.glb
+  Attached Shape: 0
+  Physics Material ID: 0
+  Skeleton Asset ID: 5794253551143049077
+  Import Behaviour: 143
+  MaterialRegistry:
+    Materials:
+      - 0: 9427552456061090566
+      - 1: 3231378479267846422
+      - 2: 697567121797685508
+      - 3: 6815151219833803013
+      - 4: 5915327659435897251
