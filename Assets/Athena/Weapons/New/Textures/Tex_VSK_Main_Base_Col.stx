@@ -3,6 +3,6 @@ Texture:
   Height: 4096
   Channels: 3
   Hdr: false
-  Flags: 1
+  Flags: 0
   FilteringFlags: 0
   Source Path: Assets/Athena/Weapons/New/Textures/Main_body_Base_color.png
