@@ -20,6 +20,7 @@ GameState::GameState()
 
 GameState::~GameState()
 {
+
 }
 
 void GameState::BeginPlay()
@@ -85,7 +86,7 @@ void GameState::SetupFirstWave()
 #if defined(SAT_DEBUG)
 	m_TimeUntilNextGameState = 3.0f;
 #else
-	m_TimeUntilNextGameState = 60.0f;
+	m_TimeUntilNextGameState = 3.0f;
 #endif
 }
 

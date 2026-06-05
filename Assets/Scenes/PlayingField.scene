@@ -3,6 +3,7 @@ Visualisation:
   ShowGrid: true
   ShowGridRT: false
   PhysCollider: 2
+  AI: 0
 Entities:
   - Entity: 6746269488979416040
     Class: Entity
@@ -210,7 +211,7 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [8.09779263, 0.305409014, 1.56312335]
+      Position: [8.09893703, 0.305043101, 1.56210649]
       Rotation: [0, 0, -12.9840317]
       Quaternion: [0, 0, -0.113064758, 0.993587613]
       Scale: [1, 1, 1]
@@ -936,7 +937,7 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [120.345474, -6.96055031, -52.5899124]
+      Position: [102.993279, -1.84765291, 1.62047005]
       Rotation: [0, 0, 0]
       Quaternion: [0, 0, 0, 1]
       Scale: [5, 5, 5]
@@ -1184,9 +1185,9 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [140.493469, -3.49698853, -4.07718945]
-      Rotation: [-4.08108711, 0, 0]
-      Quaternion: [-0.0356066748, 0, 0, 0.999365866]
+      Position: [140.493469, -6.18442583, -33.8743858]
+      Rotation: [2.56907058, 0, 0]
+      Quaternion: [0.0224174932, 0, 0, 0.999748707]
       Scale: [5, 5, 5]
     RelationshipComponent:
       Parent: 0
@@ -2290,3 +2291,282 @@ Entities:
         []
     CameraComponent:
       MainCamera: true
+  - Entity: 15944212156637138600
+    Class: Entity
+    TagComponent:
+      Tag: Tree2CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [140.493469, -3.49698853, -4.07718945]
+      Rotation: [-4.08108711, 0, 0]
+      Quaternion: [-0.0356066748, 0, 0, 0.999365866]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 10184943951540239387
+      Modified: false
+    MeshComponent:
+      Asset: 6496390079175027039
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      BodyType: 0
+      Mass: 2
+      LockFlags: 0
+  - Entity: 2991032441861473173
+    Class: Entity
+    TagComponent:
+      Tag: Tree1CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [120.345474, -6.96055031, -52.5899124]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1196541555939798699
+      Modified: false
+    MeshComponent:
+      Asset: 17156012918794846394
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      BodyType: 0
+      Mass: 2
+      LockFlags: 0
+  - Entity: 9995418872541716397
+    Class: Entity
+    TagComponent:
+      Tag: Tree1CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [120.345474, -5.85393524, -29.3645515]
+      Rotation: [9.86897087, 0, 7.68018055]
+      Quaternion: [0.0858234763, 0.00576070789, 0.0667238384, 0.99405694]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1196541555939798699
+      Modified: false
+    MeshComponent:
+      Asset: 17156012918794846394
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      BodyType: 0
+      Mass: 2
+      LockFlags: 0
+  - Entity: 8403099513083927262
+    Class: Entity
+    TagComponent:
+      Tag: Tree1CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [73.6368866, -4.57759142, -28.4962368]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1196541555939798699
+      Modified: false
+    MeshComponent:
+      Asset: 17156012918794846394
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      BodyType: 0
+      Mass: 2
+      LockFlags: 0
+  - Entity: 14572709494515327571
+    Class: Entity
+    TagComponent:
+      Tag: Tree1CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [46.9720383, -2.53802156, -22.4869194]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1196541555939798699
+      Modified: false
+    MeshComponent:
+      Asset: 17156012918794846394
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      BodyType: 0
+      Mass: 2
+      LockFlags: 0
+  - Entity: 18360355614856203584
+    Class: Entity
+    TagComponent:
+      Tag: Tree1CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [46.9720383, -6.28062248, -52.8975716]
+      Rotation: [12.6056175, 0, 0]
+      Quaternion: [0.109783038, 0, 0, 0.993955553]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1196541555939798699
+      Modified: false
+    MeshComponent:
+      Asset: 17156012918794846394
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      BodyType: 0
+      Mass: 2
+      LockFlags: 0
+  - Entity: 9961926462668443819
+    Class: Entity
+    TagComponent:
+      Tag: Tree1CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [75.7381973, -6.75368118, -58.888607]
+      Rotation: [0, 0, 0]
+      Quaternion: [0, 0, 0, 1]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1196541555939798699
+      Modified: false
+    MeshComponent:
+      Asset: 17156012918794846394
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      BodyType: 0
+      Mass: 2
+      LockFlags: 0
+  - Entity: 14579794270831107030
+    Class: Entity
+    TagComponent:
+      Tag: Tree1CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [102.993279, -5.53633881, -41.4547653]
+      Rotation: [6.28030682, 0.246605366, -1.28866792]
+      Quaternion: [0.0547991581, 0.00153265719, -0.0113464789, 0.998431742]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1196541555939798699
+      Modified: false
+    MeshComponent:
+      Asset: 17156012918794846394
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      BodyType: 0
+      Mass: 2
+      LockFlags: 0
+  - Entity: 8282849249502278112
+    Class: Entity
+    TagComponent:
+      Tag: Tree1CI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [102.993279, -3.37623334, -20.7587757]
+      Rotation: [0, 0, -8.41119576]
+      Quaternion: [0, 0, -0.0733356401, 0.997307301]
+      Scale: [5, 5, 5]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1196541555939798699
+      Modified: false
+    MeshComponent:
+      Asset: 17156012918794846394
+      MaterialRegistry:
+        AnyOverrides: false
+        MaterialOverrides:
+          - 0: 0
+          - 1: 0
+    RigidbodyComponent:
+      BodyType: 0
+      Mass: 2
+      LockFlags: 0

@@ -51,6 +51,10 @@ Assets:
     Path: Assets/Athena/Terrain/M_Grass.smaterial
     Type: Material
     Version: 1
+  - Asset: 4841321382547937791
+    Path: Assets/Athena/Terrain/Props/Mesh/StoneWall1.stmesh
+    Type: StaticMesh
+    Version: 1
   - Asset: 18340302101549531855
     Path: Assets/Athena/Opps/OppBT.sbt
     Type: BehaviourTree
@@ -106,6 +110,10 @@ Assets:
   - Asset: 11474219673214559782
     Path: Assets/Athena/Sounds/Zombie/SFX_ZbGrunt3.snd
     Type: Audio
+    Version: 1
+  - Asset: 2332503372906174876
+    Path: Assets/Athena/Terrain/Props/Materials/M_TP_StoneWall1.smaterial
+    Type: Material
     Version: 1
   - Asset: 2338072335932728136
     Path: Assets/Athena/Hud/Textures/HUD_Crosshair.stx
@@ -231,17 +239,9 @@ Assets:
     Path: Assets/Athena/Terrain/Props/Mesh/StoneWall0.stmesh
     Type: StaticMesh
     Version: 1
-  - Asset: 4841321382547937791
-    Path: Assets/Athena/Terrain/Props/Mesh/StoneWall1.stmesh
-    Type: StaticMesh
-    Version: 1
   - Asset: 1778302795075590585
     Path: Assets/Athena/Terrain/Props/Mesh/StoneWall2.stmesh
     Type: StaticMesh
-    Version: 1
-  - Asset: 2332503372906174876
-    Path: Assets/Athena/Terrain/Props/Materials/M_TP_StoneWall1.smaterial
-    Type: Material
     Version: 1
   - Asset: 14936835707402618291
     Path: Assets/Athena/Terrain/Props/Textures/TP_Straw_SG_baseColor.stx
@@ -467,13 +467,9 @@ Assets:
     Path: Assets/Athena/Weapons/New/Materials/M_VskStockSilencer.smaterial
     Type: Material
     Version: 1
-  - Asset: 123470079484448595
-    Path: Assets
-    Type: Audio
-    Version: 1
-  - Asset: 382587867478671305
-    Path: ""
-    Type: Audio
+  - Asset: 10872574818985123218
+    Path: Assets/trebuc.saf
+    Type: Font
     Version: 1
 Asset Dependencies:
   - AssetID: 9560119971860032365

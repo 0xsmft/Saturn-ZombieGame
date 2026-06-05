@@ -18,7 +18,7 @@ class GameStateHUD;
 /**
  * The actual game state...
  */
-enum class GameStateStage
+enum class GameStateStage : uint8_t
 {
 	// Wave 0
 	Init,
@@ -44,7 +44,7 @@ class GameState : public Entity
 	GENERATED_BODY()
 public:
 	GameState();
-	~GameState();
+	virtual ~GameState();
 
 public:
 	void BeginPlay() override;
@@ -76,8 +76,9 @@ private:
 
 	// The time until the next game state change, in seconds.
 	float m_TimeUntilNextGameState = 0.0f;
-	GameStateStage m_GameState = GameStateStage::Init;
 
 	Ref<Sound> m_TickSound;
 	Ref<GameStateHUD> m_GameStateHUD;
+	
+	GameStateStage m_GameState = GameStateStage::Init;
 };

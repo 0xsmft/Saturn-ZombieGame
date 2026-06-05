@@ -78,7 +78,7 @@ void GameStateHUD::OnDraw( Timestep ts )
 		// Fix - API 3.1
 		const auto textSize = g_AluraCanvas->CalcTextSize( text );
 
-		g_AluraCanvas->SetNextItemPosition( glm::vec2{ ( g_AluraCanvas->GetWidth() - textSize.x ) - g_AluraCanvas->GetStyle().ItemSpacing.x, g_AluraCanvas->GetStyle().ItemSpacing.y } );
+//		g_AluraCanvas->SetNextItemPosition( glm::vec2{ ( g_AluraCanvas->GetWidth() - textSize.x ) - g_AluraCanvas->GetStyle().ItemSpacing.x, g_AluraCanvas->GetStyle().ItemSpacing.y } );
 		g_AluraCanvas->AddText( text );
 	}
 
@@ -107,7 +107,7 @@ void GameStateHUD::OnDraw( Timestep ts )
 		const auto textSize = g_AluraCanvas->CalcTextSize( text );
 		const auto pos = glm::vec2{ ( g_AluraCanvas->GetWidth() - textSize.x ) - g_AluraCanvas->GetStyle().ItemSpacing.x, g_AluraCanvas->GetCursorPosition().y };
 
-		g_AluraCanvas->SetNextItemPosition( pos );
+//		g_AluraCanvas->SetNextItemPosition( pos );
 		g_AluraCanvas->AddText( text );
 	}
 
@@ -116,7 +116,7 @@ void GameStateHUD::OnDraw( Timestep ts )
 
 void GameStateHUD::OnDestroy()
 {
-
+	m_GameState = nullptr;
 }
 
 void GameStateHUD::OnEvent( Event& rEvent )
