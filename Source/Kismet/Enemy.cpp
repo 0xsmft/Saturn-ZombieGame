@@ -1,6 +1,8 @@
 #include "sppch.h"
 #include "Enemy.h"
 
+#include "Saturn/Scene/Scene.h"
+
 #include "Player.h"
 
 #include "Saturn/Core/Random.h"

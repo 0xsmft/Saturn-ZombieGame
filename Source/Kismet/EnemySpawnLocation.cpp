@@ -1,6 +1,8 @@
 #include "sppch.h"
 #include "EnemySpawnLocation.h"
 
+#include "Saturn/Scene/Scene.h"
+
 #include "Saturn/Core/Random.h"
 #include "Saturn/Asset/AssetManager.h"
 #include "Saturn/Asset/Prefab.h"

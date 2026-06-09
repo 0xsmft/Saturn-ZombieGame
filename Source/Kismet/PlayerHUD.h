@@ -61,6 +61,7 @@ private:
 	// Time in seconds.
 	float m_MessageTimeRemaining = 0.0f;
 	bool m_ShowMessageText = false;
+	bool m_ShowPlayerDebug = false;
 
 	// API 1.1
 	Ref<Texture2D> m_HudCrosshairTexture = nullptr;

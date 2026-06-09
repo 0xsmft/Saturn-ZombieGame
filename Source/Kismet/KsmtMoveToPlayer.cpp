@@ -1,5 +1,7 @@
 #include "KsmtMoveToPlayer.h"
 
+#include "Saturn/Scene/Scene.h"
+
 #include "Player.h"
 
 #include "Saturn/Physics/PhysicsShapes.h"

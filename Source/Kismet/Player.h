@@ -34,6 +34,7 @@ public:
 	uint32_t GetMaxAmmoInMag() const { return m_MaxAmmoInMag; }
 	uint32_t GetNumberOfMagazines() const { return m_NumberOfMagazines; }
 
+
 private:
 	void Use();
 	void Reload();

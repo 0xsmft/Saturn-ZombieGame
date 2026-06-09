@@ -1,6 +1,8 @@
 #include "sppch.h"
 #include "PlayerHUD.h"
 
+#include "Saturn/Scene/Scene.h"
+
 #include "Saturn/Alura/AluraCanvas.h"
 #include "Saturn/Vulkan/AluraRenderer.h"
 
@@ -30,6 +32,15 @@ void PlayerHUD::OnDraw( Timestep ts )
 
 	// Alura UI pass.
 	g_AluraCanvas->PushFontSize( 32.0f );
+
+	if( m_ShowPlayerDebug )
+	{
+		g_AluraCanvas->AddText( std::format( "Health: {}", m_PlayerEntity->GetHealth() ) );
+		g_AluraCanvas->AddText( std::format( "Speed: {:.2f}", m_PlayerEntity->GetMovementSpeed() ) );
+
+		g_AluraCanvas->PopFontSize();
+		return;
+	}
 
 	// Player
 	{
@@ -87,7 +98,22 @@ void PlayerHUD::OnDestroy()
 
 void PlayerHUD::OnEvent( Event& rEvent )
 {
+	switch( rEvent.Type )
+	{
+		case EventType::KeyPressed:
+		{
+			RubyKeyEvent& rKeyEvent = ( RubyKeyEvent& ) rEvent;
 
+			if( rKeyEvent.GetKeycode() == RubyKey_F2 )
+			{
+				m_ShowPlayerDebug ^= 1;
+			}
+
+		} break;
+
+		default:
+			break;
+	}
 }
 
 void PlayerHUD::ShowMessageText( const std::string& rMessage, float timeInSeconds )

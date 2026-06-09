@@ -1,6 +1,8 @@
 #include "sppch.h"
 #include "GameStateHUD.h"
 
+#include "Saturn/Scene/Scene.h"
+
 #include "Saturn/Alura/AluraCanvas.h"
 #include "Saturn/Vulkan/AluraRenderer.h"
 

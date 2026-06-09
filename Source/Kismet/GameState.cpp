@@ -1,6 +1,8 @@
 #include "sppch.h"
 #include "GameState.h"
 
+#include "Saturn/Scene/Scene.h"
+
 #include "AmmoCrateSpawner.h"
 #include "HealthKit.h"
 

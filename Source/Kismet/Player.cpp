@@ -192,8 +192,6 @@ void Player::Reload()
 		{
 			m_Ammo = m_MaxAmmoInMag;
 			--m_NumberOfMagazines;
-	
-			m_AlreadyReloading = false;
 		} );
 
 		reloadSound->Play();

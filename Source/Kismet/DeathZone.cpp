@@ -1,5 +1,7 @@
 #include "DeathZone.h"
 
+#include "Saturn/Scene/Scene.h"
+
 #include "Player.h"
 
 #include "Saturn/Physics/PhysicsRigidBody.h"
