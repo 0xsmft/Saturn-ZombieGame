@@ -4,6 +4,8 @@ This game is primarily a test of <a href="https://github.com/0xsmft/Saturn-Engin
 
 I wouldn't call this a game, it is more of a test to see what Saturn is capable of.
 
+Please note that is project works on live development versions of Saturn. Meaning that one day it may work or days it may not, it all depends on the state of Saturn at the time.
+
 ## Acknowledgements
 
 ### Models
@@ -45,6 +47,8 @@ Zombie Bite sound is free to download via <a href="https://pixabay.com/sound-eff
 Zombie Pack, which was used to create the ambient sounds for the Zombies is free to download via <a href="https://pixabay.com/sound-effects/horror-zombie-packclean-record-70768/">pixabay</a>, Author: freesound_community
 
 The Tick SFX is free to download via <a href="https://pixabay.com/sound-effects/film-special-effects-slow-cinematic-clock-ticking-tension-2-323078/">pixabay</a>, Author: u_mx4xkr2bzy
+
+Gun Reload2 SFX is free to download via <a href="https://pixabay.com/sound-effects/film-special-effects-m4a1-or-m16-reload-sound-84436/">pixabay</a>, Author: freesound_community
 
 ### UI Images
 

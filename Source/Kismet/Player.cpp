@@ -186,7 +186,7 @@ void Player::Reload()
 		m_AlreadyReloading = true;
 
 		// Fix - API 0.1
-		Ref<Sound> reloadSound = AudioSystem::Get().RequestNewSound( 570831928178778653llu, Saturn::UUID(), false );
+		Ref<Sound> reloadSound = AudioSystem::Get().RequestNewSound( 3716688620433156425llu, Saturn::UUID(), false );
 		reloadSound->AddOnCompleteFunction(
 			[ this ]( const Saturn::UUID& soundID )
 		{

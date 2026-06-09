@@ -471,6 +471,10 @@ Assets:
     Path: Assets/trebuc.saf
     Type: Font
     Version: 1
+  - Asset: 3716688620433156425
+    Path: Assets/Athena/Sounds/Weapon/SFX_Reload2.snd
+    Type: Audio
+    Version: 1
 Asset Dependencies:
   - AssetID: 9560119971860032365
     Dependencies:
