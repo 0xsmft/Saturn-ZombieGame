@@ -158,4 +158,3 @@ void GameStateHUD::OnEvent( Event& rEvent )
 			break;
 	}
 }
-

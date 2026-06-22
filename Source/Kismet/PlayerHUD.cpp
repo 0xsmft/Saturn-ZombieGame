@@ -46,7 +46,7 @@ void PlayerHUD::OnDraw( Timestep ts )
 	{
 		g_AluraCanvas->AddText( "Health" );
 		g_AluraCanvas->SameLine();
-		g_AluraCanvas->AddProgressBar( ( float ) ( m_PlayerEntity->GetHealth() / 100 ), { 64.0f, 24.0f } );
+		g_AluraCanvas->AddProgressBar( static_cast< float >( m_PlayerEntity->GetHealth() ) / 100.0f, { 64.0f, 24.0f } );
 		g_AluraCanvas->SameLine();
 		g_AluraCanvas->AddText( std::format( "{0} / 100", m_PlayerEntity->GetHealth() ) );
 	}
