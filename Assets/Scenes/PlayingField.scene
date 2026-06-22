@@ -999,9 +999,9 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [-43.650135, 1.41809916, 11.2338295]
-      Rotation: [0, 0, 0]
-      Quaternion: [0, 0, 0, 1]
+      Position: [-43.650135, 1.82343924, 11.2338295]
+      Rotation: [0.0767903626, 0, -5.56041956]
+      Quaternion: [0.000669333502, -3.25041292e-05, -0.0485047624, 0.998822689]
       Scale: [5, 5, 5]
     RelationshipComponent:
       Parent: 0
@@ -1879,7 +1879,7 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [55.9110641, -2.30538559, 4.78898716]
+      Position: [55.9063683, -2.37113595, 4.78796911]
       Rotation: [67.1492462, -89.0389709, -71.2372055]
       Quaternion: [-0.0196758807, -0.70452559, -0.0307626426, 0.708738565]
       Scale: [1, 1, 1]
@@ -2258,8 +2258,8 @@ Entities:
           - 3: 0
           - 4: 0
     CapsuleColliderComponent:
-      Height: 1
-      Radius: 1
+      Height: 0.75
+      Radius: 0.5
       Offset: [0, 0, 0]
       IsTrigger: false
     CharacterMovementComponent:

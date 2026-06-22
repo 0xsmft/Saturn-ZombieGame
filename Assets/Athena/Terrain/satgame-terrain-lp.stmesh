@@ -1,0 +1,7 @@
+StaticMesh:
+  Filepath: Assets/Athena/Terrain/satgame-terrain-lp.glb
+  Attached Shape: 5
+  Physics Material ID: -2006106910
+  MaterialRegistry:
+    Materials:
+      - 0: 16769788357849991775

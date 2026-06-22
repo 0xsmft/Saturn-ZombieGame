@@ -1,0 +1,9 @@
+StaticMesh:
+  Filepath: Assets/Athena/Editor/XNavTest.gltf
+  Attached Shape: 0
+  Physics Material ID: 0
+  Import Behaviour: 133
+  MaterialRegistry:
+    Materials:
+      - 0: 0
+      - 1: 0

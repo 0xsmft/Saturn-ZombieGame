@@ -251,6 +251,10 @@ Assets:
     Path: Assets/Athena/Terrain/Props/Materials/M_TP_StoneWall3.smaterial
     Type: Material
     Version: 1
+  - Asset: 17369974195680630787
+    Path: Assets/BB_Test.sbtm
+    Type: BehaviourTreeMemory
+    Version: 1
   - Asset: 6844437785401053357
     Path: Assets/Athena/Terrain/Props/StoneWall0CI.prefab
     Type: Prefab
@@ -466,10 +470,6 @@ Assets:
   - Asset: 697567121797685508
     Path: Assets/Athena/Weapons/New/Materials/M_VskStockSilencer.smaterial
     Type: Material
-    Version: 1
-  - Asset: 10872574818985123218
-    Path: Assets/trebuc.saf
-    Type: Font
     Version: 1
   - Asset: 3716688620433156425
     Path: Assets/Athena/Sounds/Weapon/SFX_Reload2.snd
