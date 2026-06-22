@@ -51,9 +51,9 @@ void Player::BeginPlay()
 	m_PrevForward = CalculateForward();
 	m_PrevRight = CalculateRight();
 
-	GetComponent<SkeletalMeshComponent>().LocalAnimator->GetAnimGraph()->SetVariable( "Speed", &m_MovementSpeed );
-	GetComponent<SkeletalMeshComponent>().LocalAnimator->GetAnimGraph()->SetVariable( "IsReloading", &m_AlreadyReloading );
-	GetComponent<SkeletalMeshComponent>().LocalAnimator->GetAnimGraph()->SetVariable( "IsFiring", &m_IsFiring );
+	GetAnimator()->GetAnimGraph()->SetVariable( "Speed", &m_MovementSpeed );
+	GetAnimator()->GetAnimGraph()->SetVariable( "IsReloading", &m_AlreadyReloading );
+	GetAnimator()->GetAnimGraph()->SetVariable( "IsFiring", &m_IsFiring );
 }
 
 void Player::OnUpdate( Timestep ts )

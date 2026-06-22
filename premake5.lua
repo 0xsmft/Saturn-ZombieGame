@@ -78,17 +78,17 @@ project "Kismet"
 
 			buildcommands
 			{
-				SaturnDir .. "/bin/Debug-windows-x86_64/SaturnBuildTool/SaturnBuildTool.exe /BUILD /NAME:%{prj.name} /Win64 /Debug /PROJECT:%{wks.location}"
+				SaturnDir .. "/bin/Debug-windows-x86_64/SaturnBuildTool/RT/Run.bat /BUILD /NAME:%{prj.name} /Win64 /Debug /PROJECT:%{wks.location}"
 			}
 
 			rebuildcommands 
 			{
-				SaturnDir .. "/bin/Debug-windows-x86_64/SaturnBuildTool/SaturnBuildTool.exe /REBUILD /NAME:%{prj.name} /Win64 /Debug /PROJECT:%{wks.location}"
+				SaturnDir .. "/bin/Debug-windows-x86_64/SaturnBuildTool/RT/Run.bat /REBUILD /NAME:%{prj.name} /Win64 /Debug /PROJECT:%{wks.location}"
 			}
 
 			cleancommands
 			{
-				SaturnDir .. "/bin/Debug-windows-x86_64/SaturnBuildTool/SaturnBuildTool.exe /CLEAN /NAME:%{prj.name} /Win64 /Debug /PROJECT:%{wks.location}"
+				SaturnDir .. "/bin/Debug-windows-x86_64/SaturnBuildTool/RT/Run.bat /CLEAN /NAME:%{prj.name} /Win64 /Debug /PROJECT:%{wks.location}"
 			}
 
 		filter "configurations:Release"
@@ -101,17 +101,17 @@ project "Kismet"
 
 			buildcommands
 			{
-				SaturnDir .. "/bin/Release-windows-x86_64/SaturnBuildTool/SaturnBuildTool.exe /BUILD /NAME:%{prj.name} /Win64 /Release /PROJECT:%{wks.location}"
+				SaturnDir .. "/bin/Release-windows-x86_64/SaturnBuildTool/RT/Run.bat /BUILD /NAME:%{prj.name} /Win64 /Release /PROJECT:%{wks.location}"
 			}
 
 			rebuildcommands 
 			{
-				SaturnDir .. "/bin/Release-windows-x86_64/SaturnBuildTool/SaturnBuildTool.exe /REBUILD /NAME:%{prj.name} /Win64 /Release /PROJECT:%{wks.location}"
+				SaturnDir .. "/bin/Release-windows-x86_64/SaturnBuildTool/RT/Run.bat /REBUILD /NAME:%{prj.name} /Win64 /Release /PROJECT:%{wks.location}"
 			}
 
 			cleancommands
 			{
-				SaturnDir .. "/bin/Release-windows-x86_64/SaturnBuildTool/SaturnBuildTool.exe /CLEAN /NAME:%{prj.name} /Win64 /Release /PROJECT:%{wks.location}"
+				SaturnDir .. "/bin/Release-windows-x86_64/SaturnBuildTool/RT/Run.bat /CLEAN /NAME:%{prj.name} /Win64 /Release /PROJECT:%{wks.location}"
 			}
 
 		filter "configurations:Dist"
@@ -120,15 +120,15 @@ project "Kismet"
 
 			buildcommands
 			{
-				SaturnDir .. "/bin/Dist-windows-x86_64/SaturnBuildTool/SaturnBuildTool.exe /BUILD /NAME:%{prj.name} /Win64 /Dist /PROJECT:%{wks.location}"
+				SaturnDir .. "/bin/Dist-windows-x86_64/SaturnBuildTool/RT/Run.bat /BUILD /NAME:%{prj.name} /Win64 /Dist /PROJECT:%{wks.location}"
 			}
 
 			rebuildcommands 
 			{
-				SaturnDir .. "/bin/Dist-windows-x86_64/SaturnBuildTool/SaturnBuildTool.exe /REBUILD /NAME:%{prj.name} /Win64 /Dist /PROJECT:%{wks.location}"
+				SaturnDir .. "/bin/Dist-windows-x86_64/SaturnBuildTool/RT/Run.bat /REBUILD /NAME:%{prj.name} /Win64 /Dist /PROJECT:%{wks.location}"
 			}
 
 			cleancommands
 			{
-				SaturnDir .. "/bin/Dist-windows-x86_64/SaturnBuildTool/SaturnBuildTool.exe /CLEAN /NAME:%{prj.name} /Win64 /Dist /PROJECT:%{wks.location}"
+				SaturnDir .. "/bin/Dist-windows-x86_64/SaturnBuildTool/RT/Run.bat /CLEAN /NAME:%{prj.name} /Win64 /Dist /PROJECT:%{wks.location}"
 			}
