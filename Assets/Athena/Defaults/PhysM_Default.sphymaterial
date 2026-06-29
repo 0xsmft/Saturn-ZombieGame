@@ -1,5 +1,4 @@
 PhysicsMaterial:
   Static Friction: 1
-  Dynamic Friction: 1
   Restitution: 0.5
-  Flags: 0
+  SurfaceName: Default

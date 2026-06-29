@@ -113,7 +113,7 @@ void Player::OnEntityHit( Entity* pOther, bool isTrigger )
 {
 	if( pOther->GetClass() == Enemy::StaticClass() )
 	{
-		TakeDamage( 15 );
+		TakeDamage( 10 );
 	}
 }
 

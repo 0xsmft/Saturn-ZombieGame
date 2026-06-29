@@ -475,6 +475,10 @@ Assets:
     Path: Assets/Athena/Sounds/Weapon/SFX_Reload2.snd
     Type: Audio
     Version: 1
+  - Asset: 1879593491426648876
+    Path: Assets/PSR_Main.spsr
+    Type: PhysSurfaceRegistry
+    Version: 1
 Asset Dependencies:
   - AssetID: 9560119971860032365
     Dependencies:

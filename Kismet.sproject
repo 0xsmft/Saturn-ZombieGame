@@ -4,6 +4,7 @@ Project:
   DefaultMaterialAsset: 5915327659435897251
   DefaultPhyMaterialAsset: 2783419812627168482
   DefaultFontAsset: 2996908169661081287
+  DefaultPhysRegAsset: 1879593491426648876
   IsAutoSavesEnabled: false
   AutoSaveInterval: 300
   DeveloperVersion: X1

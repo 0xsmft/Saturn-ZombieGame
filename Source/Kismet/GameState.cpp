@@ -22,7 +22,6 @@ GameState::GameState()
 
 GameState::~GameState()
 {
-
 }
 
 void GameState::BeginPlay()
@@ -56,7 +55,7 @@ void GameState::TickGameState( Timestep ts )
 			case GameStateStage::WaveInProgress:
 			{
 				// Go to next wave.
-				// NOTE: We may chance state after this to EGameState::Intermission!
+				// NOTE: We may change state after this to EGameState::Intermission!
 				AdvanceToNextWave();
 			} break;
 			

@@ -1,0 +1,5 @@
+PhysicsSurfaceRegistry:
+  Count: 2
+  Names:
+    - Name: Default
+    - Name: Grass
