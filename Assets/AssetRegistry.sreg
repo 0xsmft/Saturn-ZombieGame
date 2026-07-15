@@ -184,7 +184,7 @@ Assets:
     Type: Audio
     Version: 1
   - Asset: 2996908169661081287
-    Path: Assets/Fonts/NotoSans-Regular.saf
+    Path: Assets/Fonts/AF_NotoSansReg.saf
     Type: Font
     Version: 1
   - Asset: 1680156242400638590
