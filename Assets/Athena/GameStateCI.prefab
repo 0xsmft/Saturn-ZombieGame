@@ -11,7 +11,7 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [0, 0, 0]
+      Position: [0.200000003, 0, 0]
       Rotation: [0, 0, 0]
       Quaternion: [0, 0, 0, 1]
       Scale: [1, 1, 1]
@@ -21,4 +21,13 @@ Entities:
         []
     PrefabComponent:
       AssetID: 9006556593877605602
+      EntityIDInPrefab: 0
       Modified: false
+    TextComponent:
+      Text: ""
+      AssetID: 0
+      Color: [1, 1, 1, 1]
+ComponentCache:
+  - EntityID: 16723564206537073221
+    Count: 6
+    Hashes: [1802789876, 3247511416, 783184665, 3877905976, 2213423580, 343114207]
