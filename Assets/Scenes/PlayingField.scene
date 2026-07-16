@@ -1267,7 +1267,7 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [37.8441467, -0.822280765, 4.46865559]
+      Position: [37.8520927, -0.912739992, 4.46934843]
       Rotation: [-0.436522931, 0.683579504, 5.02266645]
       Scale: [1, 1, 1]
     RelationshipComponent:
@@ -1366,7 +1366,7 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [37.8441467, -0.822280765, 7.97554255]
+      Position: [37.8441467, -1.01676965, 7.97554255]
       Rotation: [0, 0, 0]
       Scale: [1, 1, 1]
     RelationshipComponent:
@@ -1399,7 +1399,7 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [37.8441467, -0.822280765, 6.19478893]
+      Position: [37.8441467, -0.939756572, 6.19478893]
       Rotation: [0, 0, 0]
       Scale: [1, 1, 1]
     RelationshipComponent:
@@ -1687,7 +1687,7 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [39.2594032, -0.868218124, 4.44776487]
+      Position: [39.2594032, -0.960231066, 4.44776487]
       Rotation: [0, 0, 0]
       Scale: [1, 1, 1]
     RelationshipComponent:
@@ -1753,7 +1753,7 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [39.3045044, -0.868218124, 9.83913231]
+      Position: [39.3045044, -1.24002147, 9.83913231]
       Rotation: [0, 0, 0]
       Scale: [1, 1, 1]
     RelationshipComponent:
@@ -1819,7 +1819,7 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [39.1919823, -0.868218124, 8.25541115]
+      Position: [39.1919823, -1.10665023, 8.25541115]
       Rotation: [0, 0, 0]
       Scale: [1, 1, 1]
     RelationshipComponent:
@@ -1852,7 +1852,7 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [39.1328888, -0.868218124, 6.48904228]
+      Position: [39.1328888, -1.02840686, 6.48904228]
       Rotation: [0, 0, 0]
       Scale: [1, 1, 1]
     RelationshipComponent:
@@ -2026,7 +2026,7 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [37.8441467, -0.822280765, 9.68427658]
+      Position: [37.8441467, -1.06359863, 9.68427658]
       Rotation: [0, 0, 0]
       Scale: [1, 1, 1]
     RelationshipComponent:
