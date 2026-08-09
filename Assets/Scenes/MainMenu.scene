@@ -1,0 +1,47 @@
+Scene: Untitled Scene
+Visualisation:
+  ShowGrid: true
+  ShowGridRT: false
+  PhysCollider: 2
+  AI: 0
+  Skel: 0
+Entities:
+  - Entity: 17513981907718482063
+    Class: Entity
+    TagComponent:
+      Tag: Camera
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    CameraComponent:
+      MainCamera: true
+  - Entity: 9890266315561747468
+    Class: MenuGameState
+    TagComponent:
+      Tag: MenuGameStateCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1546275705147490916
+      EntityIDInPrefab: 4772026121137397954
+      Flags: 0
+      Modified: false

@@ -1,11 +1,11 @@
 Assets:
-  - Asset: 1988173729960812615
-    Path: Assets/Scenes/PlayingField.scene
-    Type: Scene
-    Version: 1
   - Asset: 15538342156540820634
     Path: Assets/Athena/Opps/OppSpawner.prefab
     Type: Prefab
+    Version: 1
+  - Asset: 1988173729960812615
+    Path: Assets/Scenes/PlayingField.scene
+    Type: Scene
     Version: 1
   - Asset: 14888528075718103984
     Path: Assets/Athena/Defaults/Cube.stmesh
@@ -19,12 +19,12 @@ Assets:
     Path: Assets/Athena/Debug/Meshes/XNavTest.stmesh
     Type: StaticMesh
     Version: 1
-  - Asset: 6872723223138761751
-    Path: Assets/Athena/Player/PlayerCI.prefab
-    Type: Prefab
-    Version: 1
   - Asset: 5113922268661067256
     Path: Assets/Athena/Opps/Opp.prefab
+    Type: Prefab
+    Version: 1
+  - Asset: 6872723223138761751
+    Path: Assets/Athena/Player/PlayerCI.prefab
     Type: Prefab
     Version: 1
   - Asset: 11649624488961672427
@@ -35,25 +35,25 @@ Assets:
     Path: Assets/Athena/Defaults/Capsule.stmesh
     Type: StaticMesh
     Version: 1
-  - Asset: 9006556593877605602
-    Path: Assets/Athena/GameStateCI.prefab
-    Type: Prefab
-    Version: 1
   - Asset: 313970351627681043
     Path: Assets/Athena/Terrain/Props/Textures/TP_WoodDiffuse.stx
     Type: Texture
     Version: 1
-  - Asset: 4841321382547937791
-    Path: Assets/Athena/Terrain/Props/Mesh/StoneWall1.stmesh
-    Type: StaticMesh
+  - Asset: 9006556593877605602
+    Path: Assets/Athena/GameStateCI.prefab
+    Type: Prefab
+    Version: 1
+  - Asset: 15200017920014184748
+    Path: Assets/Athena/SurvivalSupport/Ammo/AmmoCrateSpawnerCI.prefab
+    Type: Prefab
     Version: 1
   - Asset: 16769788357849991775
     Path: Assets/Athena/Terrain/M_Grass.smaterial
     Type: Material
     Version: 1
-  - Asset: 15200017920014184748
-    Path: Assets/Athena/SurvivalSupport/Ammo/AmmoCrateSpawnerCI.prefab
-    Type: Prefab
+  - Asset: 4841321382547937791
+    Path: Assets/Athena/Terrain/Props/Mesh/StoneWall1.stmesh
+    Type: StaticMesh
     Version: 1
   - Asset: 18340302101549531855
     Path: Assets/Athena/Opps/OppBT.sbt
@@ -67,6 +67,10 @@ Assets:
     Path: Assets/Athena/Defaults/Plane.stmesh
     Type: StaticMesh
     Version: 1
+  - Asset: 18260538446210426904
+    Path: Assets/Athena/SurvivalSupport/Health/Textures/Medkit_metallicRoughness.stx
+    Type: Texture
+    Version: 1
   - Asset: 1117485801279175151
     Path: Assets/Athena/Terrain/Props/StoneWall1CI.prefab
     Type: Prefab
@@ -75,17 +79,13 @@ Assets:
     Path: Assets/Scenes/NavigationPlayground.scene
     Type: Scene
     Version: 1
-  - Asset: 18260538446210426904
-    Path: Assets/Athena/SurvivalSupport/Health/Textures/Medkit_metallicRoughness.stx
-    Type: Texture
+  - Asset: 2482004967821507364
+    Path: Assets/Athena/Sounds/Zombie/SFX_ZbGrunt1.snd
+    Type: Audio
     Version: 1
   - Asset: 2783419812627168482
     Path: Assets/Athena/Defaults/PhysM_Default.sphymaterial
     Type: PhysicsMaterial
-    Version: 1
-  - Asset: 2482004967821507364
-    Path: Assets/Athena/Sounds/Zombie/SFX_ZbGrunt1.snd
-    Type: Audio
     Version: 1
   - Asset: 7118205956406469156
     Path: Assets/Athena/Weapons/New/Anim_VSK_Fire.skanim
@@ -107,20 +107,20 @@ Assets:
     Path: Assets/Athena/Terrain/Props/Mesh/Tree1.stmesh
     Type: StaticMesh
     Version: 1
-  - Asset: 2332503372906174876
-    Path: Assets/Athena/Terrain/Props/Materials/M_TP_StoneWall1.smaterial
-    Type: Material
-    Version: 1
   - Asset: 11474219673214559782
     Path: Assets/Athena/Sounds/Zombie/SFX_ZbGrunt3.snd
     Type: Audio
     Version: 1
-  - Asset: 5799686793832250549
-    Path: Assets/Athena/SurvivalSupport/Ammo/Textures/AmmoCrateColor.stx
-    Type: Texture
+  - Asset: 2332503372906174876
+    Path: Assets/Athena/Terrain/Props/Materials/M_TP_StoneWall1.smaterial
+    Type: Material
     Version: 1
   - Asset: 2338072335932728136
     Path: Assets/Athena/Hud/Textures/HUD_Crosshair.stx
+    Type: Texture
+    Version: 1
+  - Asset: 5799686793832250549
+    Path: Assets/Athena/SurvivalSupport/Ammo/Textures/AmmoCrateColor.stx
     Type: Texture
     Version: 1
   - Asset: 4188168686474315140
@@ -135,21 +135,13 @@ Assets:
     Path: Assets/Athena/Sounds/Game/SFX_Tick.snd
     Type: Audio
     Version: 1
-  - Asset: 14683401302317873074
-    Path: Assets/Athena/SurvivalSupport/Health/Textures/Medkit_normal.stx
-    Type: Texture
-    Version: 1
   - Asset: 9560119971860032365
     Path: Assets/Athena/Terrain/Props/Mesh/Fence.stmesh
     Type: StaticMesh
     Version: 1
-  - Asset: 5794253551143049077
-    Path: Assets/Athena/Weapons/New/SK_Vsk.skel
-    Type: Skeleton
-    Version: 1
-  - Asset: 3293489935082472872
-    Path: Assets/Athena/Sounds/Weapon/SFX_GunFire.snd
-    Type: Audio
+  - Asset: 14683401302317873074
+    Path: Assets/Athena/SurvivalSupport/Health/Textures/Medkit_normal.stx
+    Type: Texture
     Version: 1
   - Asset: 7151680205037334162
     Path: Assets/Athena/Terrain/Props/Materials/M_TP_Mrkr.smaterial
@@ -159,17 +151,25 @@ Assets:
     Path: Assets/Athena/Sounds/Zombie/SFX_ZbGrunt2.snd
     Type: Audio
     Version: 1
+  - Asset: 5794253551143049077
+    Path: Assets/Athena/Weapons/New/SK_Vsk.skel
+    Type: Skeleton
+    Version: 1
+  - Asset: 3293489935082472872
+    Path: Assets/Athena/Sounds/Weapon/SFX_GunFire.snd
+    Type: Audio
+    Version: 1
   - Asset: 968415808348049396
     Path: Assets/Athena/SurvivalSupport/Ammo/Mesh/AmmoCrateMesh.stmesh
     Type: StaticMesh
     Version: 1
-  - Asset: 1282004882715337350
-    Path: Assets/Athena/Sounds/Zombie/SFX_ZbBite.snd
-    Type: Audio
-    Version: 1
   - Asset: 13854200658949803486
     Path: Assets/Athena/SurvivalSupport/Ammo/Textures/AmmoCrateRoughMetal.stx
     Type: Texture
+    Version: 1
+  - Asset: 1282004882715337350
+    Path: Assets/Athena/Sounds/Zombie/SFX_ZbBite.snd
+    Type: Audio
     Version: 1
   - Asset: 16815746788255443994
     Path: Assets/Athena/SurvivalSupport/Ammo/Textures/AmmoCrateNorm.stx
@@ -207,6 +207,10 @@ Assets:
     Path: Assets/Athena/Opps/M_Opp.smaterial
     Type: Material
     Version: 1
+  - Asset: 18323555681594210271
+    Path: Assets/Athena/SurvivalSupport/Health/Mesh/HealthKit.stmesh
+    Type: StaticMesh
+    Version: 1
   - Asset: 13451726458623680817
     Path: Assets/Athena/Editor/Billboard_HealthKit.stx
     Type: Texture
@@ -215,21 +219,17 @@ Assets:
     Path: Assets/Athena/Terrain/M_Water.smaterial
     Type: Material
     Version: 1
-  - Asset: 18323555681594210271
-    Path: Assets/Athena/SurvivalSupport/Health/Mesh/HealthKit.stmesh
-    Type: StaticMesh
-    Version: 1
   - Asset: 15921131299694052321
     Path: Assets/Athena/SurvivalSupport/Health/Textures/Medkit_baseColor.stx
     Type: Texture
     Version: 1
-  - Asset: 15980083650993367418
-    Path: Assets/Athena/SurvivalSupport/Health/Material/M_HealthKit.smaterial
-    Type: Material
-    Version: 1
   - Asset: 17703423472266939652
     Path: Assets/Athena/Terrain/Props/FenceCI.prefab
     Type: Prefab
+    Version: 1
+  - Asset: 15980083650993367418
+    Path: Assets/Athena/SurvivalSupport/Health/Material/M_HealthKit.smaterial
+    Type: Material
     Version: 1
   - Asset: 6021832108797269594
     Path: Assets/Athena/Debug/M_TestMaterial.smaterial
@@ -259,12 +259,12 @@ Assets:
     Path: Assets/Athena/Terrain/Props/StoneWall2CI.prefab
     Type: Prefab
     Version: 1
-  - Asset: 13750900116265353459
-    Path: Assets/Athena/Terrain/Props/Textures/TP_Mrkr.stx
-    Type: Texture
-    Version: 1
   - Asset: 5561849197517769730
     Path: Assets/Athena/Weapons/New/Textures/Tex_VSK_Main_Roughness.stx
+    Type: Texture
+    Version: 1
+  - Asset: 13750900116265353459
+    Path: Assets/Athena/Terrain/Props/Textures/TP_Mrkr.stx
     Type: Texture
     Version: 1
   - Asset: 13869134980634981992
@@ -279,12 +279,12 @@ Assets:
     Path: Assets/Athena/Terrain/Props/Textures/TP_Straw_SG_metallicRoughness.stx
     Type: Texture
     Version: 1
-  - Asset: 2348461968130562933
-    Path: Assets/Athena/Terrain/Props/Textures/TP_Straw_SG_normal.stx
-    Type: Texture
-    Version: 1
   - Asset: 8894903144980976807
     Path: Assets/Athena/Weapons/New/Textures/Tex_VSK_Main_Base_Col.stx
+    Type: Texture
+    Version: 1
+  - Asset: 2348461968130562933
+    Path: Assets/Athena/Terrain/Props/Textures/TP_Straw_SG_normal.stx
     Type: Texture
     Version: 1
   - Asset: 13679589663929221812
@@ -475,29 +475,34 @@ Assets:
     Path: Assets/PSR_Main.spsr
     Type: PhysSurfaceRegistry
     Version: 1
+  - Asset: 18326423544649990506
+    Path: Assets/Scenes/MainMenu.scene
+    Type: Scene
+    Version: 1
+  - Asset: 1546275705147490916
+    Path: Assets/Athena/Entry/MenuGameStateCI.prefab
+    Type: Prefab
+    Version: 1
 Asset Dependencies:
-  - AssetID: 12765754648904108514
-    Dependencies:
-      - Dependency: 5799686793832250549
   - AssetID: 9560119971860032365
     Dependencies:
       - Dependency: 12921953789803613332
-  - AssetID: 6292659724767781868
+  - AssetID: 12765754648904108514
     Dependencies:
-      - Dependency: 5794253551143049077
+      - Dependency: 5799686793832250549
+  - AssetID: 11649624488961672427
+    Dependencies:
+      - Dependency: 11436008685605565923
   - AssetID: 5374017015968207930
     Dependencies:
       - Dependency: 5915327659435897251
       - Dependency: 2783419812627168482
-  - AssetID: 11649624488961672427
+  - AssetID: 6292659724767781868
     Dependencies:
-      - Dependency: 11436008685605565923
+      - Dependency: 5794253551143049077
   - AssetID: 968415808348049396
     Dependencies:
       - Dependency: 12765754648904108514
-  - AssetID: 2903878141788772784
-    Dependencies:
-      - Dependency: 16164894740795494566
   - AssetID: 625831878733667820
     Dependencies:
       - Dependency: 2482004967821507364
@@ -505,6 +510,9 @@ Asset Dependencies:
       - Dependency: 2990208416715314967
       - Dependency: 11474219673214559782
       - Dependency: 8050284560379928628
+  - AssetID: 2903878141788772784
+    Dependencies:
+      - Dependency: 16164894740795494566
   - AssetID: 15980083650993367418
     Dependencies:
       - Dependency: 15921131299694052321

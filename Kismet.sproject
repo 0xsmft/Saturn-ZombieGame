@@ -1,15 +1,17 @@
 Project:
   Name: Kismet
-  StartupScene: 1988173729960812615
+  StartupScene: 18326423544649990506
+  EdStartupScene: 1988173729960812615
   DefaultMaterialAsset: 5915327659435897251
   DefaultPhyMaterialAsset: 2783419812627168482
   DefaultFontAsset: 2996908169661081287
   DefaultPhysRegAsset: 1879593491426648876
+  ABCompressThreshold: 512
   IsAutoSavesEnabled: false
   AutoSaveInterval: 300
   DeveloperVersion: X1
   Online:
-    API: 1
+    API: 0
     Settings:
       AppID: 0
   ActionBindings:

@@ -5,6 +5,7 @@
 
 #include "Saturn/Alura/AluraCanvas.h"
 #include "Saturn/Vulkan/AluraRenderer.h"
+#include "Saturn/Core/App.h"
 
 #include "Saturn/GameFramework/GameFramework.h"
 

@@ -1,0 +1,27 @@
+# WARNING, MODIFICATIONS TO THIS FILE WILL NOT UPDATE GLOBALLY IN EDITOR!
+Prefab: 1546275705147490916
+Root Entity: 4772026121137397954
+Entities:
+  - Entity: 4772026121137397954
+    Class: MenuGameState
+    TagComponent:
+      Tag: MenuGameStateCI
+    ClassInformation:
+      LastPropertyCount: 0
+      Properties:
+        []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+    RelationshipComponent:
+      Parent: 0
+      Children:
+        []
+    PrefabComponent:
+      AssetID: 1546275705147490916
+      EntityIDInPrefab: 4772026121137397954
+      Flags: 0
+      Modified: false
+ComponentCache:
+  []

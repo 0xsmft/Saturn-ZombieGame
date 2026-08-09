@@ -22,7 +22,7 @@ class GameStateHUD : public AluraDrawer
 	GENERATED_BODY()
 public:
 	GameStateHUD();
-	~GameStateHUD();
+	virtual ~GameStateHUD();
 
 	// AluraDrawer
 	virtual void OnInit() override;
