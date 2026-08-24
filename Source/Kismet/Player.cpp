@@ -165,6 +165,9 @@ void Player::Use()
 	// Fix - API 0.1
 	// Play fire sound.
 	AudioSystem::Get().PlaySoundAtLocation( 3293489935082472872llu, Saturn::UUID(), GetLocalPosition() );
+
+	// Play animation.
+	GetAnimator()->QuickFireAnimation( "Anim_VSK_Fire" );
 }
 
 void Player::Reload()
