@@ -9,6 +9,7 @@
 #endif
 
 #include "PlayerHUD.h"
+#include "GameOverUI.h"
 
 #include "Saturn/Core/Random.h"
 
@@ -63,6 +64,19 @@ void Player::OnUpdate( Timestep ts )
 		return;
 
 	Super::OnUpdate( ts );
+
+	// Are we dead?
+	if( m_Health == 0.0f )
+	{
+		if( !m_GameOverUI )
+		{
+			m_GameOverUI = Ref<GameOverUI>::Create();
+			g_AluraCanvas->RemoveAllDrawers();
+			g_AluraCanvas->AddDrawer( m_GameOverUI );
+		}
+
+		return;
+	}
 
 	// Damage checking.
 	if( m_AlreadyTakingDamage && ( m_DamageCooldownTime -= ts.Seconds() ) <= 0.0f )

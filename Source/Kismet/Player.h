@@ -10,6 +10,7 @@
 using namespace Saturn;
 
 class PlayerHUD;
+class GameOverUI;
 
 /**
  * THE player.
@@ -55,6 +56,7 @@ private:
 	SharedPtr<Entity> m_IntractableEntityHit = nullptr;
 
 	Ref<PlayerHUD> m_PlayerHUD;
+	Ref<GameOverUI> m_GameOverUI;
 	
 	glm::vec3 m_PrevForward{};
 	glm::vec3 m_PrevRight{};
