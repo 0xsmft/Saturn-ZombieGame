@@ -130,25 +130,28 @@ void GameState::AdvanceToNextWave()
 	SAT_CORE_INFO( "Advanced to wave number: {0}", m_CurrentWave );
 #endif
 
-	auto enemySpawners = GetScene()->GetAllEntitiesWithClass<EnemySpawnLocation>();
-	
-	uint32_t numberToSpawn = ( 5 + m_CurrentWave * 2 ) + ( glm::pow( ( float ) ( 0.6f * ( float ) m_CurrentWave ), 1.4f ) );
-	numberToSpawn /= enemySpawners.size();
-
-	for( auto& rEntity : enemySpawners )
+	if( m_CanSpawn )
 	{
-		// Should we add more enemies to spawn? hmmm lets ask the RNG...
-		if( Random::RandomBool() )
-		{
-			const auto currentAmount = rEntity->GetNumberToSpawn();
-			
-			rEntity->SetNumberToSpawn( numberToSpawn );
-#if defined(SAT_DEBUG)
-			SAT_CORE_INFO( "Spawning {0} entities", rEntity->GetNumberToSpawn() );
-#endif
-		}
+		auto enemySpawners = GetScene()->GetAllEntitiesWithClass<EnemySpawnLocation>();
 
-		rEntity->Spawn();
+		uint32_t numberToSpawn = ( 5 + m_CurrentWave * 2 ) + ( glm::pow( ( float ) ( 0.6f * ( float ) m_CurrentWave ), 1.4f ) );
+		numberToSpawn /= enemySpawners.size();
+
+		for( auto& rEntity : enemySpawners )
+		{
+			// Should we add more enemies to spawn? hmmm lets ask the RNG...
+			if( Random::RandomBool() )
+			{
+				const auto currentAmount = rEntity->GetNumberToSpawn();
+
+				rEntity->SetNumberToSpawn( numberToSpawn );
+#if defined(SAT_DEBUG)
+				SAT_CORE_INFO( "Spawning {0} entities", rEntity->GetNumberToSpawn() );
+#endif
+			}
+
+			rEntity->Spawn();
+		}
 	}
 
 	ReplenishConsumables();

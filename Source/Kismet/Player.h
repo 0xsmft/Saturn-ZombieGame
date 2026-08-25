@@ -35,6 +35,8 @@ public:
 	uint32_t GetMaxAmmoInMag() const { return m_MaxAmmoInMag; }
 	uint32_t GetNumberOfMagazines() const { return m_NumberOfMagazines; }
 
+	void SetInvulnerable( bool val ) { m_IsInvulnerable = val; }
+
 private:
 	void Use();
 	void Reload();
@@ -70,4 +72,5 @@ private:
 	bool m_AlreadyTakingDamage = false;
 	bool m_IsReloading = false;
 	bool m_IsFiring = false;
+	bool m_IsInvulnerable = false;
 };

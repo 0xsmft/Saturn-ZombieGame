@@ -261,6 +261,9 @@ void Player::Interact()
 
 void Player::TakeDamage( int32_t damage )
 {
+	if( m_IsInvulnerable )
+		return;
+
 	// This is not the best way to handle damage at all, but some entities will swarm the player
 	// causing player to die in seconds,
 	// so to mitigate this there is a small delay on taking damage.

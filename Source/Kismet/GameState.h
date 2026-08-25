@@ -57,6 +57,7 @@ public:
 	uint32_t GetNumberOfWavesSinceLastInt() const { return m_NumberOfWavesSinceLastInt; }
 	float TimeUntilNextGameStateChange() const { return m_TimeUntilNextGameState; }
 	GameStateStage GetCurrentStage() const { return m_GameState; }
+	void SetCanSpawn( bool val ) { m_CanSpawn = val; }
 
 private:
 	void TickGameState( Timestep ts );
@@ -81,4 +82,5 @@ private:
 	Ref<GameStateHUD> m_GameStateHUD;
 	
 	GameStateStage m_GameState = GameStateStage::Init;
+	bool m_CanSpawn = true;
 };
