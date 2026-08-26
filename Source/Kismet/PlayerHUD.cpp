@@ -30,17 +30,20 @@ void PlayerHUD::OnDraw( Timestep ts )
 	if( !m_PlayerEntity || g_ActiveScene->IsPaused() )
 		return;
 
-	// Alura UI pass.
-	g_AluraCanvas->PushFontSize( 32.0f );
-
 	if( m_ShowPlayerDebug )
 	{
+		g_AluraCanvas->DrawDemo();
+
+		g_AluraCanvas->PushFontSize( 32.0f );
 		g_AluraCanvas->AddText( std::format( "Health: {}", m_PlayerEntity->GetHealth() ) );
 		g_AluraCanvas->AddText( std::format( "Speed: {:.2f}", m_PlayerEntity->GetMovementSpeed() ) );
 
 		g_AluraCanvas->PopFontSize();
 		return;
 	}
+
+	// Alura UI pass.
+	g_AluraCanvas->PushFontSize( 32.0f );
 
 	// Player
 	{
