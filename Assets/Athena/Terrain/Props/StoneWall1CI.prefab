@@ -25,11 +25,12 @@ Entities:
     MeshComponent:
       Asset: 4841321382547937791
       MaterialRegistry:
-        AnyOverrides: true
+        AnyOverrides: false
         MaterialOverrides:
-          - 0: 2332503372906174876
-          - 1: 3728408018453544927
-          - 2: 9388542142531453729
+          - 0: 0
+          - 1: 0
+          - 2: 0
+          - 3: 0
     BoxColliderComponent:
       Extents: [1.10000002, 2.79999995, 6]
       Offset: [0, 2.0999999, 4.69999981]

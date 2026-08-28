@@ -4,6 +4,7 @@ Visualisation:
   ShowGridRT: false
   PhysCollider: 2
   AI: 0
+  Skel: 0
 Entities:
   - Entity: 6746269488979416040
     Class: Entity
@@ -281,8 +282,8 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [103.515045, -1.46301246, 19.0874519]
-      Rotation: [0, 0, 0]
+      Position: [103.494225, -1.22490788, 19.0874519]
+      Rotation: [0, 0, 4.98267889]
       Scale: [1, 1, 1]
     RelationshipComponent:
       Parent: 0
@@ -2280,9 +2281,11 @@ Entities:
     TagComponent:
       Tag: PlayerCI
     ClassInformation:
-      LastPropertyCount: 0
+      LastPropertyCount: 1
       Properties:
-        []
+        - Name: m_spProperty
+          ValueType: 14
+          Value: 14888528075718103984
     TransformComponent:
       Position: [-2.86416245, 4.4903841, 0.298428595]
       Rotation: [0, 0, 0]
@@ -2350,7 +2353,7 @@ Entities:
       Properties:
         []
     TransformComponent:
-      Position: [140.493469, -3.49698853, -4.07718945]
+      Position: [140.493469, -3.65615273, -4.06583309]
       Rotation: [-4.08108711, 0, 0]
       Scale: [5, 5, 5]
     RelationshipComponent:
