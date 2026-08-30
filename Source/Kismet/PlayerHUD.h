@@ -54,7 +54,7 @@ public:
 	void HideMessageText();
 
 private:
-	SharedPtr<Player> m_PlayerEntity;
+	WeakRef<Player> m_PlayerEntity;
 
 	std::string m_StatusMessageText{};
 

@@ -27,18 +27,19 @@ void PlayerHUD::OnInit()
 
 void PlayerHUD::OnDraw( Timestep ts )
 {
-	if( !m_PlayerEntity || g_ActiveScene->IsPaused() )
+	if( m_PlayerEntity.Expired() || g_ActiveScene->IsPaused() )
 		return;
 
 	if( m_ShowPlayerDebug )
 	{
-		g_AluraCanvas->DrawDemo();
+		if( const auto player = m_PlayerEntity.Access() )
+		{
+			g_AluraCanvas->PushFontSize( 32.0f );
+			g_AluraCanvas->TextFormatted( "Health: {}", player->GetHealth() );
+			g_AluraCanvas->TextFormatted( "Speed: {:.2f}", player->GetMovementSpeed() );
+			g_AluraCanvas->PopFontSize();
+		}
 
-		g_AluraCanvas->PushFontSize( 32.0f );
-		g_AluraCanvas->AddText( std::format( "Health: {}", m_PlayerEntity->GetHealth() ) );
-		g_AluraCanvas->AddText( std::format( "Speed: {:.2f}", m_PlayerEntity->GetMovementSpeed() ) );
-
-		g_AluraCanvas->PopFontSize();
 		return;
 	}
 
@@ -47,23 +48,23 @@ void PlayerHUD::OnDraw( Timestep ts )
 
 	// Player
 	{
-		g_AluraCanvas->AddText( "Health" );
-		g_AluraCanvas->SameLine();
-		g_AluraCanvas->AddProgressBar( static_cast< float >( m_PlayerEntity->GetHealth() ) / 100.0f, { 64.0f, 24.0f } );
-		g_AluraCanvas->SameLine();
-		g_AluraCanvas->AddText( std::format( "{0} / 100", m_PlayerEntity->GetHealth() ) );
-	}
+		if( const auto player = m_PlayerEntity.Access() )
+		{
+			g_AluraCanvas->AddText( "Health" );
+			g_AluraCanvas->SameLine();
+			g_AluraCanvas->AddProgressBar( static_cast< float >( player->GetHealth() ) / 100.0f, { 64.0f, 24.0f } );
+			g_AluraCanvas->SameLine();
+			g_AluraCanvas->TextFormatted( "{0} / 100", player->GetHealth() );
 
-	// Weapon
-	{
-		// Fix - API 3.2
-		std::string text = std::format( "{0} / {1} ({2} Magazines)", m_PlayerEntity->GetAmmo(), m_PlayerEntity->GetMaxAmmoInMag(), m_PlayerEntity->GetNumberOfMagazines() );
+			// Weapon
+			const std::string text = std::format( "{0} / {1} ({2} Magazines)", player->GetAmmo(), player->GetMaxAmmoInMag(), player->GetNumberOfMagazines() );
 
-		// Fix - API 3.1
-		const auto textSize = g_AluraCanvas->CalcTextSize( text );
+			// Fix - API 3.1
+			const auto textSize = g_AluraCanvas->CalcTextSize( text );
 
-		g_AluraCanvas->SetNextItemPosition( glm::vec2{ g_AluraCanvas->GetStyle().ItemSpacing.x * 0.25f, ( g_AluraCanvas->GetHeight() - textSize.y ) - g_AluraCanvas->GetStyle().ItemSpacing.y - 2.0f } );
-		g_AluraCanvas->AddText( text );
+			g_AluraCanvas->SetNextItemPosition( glm::vec2{ g_AluraCanvas->GetStyle().ItemSpacing.x * 0.25f, ( g_AluraCanvas->GetHeight() - textSize.y ) - g_AluraCanvas->GetStyle().ItemSpacing.y - 2.0f } );
+			g_AluraCanvas->AddText( text );
+		}
 	}
 
 	g_AluraCanvas->PopFontSize();
@@ -96,7 +97,6 @@ void PlayerHUD::OnDraw( Timestep ts )
 
 void PlayerHUD::OnDestroy()
 {
-	m_PlayerEntity = nullptr;
 }
 
 void PlayerHUD::OnEvent( Event& rEvent )

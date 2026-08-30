@@ -53,16 +53,15 @@ void GameStateHUD::OnDraw( Timestep ts )
 		g_AluraCanvas->PushFontSize( 32.0f );
 		{
 			g_AluraCanvas->AddText( "=== Game State Debug ===" );
-			g_AluraCanvas->AddText( std::format( "FPS: {0}", Application::Get()->Framerate() ) );
+			g_AluraCanvas->TextFormatted( "FPS: {0}", Application::Get()->Framerate() );
 
 			g_AluraCanvas->Indent();
 			{
-				// Fix - API 3.2
-				g_AluraCanvas->AddText( std::format( "Current Wave: {0}", m_GameState->GetCurrentWave() ) );
-				g_AluraCanvas->AddText( std::format( "Wave Difficulty: {0}", m_GameState->GetWaveDifficulty() ) );
-				g_AluraCanvas->AddText( std::format( "Number Of Waves Since Last Intermission: {0}", m_GameState->GetNumberOfWavesSinceLastInt() ) );
-				g_AluraCanvas->AddText( std::format( "Time remaining: {0}s", m_GameState->TimeUntilNextGameStateChange() ) );
-				g_AluraCanvas->AddText( std::format( "Game state: {0}", ( int ) m_GameState->GetCurrentStage() ) );
+				g_AluraCanvas->TextFormatted( "Current Wave: {0}", m_GameState->GetCurrentWave() );
+				g_AluraCanvas->TextFormatted( "Wave Difficulty: {0}", m_GameState->GetWaveDifficulty() );
+				g_AluraCanvas->TextFormatted( "Number Of Waves Since Last Intermission: {0}", m_GameState->GetNumberOfWavesSinceLastInt() );
+				g_AluraCanvas->TextFormatted( "Time remaining: {0}s", m_GameState->TimeUntilNextGameStateChange() );
+				g_AluraCanvas->TextFormatted( "Game state: {0}", ( int ) m_GameState->GetCurrentStage() );
 			}
 			g_AluraCanvas->Unindent();
 		}
@@ -76,7 +75,6 @@ void GameStateHUD::OnDraw( Timestep ts )
 
 	// Timer text
 	{
-		// Fix - API 3.2
 		std::string text = std::format( "{0}s", std::ceil( m_GameState->TimeUntilNextGameStateChange() ) );
 		// Fix - API 3.1
 		const auto textSize = g_AluraCanvas->CalcTextSize( text );
@@ -87,7 +85,6 @@ void GameStateHUD::OnDraw( Timestep ts )
 
 	// Game state text
 	{
-		// Fix - API 3.2
 		std::string text{};
 
 		switch( m_GameState->GetCurrentStage() )
@@ -110,7 +107,7 @@ void GameStateHUD::OnDraw( Timestep ts )
 		const auto textSize = g_AluraCanvas->CalcTextSize( text );
 		const auto pos = glm::vec2{ ( g_AluraCanvas->GetWidth() - textSize.x ) - g_AluraCanvas->GetStyle().ItemSpacing.x, g_AluraCanvas->GetCursorPosition().y };
 
-//		g_AluraCanvas->SetNextItemPosition( pos );
+		g_AluraCanvas->SetNextItemPosition( pos );
 		g_AluraCanvas->AddText( text );
 	}
 

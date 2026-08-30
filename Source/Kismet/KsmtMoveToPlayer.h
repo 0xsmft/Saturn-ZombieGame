@@ -52,7 +52,7 @@ private:
 	// #ReplaceRawPtrOrRefWithWeakRef, for now it's a raw ptr
 	AIAgentEntity* m_Agent = nullptr;
 
-	Player* m_pTarget = nullptr;
+	WeakRef<Player> m_wTarget;
 	Scene* m_pActiveScene = nullptr;
 
 	StraightNavPath* m_pPath = nullptr;

@@ -17,6 +17,7 @@ GameOverUI::~GameOverUI()
 
 void GameOverUI::OnInit()
 {
+	IptShowMouseCursor();
 }
 
 void GameOverUI::OnDraw( Timestep ts )

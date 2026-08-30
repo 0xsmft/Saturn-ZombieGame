@@ -42,7 +42,7 @@ void KsmtMoveToPlayer::InitialiseTaskWithOther( NodeEditorTaskHandler* pHandler,
 	auto players = m_Agent->GetScene()->GetAllEntitiesWithClass<Player>();
 	for( auto& rPlayer : players )
 	{
-		m_pTarget = rPlayer.Get();
+		m_wTarget = rPlayer;
 	}
 
 	m_PathRetargetDelay = m_PathRetargetDelayInterval;
@@ -74,9 +74,9 @@ Saturn::NodeEditorTaskState KsmtMoveToPlayer::Tick( Timestep ts )
 	m_PathRetargetDelay -= ts.Seconds();
 	if( m_PathRetargetDelay <= 0.0f )
 	{
-		if( m_pTarget )
+		if( const auto target = m_wTarget.Access() )
 		{
-			m_pPath->RetargetPath( m_Agent->GetLocalPosition(), m_pTarget->GetLocalPosition() );
+			m_pPath->RetargetPath( m_Agent->GetLocalPosition(), target->GetLocalPosition() );
 		}
 
 		m_PathRetargetDelay = m_PathRetargetDelayInterval;
@@ -93,13 +93,17 @@ void KsmtMoveToPlayer::Reset()
 
 Saturn::NodeEditorTaskState KsmtMoveToPlayer::InitPath()
 {
-	if( !m_pTarget )
-		return NodeEditorTaskState::Failed;
+	if( const auto target = m_wTarget.Access() )
+	{
+		m_pPath = m_pActiveScene->GetNavigationSystem().CreateStraightPath( 
+			m_Agent->GetLocalPosition(), 
+			target->GetLocalPosition() );
 
-	m_pPath = m_pActiveScene->GetNavigationSystem().CreateStraightPath( m_Agent->GetLocalPosition(), m_pTarget->GetLocalPosition() );
-	m_pPath->CreatePath();
+		m_pPath->CreatePath();
+		return NodeEditorTaskState::Starting;
+	}
 
-	return NodeEditorTaskState::Starting;
+	return NodeEditorTaskState::Failed;
 }
 
 Saturn::NodeEditorTaskState KsmtMoveToPlayer::WalkToNextPoint( Timestep ts )
@@ -148,4 +152,3 @@ Saturn::NodeEditorTaskState KsmtMoveToPlayer::WalkToNextPoint( Timestep ts )
 
 	return NodeEditorTaskState::Running;
 }
-
