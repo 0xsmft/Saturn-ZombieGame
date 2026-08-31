@@ -1,4 +1,4 @@
 Sound:
-  SourcePath: Assets\Athena\Sounds\Zombie\SFX_ZbBite.mp3
+  SourcePath: Assets/Athena/Sounds/Zombie/SFX_ZbBite.mp3
   ImportPath: \\srv-nas-3\sound-hub\SFX_ZbBite.mp3
   LastWriteTime: 2026-02-16

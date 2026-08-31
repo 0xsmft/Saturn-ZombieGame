@@ -1,4 +1,4 @@
 Sound:
-  SourcePath: Assets\Athena\Sounds\Weapon\SFX_GrabAmmo.mp3
+  SourcePath: Assets/Athena/Sounds/Weapon/SFX_GrabAmmo.mp3
   ImportPath: \\srv-nas-3\sound-hub\SFX_GrabAmmo.mp3
   LastWriteTime: 2026-01-31
