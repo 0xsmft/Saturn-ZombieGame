@@ -6,3 +6,8 @@ bin
 bin-int
 *.sab
 *.ssb
+.DS_Store
+Makefile
+
+*.xcworkspace/
+*.xcuserstate

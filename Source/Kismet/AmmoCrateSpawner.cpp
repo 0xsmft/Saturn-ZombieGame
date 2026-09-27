@@ -2,6 +2,7 @@
 
 #include "Saturn/Core/Random.h"
 #include "Saturn/Physics/PhysicsRigidBody.h"
+#include "Saturn/Scene/Scene.h"
 
 AmmoCrateSpawner::AmmoCrateSpawner()
 {

@@ -1,6 +1,8 @@
 #include "sppch.h"
 #include "Projectile.h"
 
+#include "Saturn/Scene/Scene.h"
+
 Projectile::Projectile()
 {
 	AddComponent<SphereColliderComponent>();
